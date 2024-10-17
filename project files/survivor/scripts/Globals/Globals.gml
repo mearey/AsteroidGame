@@ -1,0 +1,62 @@
+// Script assets have changed for v2.3.0 see
+// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+function Globals(){
+	
+	
+	//settings
+	global.master_volume = 1
+	global.sfx_level = 1
+	global.music_level = 1
+	loadOptions()
+	
+	//audio and music
+	global.currentSong = GameSongMenu
+	
+	randomize()
+	cursor_sprite = spriteCursor;
+	
+	global.weaponPool = [CannonMKII_Left, CannonMKII_Right, FrontBeamObj, CannonMKI, OrbitalCannonWeapon, OrbitalBeamWeapon,OrbitalLaserWeapon, SideLaser, LaserMKI, SideBeam, Sword, DisruptionField, MissileLauncher, MineLayer, GrenadeThrower, Flamethrower_, MiniShotgun]
+	global.synergies = [
+		[CannonMKII_Left, CannonMKII_Right, DualCannon], 
+		[FrontBeamObj, SideBeam, BeamUpgraded],
+		[SideLaser, LaserMKI, JointLaser]
+	]
+	
+	if !(os_browser == browser_not_a_browser) {
+		bw = browser_width
+		bh = browser_height
+		//window_set_fullscreen(true)
+		//		surface_resize(application_surface, bw, bh);
+		//window_set_size(bw,bh)
+		//window_center()
+	}
+	intialiseParticles()
+	
+}
+
+function clearEntities() {
+	with (Weapon) {
+		instance_destroy(self)	
+	}
+	with (Enemy) {
+		instance_destroy(self)	
+	}
+	with (spawner) {
+		instance_destroy(self)
+	}
+	with (Level) {
+		instance_destroy(self)	
+	}
+	with (Boss) {
+		instance_destroy(self)	
+	}
+	instance_destroy(global.player)
+}
+
+function removeWeaponFromPool(weapon) {
+	for (var i=0; i<array_length(global.weaponPool); i++;) {
+		if (global.weaponPool[i]==weapon) {
+			array_delete(global.weaponPool,i,1);	
+		}
+	}
+}
