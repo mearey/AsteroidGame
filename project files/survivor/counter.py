@@ -19,7 +19,7 @@ for dir in directories:
         if re.search(".png",f) or re.search(".wav",f) or re.search(".mp3",f) or re.search(".jpeg",f):
             mediafiles+=1
         # checking if it is a file
-        if re.search(".py$",f) or re.search(".html$",f) or re.search(".js$",f) or re.search(".php$",f) or re.search(".sh$",f) or re.search(".css$",f) or re.search(".bat$",f) or re.search(".gml$",f):
+        if (re.search(".py$",f) or re.search(".html$",f) or re.search(".js$",f) or re.search(".php$",f) or re.search(".sh$",f) or re.search(".css$",f) or re.search(".bat$",f) or re.search(".gml$",f)) and os.path.isfile(f):
             with open(f) as fp:
                 files+=1
                 array=fp.readlines()
@@ -30,15 +30,15 @@ for dir in directories:
                         characters+=1
 print("\n  🦈    🦈    🦈    🦈    🦈    🦈    🦈")
 print("  ______________________________________\n |======================================| \n||                                      ||")
-print("||   Shark game has: " +str(mediafiles)+ " media files   ||\n||                                      ||")
+print("||   Game has: " +str(mediafiles)+ " media files   ||\n||                                      ||")
 print("||======================================||")
 print("||                                      ||")
-print("||    Shark game has: " +str(files)+ " code files     ||\n||                                      ||")
+print("||    Game has: " +str(files)+ " code files     ||\n||                                      ||")
 print("||======================================||")
 print("||                                      ||")
-print("||     Shark game has: " +str(lines)+ " lines      ||\n||                                      ||")
+print("||     Game has: " +str(lines)+ " lines      ||\n||                                      ||")
 print("||======================================||")
-print("||                                      ||\n||     Shark game has: " +str(words)+ " words      ||\n||                                      ||")
+print("||                                      ||\n||     Game has: " +str(words)+ " words      ||\n||                                      ||")
 print("||======================================||")
-print("||                                      ||\n||  Shark game has: " +str(characters)+ " characters   ||\n||                                      ||")
+print("||                                      ||\n||  Game has: " +str(characters)+ " characters   ||\n||                                      ||")
 print(" |======================================| \n  ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾")

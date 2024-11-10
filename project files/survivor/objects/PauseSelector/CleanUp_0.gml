@@ -11,6 +11,3 @@ with (InvSlot) {
 with (WeaponSlot) {
 	instance_destroy(self)	
 }
-
-//camera_set_view_target(view_camera[0],PlayerObj)
-//camera_set_view_pos(view_camera[0],cam_x,cam_y)

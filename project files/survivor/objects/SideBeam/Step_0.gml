@@ -6,7 +6,7 @@ x = global.player.x
 y = global.player.y 
 image_angle = global.player.image_angle
 image_angle = global.player.image_angle
-if (keyboard_check(vk_space) || mouse_check_button(mb_left)|| global.auto_aim || true) {
+if (keyboard_check(vk_space) || mouse_check_button(mb_left) || true) {
 	if !global.pauseObj.paused {
 	if (fire_timer > 0) {
 		fire_timer -= 1
@@ -36,7 +36,7 @@ if (instance_exists(bullet)) {
 	bullet.image_angle = bullet.direction
 	bullet.projectile_speed = projectile_speed
 	bullet.accuracy = accuracy
-	if !(keyboard_check(vk_space) || mouse_check_button(mb_left)|| global.auto_aim || true) {
+	if !(keyboard_check(vk_space) || mouse_check_button(mb_left) || true) {
 		bullet.image_speed = 1;
 	}
 }

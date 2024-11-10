@@ -16,9 +16,19 @@ for (var i =0; i<array_length(global.player.weapons); i++) {
 	}
 }	
 if (count >= 1) {
-	draw_text(x, y- 80, "LVL +1")
+	draw_text(x, y- 80, "LVL " + string(count) +" >> " + string(count+1))
 } else {
 	draw_text(x, y- 80, "NEW")
+	var inst = instance_create_depth(0,0,0,weapon)
+	draw_set_color(c_black)
+	draw_set_alpha(0.6)
+	draw_rectangle(x-99,y+64,x+99,y+200,false)
+	draw_set_alpha(1)
+	draw_set_color(c_white)
+	draw_rectangle(x-99,y+64,x+99,y+200,true)
+	draw_set_valign(fa_top)
+	draw_text_ext(x, y+80, inst.description,20,190)
+	draw_set_valign(fa_middle)
+	instance_destroy(inst)
 }
 
-Weapontip(string(sprite_get_name(weapon_sprite)))

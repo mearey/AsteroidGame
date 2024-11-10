@@ -1,7 +1,7 @@
 
 
 if (weapon!=Weapon) {
-	Tooltip(sprite_get_name((weapon.sprite_index)))
+	Weapontip(sprite_get_name((weapon.sprite_index)), weapon, 0)
 }
 
 

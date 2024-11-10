@@ -12,6 +12,8 @@ fire_rate = 300
 fire_timer = fire_rate
 hp = 3
 _speed = 0.1;
+xp = 1
+lighting_colour = c_red
 
 
 function takeDamage(damage) {	

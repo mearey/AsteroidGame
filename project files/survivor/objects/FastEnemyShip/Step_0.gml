@@ -4,7 +4,14 @@
 // Inherit the parent event
 event_inherited();
 if !(global.pauseObj.paused){
-if (distance_to_object(PlayerObj) < 1) {
+	
+if (collision_circle(x,y,8,global.ship_selection,false,true)) {
+	physics_apply_impulse(x,y,lengthdir_x(-phy_speed,point_direction(x,y,global.player.x, global.player.y)), lengthdir_y(-phy_speed,point_direction(x,y,global.player.x, global.player.y)))	
+} else {
+	physics_apply_impulse(x,y,lengthdir_x(_speed,point_direction(x,y,global.player.x, global.player.y)), lengthdir_y(_speed,point_direction(x,y,global.player.x, global.player.y)))		
+}
+	
+if (distance_to_object(global.ship_selection) < 1) {
 	//explosion
 	instance_create_depth(x,y,0,Explosion)
 	//deal damge

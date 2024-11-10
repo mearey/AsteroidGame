@@ -7,6 +7,12 @@ Globals()
 
 global.player = self
 
+start_time = current_time
+
+damage_taken = 0
+enemies_defeated = 0
+exp_gained = 0
+
 max_speed = 2;
 
 dmg = 1;
@@ -29,26 +35,52 @@ fire_timer = fire_rate;
 
 regen = global.regen
 
-auto_aim = global.auto_aim
+cdr = global.cdr
 
 target = self
 
 max_hp = 100;
 hp = max_hp;
 
-max_xp = 5;
+max_xp = 6;
 xp = 0;
 lvl = 0;
 
 coins = 0
 
-var starting_wep = LaserMKI
+cooldown = 1000
+
+dead = false
+
+ability_cooldown = cooldown/global.cdr
+ability = "Press \'space\' to activate a knockback nova"
+
+var starting_wep = CannonMKI
 
 weapons = [starting_wep]
 unique_weapons = [starting_wep]
-equipped_weapons = [starting_wep, Weapon, Weapon, Weapon, Weapon, Weapon, Weapon, Weapon, Weapon, Weapon]
+equipped_weapons = [Weapon, Weapon, Weapon,  Weapon, Weapon, starting_wep, Weapon, Weapon, Weapon, Weapon]
 
 debug = true
+
+time = ""
+
+function ability_() {
+	//nova ability here
+	ability_cooldown -= 1
+	if ability_cooldown <= 0 && keyboard_check_pressed(vk_space) {
+		var list = ds_list_create();
+		var num = collision_circle_list(x,y,256,Enemy,false,true,list,false)
+		for (var i = 0; i<num; i++) {
+			var dir_ = -point_direction(x,y,list[| i].x,list[| i].y)
+			list[| i].phy_speed_x += lengthdir_x(4, dir_)
+			list[| i].phy_speed_y -= lengthdir_y(4, dir_)
+		}
+		ability_cooldown = 1000/(global.cdr)
+		instance_create_depth(x,y,1,shockwaveObj)
+		PlaySFX(novasfx,1,1.3)
+	}
+}
 
 function spawnWeapons() {
 	//spawn weapons
@@ -63,9 +95,10 @@ function addXP(ammount) {
 	if (xp >= max_xp) {
 		lvl+=1
 		xp=xp-max_xp
-		max_xp = max_xp*1.1
+		max_xp = max_xp*1.15
 		global.pauseObj.pause(true)
 	}
+	exp_gained += ammount
 }
 //add weapon method
 function addWeapon(weapon) {
@@ -105,21 +138,24 @@ function resetWeapons() {
 function takeDamage() {
 	image_index = 1
 	alarm[0] = 10
+	damage_taken += 1;
+	if !audio_is_playing(dmgsfx) and !dead {
+		PlaySFX(dmgsfx,1,1)
+	}
 }
 
 function loadStats() {
-	if (file_exists("save_game_state.ini")) {
-		ini_open("save_game_state.ini")
-		//load stats
-		max_speed = ini_read_real("STATESTATS", "max_speed", global.player.max_speed)
-		projectile_speed = ini_read_real("STATESTATS", "projectile_speed", global.player.projectile_speed)
-		accuracy = ini_read_real("STATESTATS", "accuracy", global.player.accuracy)
-		fire_rate = ini_read_real("STATESTATS", "fire_rate", global.player.fire_rate)
-		max_hp = ini_read_real("STATESTATS", "max_hp", global.player.max_hp)
-		max_xp = ini_read_real("STATESTATS", "max_xp", global.player.max_xp)
-		xp = ini_read_real("STATESTATS", "xp", global.player.xp)
-		lvl = ini_read_real("STATESTATS", "lvl", 0)
-		hp = ini_read_real("STATESTATS", "hp", global.player.hp)
-		dmg = ini_read_real("STATESTATS", "dmg", global.player.dmg)
-	}
+	ini_open("save_game_state.ini")
+	//load stats
+	max_speed = ini_read_real("STATESTATS", "max_speed", global.player.max_speed)
+	projectile_speed = ini_read_real("STATESTATS", "projectile_speed", global.player.projectile_speed)
+	accuracy = ini_read_real("STATESTATS", "accuracy", global.player.accuracy)
+	fire_rate = ini_read_real("STATESTATS", "fire_rate", global.player.fire_rate)
+	max_hp = ini_read_real("STATESTATS", "max_hp", global.player.max_hp)
+	max_xp = ini_read_real("STATESTATS", "max_xp", global.player.max_xp)
+	xp = ini_read_real("STATESTATS", "xp", global.player.xp)
+	lvl = ini_read_real("STATESTATS", "lvl", 0)
+	hp = ini_read_real("STATESTATS", "hp", global.player.hp)
+	dmg = ini_read_real("STATESTATS", "dmg", global.player.dmg)
+	ini_close()
 }

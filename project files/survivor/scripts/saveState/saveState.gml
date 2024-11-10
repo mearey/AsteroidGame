@@ -51,14 +51,24 @@ function saveState(){
 	//save enemies
 	for (var i=0 ; i<instance_number(Enemy); i++) {
 		var enemy = instance_find(Enemy,i)
-		ini_write_string("ENEMIES", "enemy_"+string(i), object_get_name(enemy.object_index)+"_"+string(enemy.x)+"_"+string(enemy.y))
+		ini_write_string("ENEMIES", "enemy_"+string(i), object_get_name(enemy.object_index)+"_"+string(enemy.x)+"_"+string(enemy.y)+"_"+string(enemy.size))
 	}
 	ini_write_real("ENEMIES", "num", i)
 	
+	//save ship selection
+	
+	ini_write_real("SHIP", "selection", real(global.ship_selection))
+	
+	//save time and enemies killed etc
+	ini_write_real("POSTSTATS","damage_taken", global.player.damage_taken)
+	ini_write_real("POSTSTATS","enemies_killed", global.player.enemies_defeated)
+	ini_write_real("POSTSTATS","exp_gained", global.player.exp_gained)
+	ini_write_real("POSTSTATS","time", global.player.start_time)
 	
 	//dummy save
 	ini_open("save_game_state.ini")
 	ini_write_real("dummy","dummy",0)
+	ini_close()
 }
 
 function loadState() {
@@ -67,19 +77,22 @@ function loadState() {
 	var room_ = ini_read_string("STATE", "room", "MainMenu")
 	var x_ = ini_read_real("STATE", "position_x", 0);
 	var y_ = ini_read_real("STATE", "position_y", 0);
-	var player = instance_create_depth(x_,y_,1,PlayerObj)
+	global.ship_selection = ini_read_real("SHIP", "selection", PlayerObj)
+	var player = instance_create_depth(x_,y_,1, global.ship_selection)
 	room_goto(asset_get_index(room_))
-	
+	ini_close()
 	player.loadStats()
+	ini_open("save_game_state.ini")
+	
+	//load time and enemies killed etc
+	player.damage_taken = ini_read_real("POSTSTATS","damage_taken", 0)
+	player.enemies_defeated = ini_read_real("POSTSTATS","enemies_killed", 0)
+	player.exp_gained = ini_read_real("POSTSTATS","exp_gained", 0)
+	player.start_time = ini_read_real("POSTSTATS","time", current_time)
 	
 	//load coins
 	player.coins = ini_read_real("SAVESTATS", "coins", 0)
 	
-	//load level and wave
-	ini_open("save_game_state.ini")
-	var level = instance_create_depth(0,0,1,asset_get_index(ini_read_string("SAVEWAVE", "level", "Level1")))
-	
-	level.difficulty = ini_read_real("SAVEWAVE", "difficulty", 1)
 	
 	//load weapons
 	var num = ini_read_real("WEAPONS", "num", 1)
@@ -109,7 +122,18 @@ function loadState() {
 	for (var i = 0; i<ini_read_real("ENEMIES","num", 0); i++) {
 		var res = string_split(ini_read_string("ENEMIES", "enemy_"+string(i),0), "_")
 		var enemy = instance_create_depth(real(res[1]),real(res[2]),1,asset_get_index(res[0]))
+		enemy.size = real(res[3])
+		enemy.image_yscale =real(res[3])
+		enemy.image_xscale = real(res[3])
+		enemy.lighting_size = 2*real(res[3])
 	}
+	//load level and wave
+	var diff = ini_read_real("SAVEWAVE", "difficulty", 1)
+	var level = instance_create_depth(0,0,1,asset_get_index(ini_read_string("SAVEWAVE", "level", "Level1")))
+	
+	level.difficulty = diff
+	
+	ini_close()
 }
 
 function wipeSave() {
@@ -129,4 +153,5 @@ function saveTotal() {
 	
 	ini_open("save_total.ini")
 	ini_write_real("dummy","dummy",0)
+	ini_close()
 }

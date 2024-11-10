@@ -14,7 +14,6 @@ function Globals(){
 	
 	randomize()
 	cursor_sprite = spriteCursor;
-	
 	global.weaponPool = [CannonMKII_Left, CannonMKII_Right, FrontBeamObj, CannonMKI, OrbitalCannonWeapon, OrbitalBeamWeapon,OrbitalLaserWeapon, SideLaser, LaserMKI, SideBeam, Sword, DisruptionField, MissileLauncher, MineLayer, GrenadeThrower, Flamethrower_, MiniShotgun]
 	global.synergies = [
 		[CannonMKII_Left, CannonMKII_Right, DualCannon], 
@@ -50,7 +49,9 @@ function clearEntities() {
 	with (Boss) {
 		instance_destroy(self)	
 	}
-	instance_destroy(global.player)
+	with (PlayerObj) {
+		instance_destroy(self)	
+	}
 }
 
 function removeWeaponFromPool(weapon) {
@@ -58,5 +59,16 @@ function removeWeaponFromPool(weapon) {
 		if (global.weaponPool[i]==weapon) {
 			array_delete(global.weaponPool,i,1);	
 		}
+	}
+}
+
+function preGlobals() {
+	//player
+	if !file_exists("ship_selection.ini") {
+		global.ship_selection = PlayerObj
+	} else {
+		ini_open("ship_selection.ini")
+		global.ship_selection = ini_read_real("SHIP", "selection", PlayerObj)
+		ini_close()
 	}
 }

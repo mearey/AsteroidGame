@@ -9,12 +9,13 @@ if (collision_circle(x,y,8,Enemy,false,true) || (life <= 0 )) {
 	speed = 0
 	if !exploded {
 		PlaySFX(explosion,1,4)
+		instance_create_depth(x,y,1,Explosion)
 		var list = ds_list_create();
 		var num = collision_circle_list(x,y,60*size,Enemy,false,true,list,false)
 		for (var i = 0; i<num; i++) {
 			var dir = -point_direction(global.player.x,global.player.y,list[| i].x,list[| i].y)
 			list[| i].phy_speed_x += lengthdir_x(4, dir)
-			list[| i].phy_speed_y += lengthdir_y(4, dir)
+			list[| i].phy_speed_y -= lengthdir_y(4, dir)
 			list[| i].takeDamage(global.player.dmg)
 		}	
 		exploded = true

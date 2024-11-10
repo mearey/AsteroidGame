@@ -4,6 +4,7 @@
 // Inherit the parent event
 event_inherited();
 lighting_colour= c_aqua
+lighting_size = 4
 image_angle = point_direction(x,y,global.player.x,global.player.y)
 image_speed = 1;
 fire_rate = 100

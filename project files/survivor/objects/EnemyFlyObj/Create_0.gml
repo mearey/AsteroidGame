@@ -3,7 +3,7 @@
 
 // Inherit the parent event
 event_inherited();
-
+lighting_colour = c_lime
 hp = 2;
 
 _speed = 0.2;

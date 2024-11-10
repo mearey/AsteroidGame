@@ -5,3 +5,4 @@
 event_inherited();
 
 lighting_colour = c_yellow
+speed=0

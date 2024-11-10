@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-if collision_circle(x,y,size,PlayerObj,false,true) {
+if collision_circle(x,y,size,global.ship_selection,false,true) {
 	global.player.hp -= damage
 	global.player.takeDamage()
 	instance_destroy(self)

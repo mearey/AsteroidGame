@@ -8,6 +8,4 @@ lighting_layer = level_1__sun
 
 foreground_layer = level_1__planet
 
-boss = false
-
 PlaySong(Level1Song)

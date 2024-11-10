@@ -10,6 +10,8 @@ fire_rate = 500
 fire_timer = fire_rate
 hp = 5;
 _speed = 0.08;
+lighting_colour = c_aqua
+lighting_size = 3
 
 function takeDamage(damage) {	
 	hp-=damage;

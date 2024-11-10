@@ -5,7 +5,7 @@ y = global.player.y
 image_angle = global.player.image_angle
 image_angle = global.player.image_angle
 
-if (keyboard_check(vk_space) || mouse_check_button(mb_left)|| global.auto_aim || true) {
+if (keyboard_check(vk_space) || mouse_check_button(mb_left) || true) {
 	if !global.pauseObj.paused {
 	if (fire_timer > 0) {
 		fire_timer -= 1

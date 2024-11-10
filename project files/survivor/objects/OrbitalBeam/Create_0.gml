@@ -6,11 +6,19 @@ event_inherited();
 
 shooting = false
 
+fire_rate = global.player.fire_rate*6;
+
 target = PlayerObj
 
 range = 300
 
 rotation = 360
+
+damage = 1
+
+projectile_speed = 10
+
+description = "Orbits the ship and constantly beams nearby enemies"
 
 function lvlUp() {
 	lvl+=1;	

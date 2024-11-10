@@ -8,3 +8,11 @@ function GetUpgradeButton(button_text){
 	}
 	return NaN
 }
+
+function GetShipUnlockButton(ship_) {
+	with (ShipSelectionButton) {
+		if ship == 	ship_ {
+			return self	
+		}
+	}
+}

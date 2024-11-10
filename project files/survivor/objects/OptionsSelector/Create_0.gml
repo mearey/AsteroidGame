@@ -20,9 +20,7 @@ y_ = camy+cam_height/2
 Globals()
 
 coins = 0
-if (file_exists("save_options.ini")){
-	ini_open("save_options.ini")
-}
+ini_open("save_options.ini")
 
 function CreateButton(degree, text, func) {
 	var direction_ = degree
@@ -67,7 +65,7 @@ regen_btn = CreateButton(-15,"MUSIC VOLUME", function () {
 		self.coins -= temp.cost
 	}
 	global.music_level = temp.points/10
-	audio_sound_gain(global.currentlyPlayingSong,global.music_level,0)
+	audio_sound_gain(global.currentlyPlayingSong,global.music_level,0)//STRANGE ERROR
 })
 regen_btn.max_points = 10
 regen_btn.cost = 0
@@ -116,4 +114,6 @@ function SaveOptions() {
 	//dummy save
 	ini_open("save_options.ini")
 	ini_write_real("dummy","dummy",0)
+	ini_close()
 }
+ini_close()

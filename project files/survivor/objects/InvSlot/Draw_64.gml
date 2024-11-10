@@ -23,3 +23,4 @@ if (dragging) {
 	}
 	draw_sprite_ext(object_get_sprite(item),2,x-cam_x,y-cam_y,2,2,90,c_white,1)
 }
+

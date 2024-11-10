@@ -8,3 +8,5 @@ text = ""
 
 spr = nocollision
 spr1 = nocollision
+
+locked = true

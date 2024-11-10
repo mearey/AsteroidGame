@@ -8,6 +8,8 @@ accuracy = global.player.accuracy;
 fire_rate = global.player.fire_rate;
 fire_timer = fire_rate;
 
+damage = 1
+
 evolved = false
 
 lvl = 1;
@@ -24,3 +26,5 @@ function lvlUp() {
 		removeWeaponFromPool(self)
 	}
 }
+
+description = "NONE"

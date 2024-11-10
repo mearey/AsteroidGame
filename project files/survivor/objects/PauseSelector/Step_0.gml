@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+if !tutorial {
 x_ = cam_x
 y_ = cam_y + cam_height/2
 var direction_ = point_direction(x_,y_,mouse_x,mouse_y)
@@ -34,4 +34,6 @@ if hovered_ = false {
 	for (var i = 0; i<array_length(slots); i++) {
 		slots[i].grey = false
 	}
+}
+
 }

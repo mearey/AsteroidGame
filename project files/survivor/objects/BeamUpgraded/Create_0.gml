@@ -9,6 +9,7 @@ event_inherited();
 lighting_colour = c_aqua
 width = 2;
 slot = 9
+damage = 3
 function lvlUp() {
 	if (lvl < 10) {
 		lvl+=1

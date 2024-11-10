@@ -3,7 +3,6 @@
 
 // Inherit the parent event
 event_inherited();
-lighting_colour= c_aqua
 image_angle = point_direction(x,y,global.player.x,global.player.y)
 image_speed = 0
 
@@ -19,6 +18,7 @@ damage = 3;
 xp = 5;
 
 chest = true
+lighting_colour = c_red
 
 
 function takeDamage(damage) {	

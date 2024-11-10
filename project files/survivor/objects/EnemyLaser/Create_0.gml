@@ -9,5 +9,5 @@ damage = 2
 size = 14
 
 lighting_colour = c_lime
-lighting_size = 1
+lighting_size = 0.6
 lighting_intensity = 0.6

@@ -4,6 +4,7 @@
 // Inherit the parent event
 event_inherited();
 lighting_colour = c_purple
+lighting_intensity = 0
 size = 0
 image_xscale = size
 image_yscale = size 

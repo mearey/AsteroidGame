@@ -1,8 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
-phy_rotation+=rotation
+image_angle+=rotation
 
-if (collision_circle(x,y,global.magnet,PlayerObj,false,true)){
+if (collision_circle(x,y,global.magnet,global.ship_selection,false,true)){
 	instance_create_depth(x,y,1,EXPOrbSuck)
 	instance_destroy(self)
 }

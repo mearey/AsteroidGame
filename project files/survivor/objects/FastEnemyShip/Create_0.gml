@@ -3,10 +3,12 @@
 
 // Inherit the parent event
 event_inherited();
-
-phy_rotation = -point_direction(x,y,global.player.x,global.player.y)
+if (variable_global_exists("player")) {
+	image_angle = point_direction(x,y,global.player.x,global.player.y)
+}
 image_speed = 0
 
+lighting_colour = c_lime
 fire_rate = 100
 fire_timer = fire_rate
 hp = 2

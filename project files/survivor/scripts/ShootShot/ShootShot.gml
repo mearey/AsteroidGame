@@ -28,7 +28,7 @@ function Fire(type, dir, starting_x, starting_y, acc, spd){
 		var bullet = instance_create_depth(starting_x,starting_y,1,type)
 		bullet.direction = dir
 		bullet.phy_rotation = -bullet.direction
-		bullet.projectile_speed = spd
+		bullet.projectile_speed = spd*2
 		bullet.accuracy = acc
 
 		with (bullet) {

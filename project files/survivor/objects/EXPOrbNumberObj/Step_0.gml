@@ -3,7 +3,7 @@
 phy_rotation+=rotation
 lighting_size = number/20
 
-if (collision_circle(x,y,global.magnet,PlayerObj,false,true)){
+if (collision_circle(x,y,global.magnet,global.ship_selection,false,true)){
 	var orb = instance_create_depth(x,y,1,EXPOrbSuck)
 	orb.number = number
 	orb.lighting_colour = c_lime

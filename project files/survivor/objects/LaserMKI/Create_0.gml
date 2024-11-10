@@ -12,13 +12,15 @@ fire_timer = fire_rate;
 lvl = 1;
 
 slot = 0
+damage = 4
+description = "Aimed basic laser repeater"
 
 function lvlUp() {
 	if (lvl < 10) {
 		lvl+=1
 		fire_rate -= fire_rate/4
 	} 
-	if lvl == 10 {
+	if lvl >= 10 {
 		evolved = true
 		removeWeaponFromPool(LaserMKI)
 	}

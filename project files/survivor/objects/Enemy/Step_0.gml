@@ -6,3 +6,6 @@ if (!global.pauseObj.paused){
 	EnemyCollisions()
 }
 
+if chubby {
+	rot = int64(rot+1) mod 360	
+}

@@ -1,14 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
-//auto aim
+
 if !global.pauseObj.paused {
-if auto_aim {
-	if (instance_exists(Enemy)) {
-		target = instance_nearest(x,y,Enemy)
-	}
-} else {
-	image_angle = point_direction(x,y,mouse_x,mouse_y)	
-}
+ability_()
+	
+image_angle = point_direction(x,y,mouse_x,mouse_y)	
 
 if target != self {
 	if (instance_exists(target)) {
@@ -24,8 +20,10 @@ if ((keyboard_check(ord("W"))||keyboard_check(ord("A"))||keyboard_check(ord("S")
 	speed_ = 0;
 } else if (speed_ > 0) {
 	speed_ -= 0.2;	
+	if global.pauseObj.paused {
+		speed_ = 0	
+	}
 }
-
 if (keyboard_check(ord("W")) && y>0) {
 	yspeed -= speed_
 }
@@ -38,21 +36,29 @@ if (keyboard_check(ord("S")) && y<room_height) {
 if (keyboard_check(ord("A")) && x>0) {
 	xspeed -= speed_
 }
-if !(global.pauseObj.paused) {
-x+=xspeed
-y+=yspeed
-x_speed = xspeed;
-y_speed = yspeed;
-xspeed = 0
-yspeed = 0
-}
-if (hp <= 0) {
-	clearEntities()
-	room_goto(MainMenu)
-	saveTotal()
-	wipeSave()
-}
 
+if !(global.pauseObj.paused) && !dead {
+	x+=xspeed
+	y+=yspeed
+	x_speed = xspeed;
+	y_speed = yspeed;
+	xspeed = 0
+	yspeed = 0
+}
+if (hp <= 0 && !dead) {
+	dead = true
+	var inst = instance_create_depth(x,y,1,DeadPlayer)
+	inst.phy_rotation = -image_angle
+	inst.sprite_index = sprite_index
+	sprite_index = nocollision	
+	with (Weapon) {
+		instance_destroy(self)
+	}
+	with (Enemy) {
+		
+	}
+	alarm[11] =200
+}
 if (hp < max_hp) && !global.pauseObj.paused {
-	hp+=regen/100
+	hp+=regen/150
 }

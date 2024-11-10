@@ -15,12 +15,12 @@ move_cooldown -= 1;
 if move_cooldown <= 0 {
 	moves[random_range(0,array_length(moves))]()
 }
-log(alarm[1])
+
 if alarm[1] {
-	lighting_intensity = 6 + 10/alarm[1]*10
+	lighting_intensity = 0.5 + 10/alarm[1]
 	PlaySFX(buttonSwitch,1+0,1+5/alarm[1])
 } else {
-	lighting_intensity = 6
+	lighting_intensity = 0.5
 }
 
 //MOVE3
@@ -40,5 +40,8 @@ if (y<0) {
 if (y>room_width) {
 	physics_apply_impulse(x,y,0,-30)	
 }
+
+//move towards player
+physics_apply_impulse(x,y,(global.player.x-x)/10,(global.player.y-y)/10)
 
 }

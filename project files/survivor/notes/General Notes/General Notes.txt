@@ -1,1 +1,27 @@
-- more information about items in inventory
+- add more playable ships with different abilities
+
+-	mele contact damage ship
+	ship as a weapon
+	slower ship with more defense
+
+- make boss 2 for second area
+
+--PLAYTEST NOTES--
+
+put correct stats on weapons to be displayed
+
+add luck stat
+
+damage for each weapons in inventory
+
+delay when unpause
+
+damage on post game screen for each weapon
+
+highest damage weaopon on pst game screen
+
+put a worm enemy
+
+add time SAVING
+
+around 400 coins from beating first level

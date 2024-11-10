@@ -8,6 +8,8 @@ x = x_ + lengthdir_x(340,direction_)
 y = y_ + lengthdir_y(340,direction_)
 image_angle = direction_
 
+layer_vspeed("Stars",random_range(-0.1,0.1))
+
 with (Button) {
 	hovered = false;
 }

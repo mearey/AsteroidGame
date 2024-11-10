@@ -3,6 +3,6 @@
 
 // Inherit the parent event
 event_inherited();
-lighting_size = 10
+lighting_size = 1
 lighting_intensity = 0.05
 

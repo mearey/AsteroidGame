@@ -3,7 +3,7 @@
 
 // Inherit the parent event
 event_inherited();
-
+description = "Creates a field around the ship that damages enemies that enter"
 lvl = 1;
 
 slot = 5
@@ -18,7 +18,11 @@ animation = 10/(20/fire_rate)
 
 right = true
 
-size = 0.5
+size = 1.5
+
+damage = 2
+
+projectile_speed = 0
 
 function lvlUp() {
 	if (lvl < 10) {

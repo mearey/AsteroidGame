@@ -35,8 +35,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"ButtonSprite",
-    "path":"sprites/ButtonSprite/ButtonSprite.yy",
+    "name":"ButtonSpriteWithTut",
+    "path":"sprites/ButtonSpriteWithTut/ButtonSpriteWithTut.yy",
   },
   "spriteMaskId":null,
   "visible":true,

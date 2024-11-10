@@ -27,12 +27,12 @@ if !global.pauseObj.paused {
 			}
 			var dir = point_direction(x,y,target.x,target.y)
 			if (right) {
-				sword.x = x + lengthdir_x(50,dir - 35 - (animation-7)*7)
-				sword.y = y + lengthdir_y(50,dir - 35 - (animation-7)*7)
+				sword.x = x + lengthdir_x(50*range/100,dir - 35 - (animation-7)*7)
+				sword.y = y + lengthdir_y(50*range/100,dir - 35 - (animation-7)*7)
 				sword.image_angle = dir - (animation-3)*15 -90
 			} else {
-				sword.x = x + lengthdir_x(50,dir + (animation-7)*7)
-				sword.y = y + lengthdir_y(50,dir + (animation-7)*7)
+				sword.x = x + lengthdir_x(50*range/100,dir + (animation-7)*7)
+				sword.y = y + lengthdir_y(50*range/100,dir + (animation-7)*7)
 				sword.image_angle = dir-75 + (animation-3)*15 -90
 			}
 			animation -= 1

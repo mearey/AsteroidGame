@@ -3,6 +3,7 @@
 event_inherited()
 image_xscale = 1 + image_index/4
 image_yscale = 1 + image_index/4
+part_type_color_mix(global.exhaust, c_white, c_white)
 part_type_orientation(global.exhaust, image_angle,image_angle,0,0,0)
 part_type_direction(global.exhaust,0,0,0,0);
 part_particles_create(global.p_system, x, y, global.exhaust, 1);	
@@ -39,7 +40,7 @@ if !global.pauseObj.paused {
 			for (var i = 0; i<num; i++) {
 				var dir_ = -point_direction(x,y,list[| i].x,list[| i].y)
 				list[| i].phy_speed_x += lengthdir_x(4, dir_)
-				list[| i].phy_speed_y += lengthdir_y(4, dir_)
+				list[| i].phy_speed_y -= lengthdir_y(4, dir_)
 				list[| i].takeDamage(global.player.dmg)
 			}
 			exploded = true

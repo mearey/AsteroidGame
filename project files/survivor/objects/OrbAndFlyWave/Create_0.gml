@@ -4,7 +4,7 @@
 // Inherit the parent event
 event_inherited();
 
-enemylist = [EnemyOrbObj,EnemyFlyObj,SquareWave]
+enemylist = [EnemyOrbObj,EnemyFlyObj]
 bosslist = [EnemyOrbBossObj,EnemyFlyBossObj, EnemySquareBossObj]
 
 timer = spawnrate + random_range(-20,20);

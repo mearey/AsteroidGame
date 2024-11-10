@@ -3,14 +3,17 @@
 
 // Inherit the parent event
 event_inherited();
+description = "Mele weapon that slashes at nearby enemies and deals massive damage"
 projectile_speed = global.player.projectile_speed;
 
 accuracy = global.player.accuracy;
 
-fire_rate = global.player.fire_rate*2;
+fire_rate = global.player.fire_rate*3;
 fire_timer = fire_rate;
 
 lvl = 1;
+
+damage = 8
 
 slot = 0
 
@@ -28,6 +31,7 @@ function lvlUp() {
 	if (lvl < 10) {
 		lvl+=1;	
 		fire_rate -= 1;
+		range+=20
 	} else {
 		evolved = true
 		removeWeaponFromPool(Sword)

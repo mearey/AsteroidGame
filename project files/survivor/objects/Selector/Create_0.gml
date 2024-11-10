@@ -7,6 +7,12 @@ lighting_layer = level_2__sun
 
 foreground_layer = level_2_planet
 
+//BACKGROUND SCROLLLING FOR MAIN MENU
+layer_hspeed("Stars",0.5)
+layer_hspeed("Background",0.25)
+
+
+
 event_inherited()
 x_ = surface_get_width(application_surface)/2
 y_ = surface_get_height(application_surface)/2
@@ -22,13 +28,12 @@ LoadUpgrades()
 Globals()
 
 coins = 0
-if (file_exists("save_total.ini")){
-	ini_open("save_total.ini")
-	coins = ini_read_real("CURRENCY", "coins", 0)
-	//music
-	global.currentSong = GameSongMenu
-	PlaySong(global.currentSong)
-}
+ini_open("save_total.ini")
+coins = ini_read_real("CURRENCY", "coins", 0)
+ini_close()
+//music
+global.currentSong = GameSongMenu
+PlaySong(global.currentSong)
 
 function CreateButton(degree, text, func) {
 	var direction_ = degree
@@ -47,6 +52,7 @@ CreateButton(30,"CONTINUE", function () {
 		audio_stop_all()
 		loadscreen = instance_create_depth(0,0,0,Loadscreen)
 		alarm[0] = 10
+		ini_close()
 	}
 })
 
@@ -56,7 +62,7 @@ CreateButton(0,"NEW GAME", function () {
 	
 })
 
-CreateButton(180-30,"OPTIONS", function () {
+CreateButton(180,"OPTIONS", function () {
 	instance_destroy(self)
 	instance_create_depth(x,y,1,OptionsSelector)
 })
@@ -64,6 +70,11 @@ CreateButton(180-30,"OPTIONS", function () {
 CreateButton(-30, "UPGRADES", function() {
 	instance_destroy(self)
 	instance_create_depth(x,y,1,UpgradeSelector)
+})
+
+CreateButton(180-30, "SHIP SELECT", function() {
+	instance_destroy(self)
+	instance_create_depth(x,y,1,ShipSelectionSelector)
 })
 
 CreateButton(180+30, "EXIT", function() {game_end()})

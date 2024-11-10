@@ -2,22 +2,21 @@
 // You can write your code in this editor
 event_inherited()
 slot = 6
-projectile_speed = 0
-
-accuracy = 0
-
-fire_rate = 0
+projectile_speed = global.player.projectile_speed*1.2
+fire_rate = global.player.fire_rate*6;
 fire_timer = fire_rate;
-
+accuracy = global.player.accuracy*4
+description = "Orbits the ship and occasionaly fires a laser at the nearest enemy"
 number = 1;
 lvl = 1;
+damage = 4
 
 function lvlUp() {
 	if (lvl < 10) {
 		lvl+=1
 		number+=1;
 	}  
-	if lvl == 10 {
+	if lvl >= 10 {
 		evolved = true
 		removeWeaponFromPool(OrbitalLaserWeapon)
 	}

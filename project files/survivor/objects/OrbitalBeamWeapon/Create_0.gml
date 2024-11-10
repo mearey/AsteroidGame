@@ -2,19 +2,25 @@
 // You can write your code in this editor
 event_inherited()
 slot = 8
-projectile_speed = 0
 
-accuracy = 0
+fire_rate = global.player.fire_rate*6;
+projectile_speed = 10
+
+accuracy = 10
+
+damage = 1
+projectile_speed = 10
 
 number_beams = 1;
 lvl = 1;
+description = "Orbits the ship and constantly beams nearby enemies"
 
 function lvlUp() {
 	if (lvl < 10) {
 		lvl+=1
 		number_beams+=1;
 	} 
-	if lvl == 10 {
+	if lvl >= 10 {
 		evolved = true
 		removeWeaponFromPool(OrbitalBeamWeapon)
 	}

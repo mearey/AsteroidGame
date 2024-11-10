@@ -10,4 +10,4 @@ animation = 0;
 
 slot = 0;
 
-alarm[0] = 40;
+alarm[0] = 10;

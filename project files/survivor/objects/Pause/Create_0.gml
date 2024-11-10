@@ -7,6 +7,8 @@ paused_surf = -1;
 
 upgrades = false
 
+
+
 function pause(upgrade) {
 	paused = !paused;
 	if paused_surf == -1 {

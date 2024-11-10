@@ -10,3 +10,7 @@ draw_set_valign(fa_middle)
 image_speed = 0
 
 hovered = false
+
+locked = false
+
+cost = -1

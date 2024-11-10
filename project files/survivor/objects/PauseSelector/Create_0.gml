@@ -13,6 +13,20 @@ cam_height = camera_get_view_height(view_camera[0])
 x_ = cam_x
 y_ = cam_y + cam_height/2
 
+
+tutorial = false
+
+ini_open("save_total.ini")
+
+if !(ini_key_exists("TUTORIAL", "invtut")) {
+	//DISPLAY THE TUTORIAL
+	tutorial = true
+	ini_write_real("TUTORIAL", "invtut", 1)
+}
+
+
+ini_close()
+
 slots = []
 inv_slots = []
 
@@ -64,42 +78,119 @@ function CreateInventory() {
 	var slot = instance_create_depth(x_-176,y_,1,WeaponSlot)
 	slot.slot = 0
 	slot.weapon = global.player.equipped_weapons[0]
+	var count = 0
+	for (var i=0; i<array_length(global.player.weapons); i+=1) {
+		if (global.player.weapons[i] == slot.weapon) {
+			count += 1;	
+		}
+	}
+	slot.lvl = count
 	array_push(slots, slot)
 	var slot = instance_create_depth(x_-256,y_-80,1,WeaponSlot)
 	slot.slot = 1
 	slot.weapon = global.player.equipped_weapons[1]
+	var count = 0
+	for (var i=0; i<array_length(global.player.weapons); i+=1) {
+		if (global.player.weapons[i] == slot.weapon) {
+			count += 1;	
+		}
+	}
+	slot.lvl = count
 	array_push(slots, slot)
 	var slot = instance_create_depth(x_-256,y_+80,1,WeaponSlot)
 	slot.slot = 2
 	slot.weapon = global.player.equipped_weapons[2]
+	var count = 0
+	for (var i=0; i<array_length(global.player.weapons); i+=1) {
+		if (global.player.weapons[i] == slot.weapon) {
+			count += 1;	
+		}
+	}
+	slot.lvl = count
 	array_push(slots, slot)
 	var slot = instance_create_depth(x_+256,y_-80,1,WeaponSlot)
 	slot.slot = 3
 	slot.weapon = global.player.equipped_weapons[3]
+	var count = 0
+	for (var i=0; i<array_length(global.player.weapons); i+=1) {
+		if (global.player.weapons[i] == slot.weapon) {
+			count += 1;	
+		}
+	}
+	slot.lvl = count
 	array_push(slots, slot)
 	var slot = instance_create_depth(x_+256,y_+80,1,WeaponSlot)
 	slot.slot = 4
 	slot.weapon = global.player.equipped_weapons[4]
+	var count = 0
+	for (var i=0; i<array_length(global.player.weapons); i+=1) {
+		if (global.player.weapons[i] == slot.weapon) {
+			count += 1;	
+		}
+	}
+	slot.lvl = count
 	array_push(slots, slot)
 	var slot = instance_create_depth(x_+176,y_,1,WeaponSlot)
 	slot.slot = 5
 	slot.weapon = global.player.equipped_weapons[5]
+	var count = 0
+	for (var i=0; i<array_length(global.player.weapons); i+=1) {
+		if (global.player.weapons[i] == slot.weapon) {
+			count += 1;	
+		}
+	}
+	slot.lvl = count
 	array_push(slots, slot)
 	var slot = instance_create_depth(x_+80,y_-288,1,WeaponSlot)
 	slot.slot = 6
 	slot.weapon = global.player.equipped_weapons[6]
+	var count = 0
+	for (var i=0; i<array_length(global.player.weapons); i+=1) {
+		if (global.player.weapons[i] == slot.weapon) {
+			count += 1;	
+		}
+	}
+	slot.lvl = count
 	array_push(slots, slot)
 	var slot = instance_create_depth(x_,y_-288,1,WeaponSlot)
 	slot.slot = 7
 	slot.weapon = global.player.equipped_weapons[7]
+	var count = 0
+	for (var i=0; i<array_length(global.player.weapons); i+=1) {
+		if (global.player.weapons[i] == slot.weapon) {
+			count += 1;	
+		}
+	}
+	slot.lvl = count
+	var count = 0
+	for (var i=0; i<array_length(global.player.weapons); i+=1) {
+		if (global.player.weapons[i] == slot.weapon) {
+			count += 1;	
+		}
+	}
+	slot.lvl = count
 	array_push(slots, slot)
 	var slot = instance_create_depth(x_-80,y_-288,1,WeaponSlot)
 	slot.slot = 8
 	slot.weapon = global.player.equipped_weapons[8]
+	var count = 0
+	for (var i=0; i<array_length(global.player.weapons); i+=1) {
+		if (global.player.weapons[i] == slot.weapon) {
+			count += 1;	
+		}
+	}
+	slot.lvl = count
 	array_push(slots, slot)
 	var slot = instance_create_depth(x_,y_-208,1,WeaponSlot)
 	slot.slot = 9
 	slot.weapon = global.player.equipped_weapons[9]
+	var count = 0
+	for (var i=0; i<array_length(global.player.weapons); i+=1) {
+		if (global.player.weapons[i] == slot.weapon) {
+			count += 1;	
+		}
+	}
+	slot.lvl = count
 	array_push(slots, slot)
 	
 	for (var i=0; i<array_length(slots); i++;) {

@@ -20,14 +20,16 @@ if !instance_exists(spawner) {
 		SpawnWave(ShipWave3,100,1,17)	
 	} else if difficulty < 800 {
 		SpawnWave(ShipWave3,100,3,10)	
-	} else {
-		if !boss {
-			with (spawner) {
-				instance_destroy(self)	
-			}
-			//SPAWN BOSS HERE\
-			var boss_obj = instance_create_depth(global.player.x,global.player.y,1,OrbOfScorb)
-			boss = true
+	}
+}
+
+if difficulty > 800 {
+	if !boss {
+		with (spawner) {
+			instance_destroy(self)	
 		}
+		//SPAWN BOSS HERE\
+		boss_obj = instance_create_depth(global.player.x,global.player.y-300,1,OrbOfScorb)
+		boss = true
 	}
 }

@@ -10,8 +10,10 @@ projectile_speed = global.player.projectile_speed;
 
 accuracy = global.player.accuracy/2;
 
-fire_rate = global.player.fire_rate*1.5;
+fire_rate = global.player.fire_rate;
 fire_timer = fire_rate;
+
+damage = 4
 
 lvl = 1;
 

@@ -3,7 +3,7 @@
 
 // Inherit the parent event
 event_inherited();
-lighting_colour= c_aqua
+lighting_colour = c_red
 lighting_size = 4
 lighting_intensity = 0.5;
 hp = 10;

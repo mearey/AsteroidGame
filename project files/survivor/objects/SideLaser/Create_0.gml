@@ -13,12 +13,14 @@ lvl = 1;
 
 slot = 4
 
+description = "Aimed basic laser repeater"
+damage = 4
 function lvlUp() {
 	if (lvl < 10) {
 		lvl+=1
 		fire_rate -= fire_rate/4
 	} 
-	if lvl == 10 {
+	if lvl >= 10 {
 		evolved = true
 		removeWeaponFromPool(SideLaser)
 	}

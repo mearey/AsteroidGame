@@ -13,3 +13,6 @@ damage = 5;
 xp = 10;
 
 chest = true
+
+image_xscale = 1.3
+image_yscale = 1.3

@@ -3,7 +3,7 @@
 
 // Inherit the parent event
 event_inherited();
-
+lighting_colour = c_aqua
 hp = 5;
 
 _speed = 0.08;
@@ -11,3 +11,6 @@ _speed = 0.08;
 damage = 2;
 
 xp = 2;
+
+image_xscale = 1.3
+image_yscale = 1.3

@@ -4,6 +4,8 @@ slot = 0
 
 weapon = Weapon
 
+lvl = 0
+
 grey = false
 
 blue = false

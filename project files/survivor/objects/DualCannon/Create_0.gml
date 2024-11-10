@@ -7,6 +7,9 @@
 // Inherit the parent event
 event_inherited();
 slot = 1
+damage = 5
+fire_rate = global.player.fire_rate/1.5;
+fire_timer = fire_rate;
 function lvlUp() {
 	if (lvl < 10) {
 		lvl+=1
