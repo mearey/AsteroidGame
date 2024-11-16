@@ -9,7 +9,7 @@ image_angle = point_direction(x,y,global.player.x,global.player.y)
 image_speed = 1;
 fire_rate = 100
 fire_timer = fire_rate
-hp = 15;
+hp = 8;
 _speed = 0.09;
 
 function takeDamage(damage) {	

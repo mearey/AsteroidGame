@@ -9,3 +9,5 @@ if (!global.pauseObj.paused){
 if chubby {
 	rot = int64(rot+1) mod 360	
 }
+
+	

@@ -73,12 +73,26 @@ CreateButton(180+30,"BACK", function () {
 	ini_open("unlocks.ini")
 	var button = GetShipUnlockButton(FastShip)
 	ini_write_real("SHIPS", "Fastship", !button.locked)
+	button = GetShipUnlockButton(MeeleShip)
+	ini_write_real("SHIPS", "Meeleship", !button.locked)
 	ini_close()
+	
 	ini_open("save_total.ini")
 	ini_write_real("CURRENCY", "coins", coins)
 	ini_close()
 	clearEntities()
 	room_goto(MainMenu)
+})
+
+CreateButton(180-30,"BUY", function () {
+	var btn = GetShipUnlockButton(display_ship)
+	if btn.locked {
+		if self.coins >= btn.cost {
+			self.coins -= btn.cost
+			btn.locked = false
+			global.ship_selection = display_ship
+		}
+	}
 })
 
 var button = CreateShipSelectButton(30,Sprite1,PlayerObj, function () {
@@ -90,21 +104,25 @@ if (ini_read_real("SHIPS", "Default", false)) {
 }
 
 var button = CreateShipSelectButton(15,PlayerFastShipSprite,FastShip, function () {
-	var button = GetShipUnlockButton(FastShip)
-	if button.locked {
-		if self.coins >= button.cost {
-			self.coins -= button.cost
-			button.locked = false
-			global.ship_selection = FastShip
-		}
-		display_ship = FastShip
-	} else {
-		global.ship_selection = FastShip	
-		display_ship = FastShip
+	display_ship = FastShip
+	if !GetShipUnlockButton(FastShip).locked {
+		global.ship_selection = FastShip
 	}
 })
 button.cost = 150
 if (ini_read_real("SHIPS", "Fastship", false)) {
+	button.locked = false	
+}
+
+
+var button = CreateShipSelectButton(0,MeeleShipSprite,MeeleShip, function () {
+	display_ship = MeeleShip
+	if !GetShipUnlockButton(MeeleShip).locked {
+		global.ship_selection = MeeleShip
+	}
+})
+button.cost = 230
+if (ini_read_real("SHIPS", "Meeleship", false)) {
 	button.locked = false	
 }
 

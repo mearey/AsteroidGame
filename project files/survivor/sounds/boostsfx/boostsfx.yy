@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"boostsfx.wav",
   "type":0,
-  "volume":0.69,
+  "volume":0.4,
 }

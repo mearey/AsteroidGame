@@ -13,10 +13,12 @@ if (collision_circle(x,y,8,Enemy,false,true) || (life <= 0 )) {
 		var list = ds_list_create();
 		var num = collision_circle_list(x,y,60*size,Enemy,false,true,list,false)
 		for (var i = 0; i<num; i++) {
-			var dir = -point_direction(global.player.x,global.player.y,list[| i].x,list[| i].y)
-			list[| i].phy_speed_x += lengthdir_x(4, dir)
-			list[| i].phy_speed_y -= lengthdir_y(4, dir)
-			list[| i].takeDamage(global.player.dmg)
+			if instance_exists(list[| i]) {
+				var dir = -point_direction(global.player.x,global.player.y,list[| i].x,list[| i].y)
+				list[| i].phy_speed_x += lengthdir_x(1.5, dir)
+				list[| i].phy_speed_y -= lengthdir_y(1.5, dir)
+				list[| i].takeDamage(global.player.dmg)
+			}
 		}	
 		exploded = true
 	}

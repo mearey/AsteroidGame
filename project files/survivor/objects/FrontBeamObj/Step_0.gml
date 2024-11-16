@@ -30,7 +30,7 @@ if (keyboard_check(vk_space) || mouse_check_button(mb_left) || true) {
 }
 
 
-
+try {
 if (instance_exists(bullet)) {
 	bullet.x = global.player.x
 	bullet.y = global.player.y
@@ -41,4 +41,7 @@ if (instance_exists(bullet)) {
 	if !(keyboard_check(vk_space) || mouse_check_button(mb_left) || true) {
 		bullet.image_speed = 1;
 	}
+}
+} catch (err) {
+	log (err)	
 }

@@ -18,3 +18,15 @@ if collision_circle(x,y,16,global.ship_selection,false,true) {
 	Notification("+1 lvl " + string(number) + " " +string_replace(sprite_get_name(temp.sprite_index),"_"," "), temp.sprite_index, 3)
 	instance_destroy(temp)
 }
+
+if x < 0 {
+	phy_position_x += 1	
+} else if x > room_width {
+	phy_position_x -= 1	
+}
+
+if y < 0 {
+	phy_position_y += 1
+} else if y > room_height {
+	phy_position_y -= 1	
+}

@@ -11,7 +11,7 @@ image_speed = 0
 lighting_colour = c_lime
 fire_rate = 100
 fire_timer = fire_rate
-hp = 2
+hp = 1.5
 _speed = 0.4;
 damage = 15;
 

@@ -9,7 +9,7 @@ image_speed = 0
 fire_rate = 100
 fire_timer = fire_rate
 
-hp = 10;
+hp = 6;
 
 _speed = 0.2;
 

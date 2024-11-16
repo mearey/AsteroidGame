@@ -7,14 +7,14 @@ fire_rate = global.player.fire_rate*6;
 fire_timer = fire_rate;
 accuracy = global.player.accuracy*4
 description = "Orbits the ship and occasionaly fires a laser at the nearest enemy"
-number = 1;
+number = 2;
 lvl = 1;
 damage = 4
 
 function lvlUp() {
 	if (lvl < 10) {
 		lvl+=1
-		number+=1;
+		number+=2;
 	}  
 	if lvl >= 10 {
 		evolved = true

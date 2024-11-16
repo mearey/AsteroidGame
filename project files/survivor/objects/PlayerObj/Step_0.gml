@@ -60,5 +60,5 @@ if (hp <= 0 && !dead) {
 	alarm[11] =200
 }
 if (hp < max_hp) && !global.pauseObj.paused {
-	hp+=regen/150
+	hp+=regen/300
 }

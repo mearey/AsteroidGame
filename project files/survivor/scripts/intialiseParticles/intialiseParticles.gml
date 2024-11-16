@@ -37,4 +37,21 @@ function intialiseParticles(){
 	part_type_alpha2(global.exhaust, 1,0);
 	part_type_scale(global.exhaust,1,1)
 	part_type_color3(global.exhaust,c_white,c_yellow, c_yellow)
+	
+	global.plasma = part_type_create();
+	part_type_sprite(global.plasma,Flame, 0, 0,0 );
+	part_type_speed(global.plasma,0.2,1,-0.01,0);            //The particles speed//part_type_orientation(global.particle1,0,0,0,0,true);        //This changes the rotation of the particle                       //This is the blend mode, either additive or normal
+	part_type_life(global.plasma,10,15);      
+	part_type_alpha2(global.plasma, 0.8,0);
+	part_type_scale(global.plasma,0.5,0.5)
+	part_type_size(global.plasma, 1,1,-0.1,0.1)
+	
+	global.asteroid_trail = part_type_create();
+	part_type_sprite(global.asteroid_trail,Flame, 0, 0,0 );
+	part_type_speed(global.asteroid_trail,0.2,1,-0.01,0);            //The particles speed//part_type_orientation(global.particle1,0,0,0,0,true);        //This changes the rotation of the particle                       //This is the blend mode, either additive or normal
+	part_type_life(global.asteroid_trail,40,60);      
+	part_type_alpha2(global.asteroid_trail, 0.8,0);
+	part_type_size(global.asteroid_trail, 1,1,-0.03,0.1)
+	part_type_color_mix(global.asteroid_trail, c_orange, c_yellow)
+	
 }

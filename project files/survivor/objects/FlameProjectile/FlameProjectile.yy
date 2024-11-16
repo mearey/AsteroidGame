@@ -14,10 +14,7 @@
     "name":"Projectiles",
     "path":"folders/Objects/Projectiles.yy",
   },
-  "parentObjectId":{
-    "name":"PlayerBullet",
-    "path":"objects/PlayerBullet/PlayerBullet.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-
+body = []
 for (var i = 0; i<length; i++;) {
 	var modifier = 1
 	if x<room_width/2 {

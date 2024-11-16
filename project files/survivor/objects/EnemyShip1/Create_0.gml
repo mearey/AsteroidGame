@@ -10,7 +10,7 @@ image_speed = 0
 
 fire_rate = 300
 fire_timer = fire_rate
-hp = 3
+hp = 2
 _speed = 0.1;
 xp = 1
 lighting_colour = c_red

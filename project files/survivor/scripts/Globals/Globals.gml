@@ -2,7 +2,6 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function Globals(){
 	
-	
 	//settings
 	global.master_volume = 1
 	global.sfx_level = 1
@@ -50,6 +49,12 @@ function clearEntities() {
 		instance_destroy(self)	
 	}
 	with (PlayerObj) {
+		instance_destroy(self)	
+	}
+	with (Hammer) {
+		instance_destroy(self)	
+	}
+	with (HammerController) {
 		instance_destroy(self)	
 	}
 }

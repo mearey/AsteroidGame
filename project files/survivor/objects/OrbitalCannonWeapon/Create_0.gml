@@ -3,11 +3,11 @@
 event_inherited()
 slot = 7
 
-projectile_speed = global.player.projectile_speed*3;
+projectile_speed = global.player.projectile_speed*2;
 fire_rate = global.player.fire_rate*6;
 fire_timer = fire_rate;
 description = "Orbits the ship and occasionaly fires a bullet at the nearest enemy"
-number = 1;
+number = 2;
 lvl = 1;
 damage = 5
 
@@ -15,7 +15,7 @@ damage = 5
 function lvlUp() {
 	if (lvl < 10) {
 		lvl+=1
-		number+=1;
+		number+=2;
 	}  
 	if lvl >= 10 {
 		evolved = true

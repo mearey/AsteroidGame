@@ -10,30 +10,33 @@ if (instance_exists(Enemy)) {
 
 if (instance_exists(sword)) {
 	sword.x = x
-	sword.y = y
+	sword.y = y		
 	sword.image_angle = image_angle
 }
 
 if !global.pauseObj.paused {
-	if (target != PlayerObj) && distance_to_object(target) < range {
+	if ((target != PlayerObj) && distance_to_object(target) < range) || (anim_started) {
+		anim_started = true
 		if (fire_timer > 0) {
 			fire_timer -= 1
 			alarm_ = false
-			animation = 10/(20/fire_rate)
+			animation = (20)
 		} else {
 			if !alarm_ {
-				alarm[0] =10/(20/fire_rate)
+				alarm[0] = (20)
 				alarm_ = true
 			}
-			var dir = point_direction(x,y,target.x,target.y)
-			if (right) {
-				sword.x = x + lengthdir_x(50*range/100,dir - 35 - (animation-7)*7)
-				sword.y = y + lengthdir_y(50*range/100,dir - 35 - (animation-7)*7)
-				sword.image_angle = dir - (animation-3)*15 -90
-			} else {
-				sword.x = x + lengthdir_x(50*range/100,dir + (animation-7)*7)
-				sword.y = y + lengthdir_y(50*range/100,dir + (animation-7)*7)
-				sword.image_angle = dir-75 + (animation-3)*15 -90
+			if instance_exists(target) {
+				var dir = point_direction(x,y,target.x,target.y)
+				if (right) {
+					sword.x = x + lengthdir_x(50*range/100,dir - 35 - (animation-7)*7)
+					sword.y = y + lengthdir_y(50*range/100,dir - 35 - (animation-7)*7)
+					sword.image_angle = dir - (animation-3)*15 - 90
+				} else {
+					sword.x = x + lengthdir_x(50*range/100,dir + (animation-7)*7)
+					sword.y = y + lengthdir_y(50*range/100,dir + (animation-7)*7)
+					sword.image_angle = dir-75 + (animation-3)*15 -90
+				}
 			}
 			animation -= 1
 			//play audio

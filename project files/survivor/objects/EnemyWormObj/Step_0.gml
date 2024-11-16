@@ -15,4 +15,11 @@ image_angle = direction
 if move {
 	physics_apply_impulse(x,y,lengthdir_x(_speed,direction),lengthdir_y(_speed,direction))
 }
+
+try {
+if !instance_exists(body[0]) {
+	dead = true
+	instance_destroy(self)
+}
+}
 }

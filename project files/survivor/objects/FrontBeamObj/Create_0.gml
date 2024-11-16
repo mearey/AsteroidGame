@@ -23,4 +23,4 @@ function lvlUp() {
 	}
 }
 
-bullet = -999;
+bullet = NaN;

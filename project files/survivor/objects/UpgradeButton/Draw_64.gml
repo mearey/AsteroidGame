@@ -26,4 +26,6 @@ for (var i = 0; i< points; i++) {
 	y_ = y-camy+20
 	draw_rectangle_color(x_+1,y_+1,x_+6-1,y_+20-1,c_aqua,c_aqua,c_aqua,c_aqua,false)	
 }
+} else {
+	sprite_index = 	ButtonSprite
 }

@@ -27,5 +27,3 @@ gpu_set_blendmode(bm_normal)
 
 surface_reset_target()
 draw_sprite_ext(GlowCircleSmallSpr,0,eye_x,eye_y,2,2,0,c_aqua,0.3)
-
-draw_healthbar(x-50,y-60,x+50,y-70,(hp/max_hp)*100,c_black,c_green,c_green,0,true,true)

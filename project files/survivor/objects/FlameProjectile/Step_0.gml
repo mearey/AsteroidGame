@@ -2,7 +2,14 @@
 // You can write your code in this editor
 
 // Inherit the parent event
-event_inherited();
+if !global.pauseObj.paused {
+	lifetime -= 1
+}
+
+if lifetime <= 0 {
+	instance_destroy(self)	
+}
+
 if !global.pauseObj.paused {
 if speed > 0 {
 	speed -= 0.1;

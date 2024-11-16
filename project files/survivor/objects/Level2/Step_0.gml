@@ -1,35 +1,76 @@
 /// @description Insert description here
 // You can write your code in this editor
-
 // Inherit the parent event
 event_inherited();
-if !instance_exists(spawner) {
-	if difficulty < 100 {
-		SpawnWave(ShipWave, 100, 1, 50)
+if !set {
+	//difficulty*60 = frames
+	if difficulty < 50 {
+		enemylist = [AsteroidObj]
+		bosslist = [AsteroidBossObj]
+		number = 10
+		num_bosses = 1
+		spawnrate = 120
+	} else if difficulty < 100 {
+		enemylist = [AsteroidObj, GunDebrisObj]
+		bosslist = [AsteroidBossObj]
+		number = 35
+		num_bosses = 1
+		spawnrate = 110
 	} else if difficulty < 200 {
-		SpawnWave(ShipWave, 50, 1, 40)
+		enemylist = [AsteroidObj, RocketObj]
+		bosslist = [AsteroidBossObj, RocketBossObj]
+		number = 40
+		num_bosses = 1
+		spawnrate = 80
 	} else if difficulty < 300 {
-		SpawnWave(ShipWave1, 100, 1, 25)
+		enemylist = [RocketObj,RocketObj, SatelliteObj, SatelliteObj, SatelliteObj]
+		bosslist = [RocketBossObj]
+		number = 70
+		num_bosses = 1
+		spawnrate = 40
 	} else if difficulty < 400 {
-		SpawnWave(ShipWave1, 200, 2, 20)
+		enemylist = [AsteroidObj, RocketObj, SatelliteObj, SatelliteObj, SatelliteObj, GunDebrisObj]
+		bosslist = [AsteroidBossObj, RocketBossObj]
+		number = 100
+		num_bosses = 2
+		spawnrate = 30
 	} else if difficulty < 500 {
-		SpawnWave(ShipWave2, 200, 1, 15)
+		enemylist = [AsteroidObj, RocketObj, SatelliteObj, SatelliteObj, SatelliteObj,AsteroidObj, RocketObj, SatelliteObj, SatelliteObj, SatelliteObj, DebrisGrabberObj]
+		bosslist = [AsteroidBossObj, RocketBossObj]
+		number = 130
+		num_bosses = 1
+		spawnrate = 20
 	} else if difficulty < 600 {
-		SpawnWave(ShipWave2,300,1,10)
+		enemylist = [AsteroidObj, RocketObj, SatelliteObj, DebrisGrabberObj, EnemySquareObj, GunDebrisObj]
+		bosslist = [AsteroidBossObj, RocketBossObj]
+		number = 200
+		num_bosses = 1
+		spawnrate = 13
 	} else if difficulty < 700 {
-		SpawnWave(ShipWave3,100,1,17)	
+		enemylist = [AsteroidObj, SatelliteObj,AsteroidObj, SatelliteObj,AsteroidObj, SatelliteObj, DebrisGrabberObj]
+		bosslist = [AsteroidBossObj]
+		number = 300
+		num_bosses = 1
+		spawnrate = 10
 	} else if difficulty < 800 {
-		SpawnWave(ShipWave3,100,3,10)	
+		enemylist = [AsteroidObj, RocketObj, SatelliteObj, SatelliteObj, SatelliteObj, DebrisGrabberObj]
+		bosslist = [AsteroidBossObj, RocketBossObj]
+		number = 400
+		num_bosses = 2
+		spawnrate = 8
+	} else {
+		enemylist = [AsteroidObj, RocketObj, SatelliteObj, SatelliteObj, SatelliteObj, DebrisGrabberObj, GunDebrisObj]
+		bosslist = [AsteroidBossObj, RocketBossObj]
 	}
+	set = true
 }
 
 if difficulty > 800 {
+	enemylist = [AsteroidObj, RocketObj, SatelliteObj, SatelliteObj, SatelliteObj, DebrisGrabberObj, GunDebrisObj]
+	bosslist = [AsteroidBossObj, RocketBossObj]
 	if !boss {
-		with (spawner) {
-			instance_destroy(self)	
-		}
 		//SPAWN BOSS HERE\
-		boss_obj = instance_create_depth(global.player.x,global.player.y-300,1,OrbOfScorb)
+		boss_obj = instance_create_depth(global.player.x,global.player.y-300,1,WallOfDebris)
 		boss = true
 	}
 }

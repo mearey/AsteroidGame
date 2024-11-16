@@ -46,3 +46,9 @@ function invincible() {
 	global.player.max_hp = 9999
 	global.player.hp = 9999
 }
+
+function unlock() {
+	ini_open("unlocks.ini")
+	ini_write_real("LEVELS", "2", 1)
+	ini_close()
+}

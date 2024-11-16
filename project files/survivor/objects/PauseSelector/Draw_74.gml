@@ -13,19 +13,6 @@ draw_circle(x_,y_,340+18,true)
 draw_sprite_ext(sprite_index,0,x-cam_x,y-cam_y,1,1,0,c_white,1)
 draw_set_alpha(1)
 
-//draw stats on the left
-/*
-draw_set_halign(fa_left)
-draw_text(x_+96,y_-96,"LVL: " + string(global.player.lvl))
-draw_text(x_+96,y_-64,"DMG: " + string(global.player.dmg))
-draw_text(x_+96,y_-32,"SPEED: " + string(global.player.max_speed))
-draw_text(x_+96,y_,"SHOT SPEED: " + string(global.player.projectile_speed))
-draw_text(x_+96,y_+32,"FIRE RATE: " + string(global.player.fire_rate/20))
-draw_text(x_+96,y_+64,"HP: " + string(global.player.max_hp))
-draw_text(x_+96,y_+96,"ACCURACY: " + string(global.player.accuracy))
-draw_set_halign(fa_center)
-*/
-
 //draw player on the right
 var num_orbitals = 0;
 draw_sprite_ext(global.player.sprite_index,0,round(cam_width*3/4),round(cam_height/2),7,7,90,c_white,1)
@@ -46,7 +33,8 @@ event_inherited()
 draw_set_halign(fa_right)
 
 //DRAW speed
-for (var i = 0; i<10; i++) {
+var spd = global.player.max_speed*2
+for (var i = 0; i<max(10,spd); i++) {
 	x_ = i*8+25*5
 	y_ = surface_get_height(application_surface)/2-90
 	draw_rectangle_color(x_-1,y_-1,x_+6+1,y_+20+1,c_black,c_black,c_black,c_black, false)
@@ -54,14 +42,15 @@ for (var i = 0; i<10; i++) {
 }
 draw_text(24*5,surface_get_height(application_surface)/2-90+string_height("S")/2,"Speed:")
 
-for (var i = 0; i<global.player.max_speed*2; i++) {
+for (var i = 0; i<spd; i++) {
 	x_ = i*8+25*5
 	y_ = surface_get_height(application_surface)/2-90
 	draw_rectangle_color(x_+1,y_+1,x_+6-1,y_+20-1,c_aqua,c_aqua,c_aqua,c_aqua,false)	
 }
 
 //DRAW DAMAGE
-for (var i = 0; i<10; i++) {
+var dmg = global.player.dmg*7-3
+for (var i = 0; i<max(10,dmg); i++) {
 	x_ = i*8+25*5
 	y_ = surface_get_height(application_surface)/2-60
 	draw_rectangle_color(x_-1,y_-1,x_+6+1,y_+20+1,c_black,c_black,c_black,c_black, false)
@@ -69,14 +58,15 @@ for (var i = 0; i<10; i++) {
 }
 draw_text(24*5,surface_get_height(application_surface)/2-60+string_height("S")/2,"Damage:")
 
-for (var i = 0; i<global.player.dmg*7-3; i++) {
+for (var i = 0; i<dmg; i++) {
 	x_ = i*8+25*5
 	y_ = surface_get_height(application_surface)/2-60
 	draw_rectangle_color(x_+1,y_+1,x_+6-1,y_+20-1,c_aqua,c_aqua,c_aqua,c_aqua,false)	
 }
 
 //DRAW FIRE RATE
-for (var i = 0; i<10; i++) {
+var frate = 10/global.player.fire_rate;
+for (var i = 0; i<max(10,frate); i++) {
 	x_ = i*8+25*5
 	y_ = surface_get_height(application_surface)/2-30
 	draw_rectangle_color(x_-1,y_-1,x_+6+1,y_+20+1,c_black,c_black,c_black,c_black, false)
@@ -84,14 +74,15 @@ for (var i = 0; i<10; i++) {
 }
 draw_text(24*5,surface_get_height(application_surface)/2-30+string_height("S")/2,"Fire Rate:")
 
-for (var i = 0; i<10/global.player.fire_rate; i++) {
+for (var i = 0; i<frate; i++) {
 	x_ = i*8+25*5
 	y_ = surface_get_height(application_surface)/2-30
 	draw_rectangle_color(x_+1,y_+1,x_+6-1,y_+20-1,c_aqua,c_aqua,c_aqua,c_aqua,false)	
 }
 
 //DRAW HP
-for (var i = 0; i<10; i++) {
+var hp_ = global.player.hp/10
+for (var i = 0; i<max(10,hp_); i++) {
 	x_ = i*8+25*5
 	y_ = surface_get_height(application_surface)/2
 	draw_rectangle_color(x_-1,y_-1,x_+6+1,y_+20+1,c_black,c_black,c_black,c_black, false)
@@ -99,14 +90,15 @@ for (var i = 0; i<10; i++) {
 }
 draw_text(24*5,surface_get_height(application_surface)/2+string_height("S")/2,"HP:")
 
-for (var i = 0; i<global.player.hp/10; i++) {
+for (var i = 0; i<hp_; i++) {
 	x_ = i*8+25*5
 	y_ = surface_get_height(application_surface)/2
 	draw_rectangle_color(x_+1,y_+1,x_+6-1,y_+20-1,c_aqua,c_aqua,c_aqua,c_aqua,false)	
 }
 
 //DRAW PROJECTILE SPEED
-for (var i = 0; i<10; i++) {
+var pspeed = global.player.projectile_speed/3
+for (var i = 0; i<max(10,pspeed); i++) {
 	x_ = i*8+25*5
 	y_ = surface_get_height(application_surface)/2+30
 	draw_rectangle_color(x_-1,y_-1,x_+6+1,y_+20+1,c_black,c_black,c_black,c_black, false)
@@ -114,7 +106,7 @@ for (var i = 0; i<10; i++) {
 }
 draw_text(24*5, surface_get_height(application_surface)/2+30+string_height("S")/2,"Projectile Speed:")
 
-for (var i = 0; i<global.player.projectile_speed/3; i++) {
+for (var i = 0; i<pspeed; i++) {
 	x_ = i*8+25*5
 	y_ = surface_get_height(application_surface)/2+30
 	draw_rectangle_color(x_+1,y_+1,x_+6-1,y_+20-1,c_aqua,c_aqua,c_aqua,c_aqua,false)	

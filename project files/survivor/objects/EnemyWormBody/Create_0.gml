@@ -7,14 +7,14 @@ num=0
 
 breakoff = true
 
-hp=3
+hp=2
 
 dead = false
 
 damage = 1
 
 lighting_colour = c_purple
-
+plasma = 0
 function takeDamage(damage) {	
 	hp-=damage;
 	if (hp<=0) {

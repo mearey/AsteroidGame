@@ -42,7 +42,7 @@ target = self
 max_hp = 100;
 hp = max_hp;
 
-max_xp = 6;
+max_xp = 12;
 xp = 0;
 lvl = 0;
 

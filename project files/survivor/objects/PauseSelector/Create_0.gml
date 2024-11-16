@@ -56,7 +56,6 @@ CreateButton(0,"OPTIONS", function () {
 })
 	
 CreateButton(-30, "SAVE & EXIT", function() {
-	//save
 	saveState();
 	clearEntities()
 	room_goto(MainMenu)

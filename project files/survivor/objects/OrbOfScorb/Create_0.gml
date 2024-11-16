@@ -29,21 +29,29 @@ image_yscale = 1
 
 
 moves = [
-	function move1() {
-		alarm[1] = 100
-		move_cooldown = 101
+	function move0() {
+		alarm[1] = 50
+		move_cooldown = 51
+	},
+	function move01() {
+		alarm[1] = 50
+		move_cooldown = 51
+	},
+	function move02() {
+		alarm[1] = 50
+		move_cooldown = 51
 	},
 	function move2() {
 		instance_create_depth(x+10,y,1,EnemyOrbObj)
 		instance_create_depth(x-10,y,1,EnemyOrbObj)
 		instance_create_depth(x,y+10,1,EnemyOrbObj)
 		instance_create_depth(x,y-10,1,EnemyOrbObj)
-		move_cooldown = 50
+		move_cooldown = 25
 	},
 	function move3() {
-		alarm[2] = 20
+		alarm[2] = 10
 		moving = true
-	    move_cooldown = 20
+	    move_cooldown = 10
 
 		moveto_x = random_range(-50,50)
 		moveto_y = random_range(-50,50)
@@ -54,12 +62,12 @@ moves = [
 		instance_create_depth(x-10,y,1,EnemyShip1)
 		instance_create_depth(x,y+10,1,EnemyShip1)
 		instance_create_depth(x,y-10,1,EnemyShip1)
-		move_cooldown = 50
+		move_cooldown = 25
 	},
 	function move5() {
-		alarm[2] = 20
+		alarm[2] = 10
 		moving = true
-	    move_cooldown = 20
+	    move_cooldown = 10
 
 		moveto_x = random_range(-100,100)
 		moveto_y = random_range(-100,100)

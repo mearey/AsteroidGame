@@ -2,7 +2,9 @@
 // You can write your code in this editor
 
 // Inherit the parent event
-event_inherited();
+projectile_speed = 0;
+accuracy = 0;
+lifetime = 100;
 lighting_colour = c_purple
 lighting_intensity = 0
 size = 0

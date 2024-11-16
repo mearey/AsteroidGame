@@ -51,7 +51,11 @@ function saveState(){
 	//save enemies
 	for (var i=0 ; i<instance_number(Enemy); i++) {
 		var enemy = instance_find(Enemy,i)
-		ini_write_string("ENEMIES", "enemy_"+string(i), object_get_name(enemy.object_index)+"_"+string(enemy.x)+"_"+string(enemy.y)+"_"+string(enemy.size))
+		if object_get_physics(enemy.object_index) {
+			ini_write_string("ENEMIES", "enemy_"+string(i), object_get_name(enemy.object_index)+"_"+string(enemy.x)+"_"+string(enemy.y)+"_"+string(enemy.size)+"_"+string(enemy.phy_speed_x)+"_"+string(enemy.phy_speed_y))
+		} else {
+			ini_write_string("ENEMIES", "enemy_"+string(i), object_get_name(enemy.object_index)+"_"+string(enemy.x)+"_"+string(enemy.y)+"_"+string(enemy.size)+"_0_0")
+		}
 	}
 	ini_write_real("ENEMIES", "num", i)
 	
@@ -126,6 +130,9 @@ function loadState() {
 		enemy.image_yscale =real(res[3])
 		enemy.image_xscale = real(res[3])
 		enemy.lighting_size = 2*real(res[3])
+		if object_get_physics(enemy.object_index) {
+			enemy.set_phys_speed(res[4],res[5])
+		}
 	}
 	//load level and wave
 	var diff = ini_read_real("SAVEWAVE", "difficulty", 1)

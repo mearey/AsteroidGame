@@ -10,7 +10,7 @@ fire_rate = global.player.fire_rate*6;
 
 target = PlayerObj
 
-range = 300
+range = 350
 
 rotation = 360
 

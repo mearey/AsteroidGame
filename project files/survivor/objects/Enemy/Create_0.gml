@@ -11,7 +11,9 @@ _speed = 0.1;
 
 chubby = false
 
-if (random(1) < 0.02) {
+new_ = false
+
+if (random(1) < 0.012) {
 	chubby = true	
 	rot = 0
 }
@@ -23,8 +25,10 @@ xp = 1;
 chest = false;
 
 combine_time = 200
+plasma = 0
 
-
+p_x = 0
+p_y = 0
 
 function takeDamage(damage) {	
 	hp-=damage;
@@ -41,7 +45,14 @@ function takeDamage(damage) {
 	image_index = 1;
 	alarm[0] = 10;
 	//draw_damage number
-	if damage*10 > 1 {
-		instance_create_depth(x,y,1,DamageText).number = damage
+	if damage*10 > 0 {
+		instance_create_depth(random_range(x-sprite_width/2,x+sprite_width/2),random_range(y-sprite_height/2,y+sprite_height/2),1,DamageText).number = damage
 	}
 }
+
+function set_phys_speed(x_,y_) {
+	p_x = x_
+	p_y = y_
+}
+
+alarm[11] = 5

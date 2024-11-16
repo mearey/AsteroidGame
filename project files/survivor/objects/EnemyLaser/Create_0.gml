@@ -4,7 +4,7 @@ event_inherited()
 projectile_speed = 1
 accuracy = 0;
 lifetime = 1000;
-damage = 2
+damage = 6
 
 size = 14
 

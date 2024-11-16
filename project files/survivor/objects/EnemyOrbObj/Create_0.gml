@@ -14,3 +14,7 @@ function physics_fixture_create_() {
 check_timer = 120
 num = 0
 combine_time = 200
+hp = 2
+new_ = false
+alarm[1] = 10
+

@@ -4,7 +4,7 @@
 // Inherit the parent event
 event_inherited();
 lighting_colour= c_aqua
-hp = 20;
+hp = 11;
 
 _speed = 0.1;
 

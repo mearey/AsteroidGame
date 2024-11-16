@@ -11,8 +11,8 @@
   "name":"Sword",
   "overriddenProperties":[],
   "parent":{
-    "name":"mele",
-    "path":"folders/Objects/Weapons/mele.yy",
+    "name":"melee",
+    "path":"folders/Objects/Weapons/melee.yy",
   },
   "parentObjectId":{
     "name":"Weapon",

@@ -5,7 +5,7 @@
 event_inherited();
 
 
-projectile_speed = global.player.projectile_speed*3;
+projectile_speed = global.player.projectile_speed*2;
 fire_rate = global.player.fire_rate*6;
 fire_timer = fire_rate;
 range = 300

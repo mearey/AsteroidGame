@@ -6,3 +6,4 @@ timer = 50
 
 direction = random_range(-180,0)
 
+

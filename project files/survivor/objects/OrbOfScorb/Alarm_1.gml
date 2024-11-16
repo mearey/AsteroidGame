@@ -3,7 +3,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 var bullet = instance_create_depth(eye_x,eye_y,1,GiantLaserShot)
-bullet.projectile_speed = 20
+bullet.projectile_speed = 22
 bullet.direction = dir
 image_index = 0
 

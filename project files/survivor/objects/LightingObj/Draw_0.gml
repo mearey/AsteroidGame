@@ -19,16 +19,19 @@ gpu_set_blendmode(bm_subtract)
 if (instance_exists(Level)) {
 	draw_sprite(global.level.lighting_layer, 0, camx*0.3-room_width/4 - camx, camy*0.3-room_width/4 + cam_height*1.3 - camy-1440)
 }
+
 for (var i = 0; i< instance_number(ObjectLightingParent); i++) {
 	var obj = instance_find(ObjectLightingParent, i)
-	draw_sprite_ext(obj.lighting_sprite,0,obj.x-camx,obj.y-camy, obj.lighting_size, obj.lighting_size, obj.image_angle,c_white,obj.lighting_intensity)
+	draw_sprite_ext(obj.lighting_sprite,0,obj.x-camx,obj.y-camy, obj.lighting_size, obj.lighting_size, obj.image_angle,obj.lighting_colour,obj.lighting_intensity)
 }
+
 gpu_set_blendmode(bm_normal)
-		
+	
 for (var i = 0; i< instance_number(ObjectLightingParent); i++) {
 	var obj = instance_find(ObjectLightingParent, i)
 	draw_sprite_ext(obj.lighting_sprite,0,obj.x-camx,obj.y-camy, obj.lighting_size,obj.lighting_size, obj.image_angle,obj.lighting_colour,obj.lighting_intensity)
 }
+
 	
 draw_set_alpha(1)
 surface_reset_target()

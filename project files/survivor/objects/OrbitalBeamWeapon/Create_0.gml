@@ -11,14 +11,14 @@ accuracy = 10
 damage = 1
 projectile_speed = 10
 
-number_beams = 1;
+number_beams = 2;
 lvl = 1;
 description = "Orbits the ship and constantly beams nearby enemies"
 
 function lvlUp() {
 	if (lvl < 10) {
 		lvl+=1
-		number_beams+=1;
+		number_beams+=2;
 	} 
 	if lvl >= 10 {
 		evolved = true

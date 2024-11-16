@@ -41,8 +41,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spriteCursor",
-    "path":"sprites/spriteCursor/spriteCursor.yy",
+    "name":"nocollision",
+    "path":"sprites/nocollision/nocollision.yy",
   },
   "spriteMaskId":null,
   "visible":true,

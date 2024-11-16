@@ -9,6 +9,7 @@ speed_+=0.4
 
 if collision_point(x,y,global.ship_selection,false,true) {
 	instance_destroy(self)
+	audio_stop_sound(expGetSound)
 	PlaySFX(expGetSound,1,1)
 	global.player.addXP(number);
 }
