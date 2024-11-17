@@ -10,3 +10,8 @@ layer_y("Midground", camy*0.3+room_height/4-1440)
 layer_x("Foreground", camx*0.5+room_width/4)
 
 layer_y("Foreground", camy*0.5-room_height/4)
+
+with MidgroundObj {
+	x_ = camx*0.5+room_width/4
+	y_ = camy*0.5-room_height/4
+}

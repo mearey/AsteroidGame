@@ -2,6 +2,7 @@
 // You can write your code in this editor
 
 if !global.pauseObj.paused {
+
 ability_()
 	
 image_angle = point_direction(x,y,mouse_x,mouse_y)	
@@ -26,6 +27,7 @@ if ((keyboard_check(ord("W"))||keyboard_check(ord("A"))||keyboard_check(ord("S")
 }
 if (keyboard_check(ord("W")) && y>0) {
 	yspeed -= speed_
+	instance_create_layer(x,y,"Foreground", DeadPlayer)
 }
 if (keyboard_check(ord("D")) && x<room_width) {
 	xspeed += speed_
@@ -46,6 +48,7 @@ if !(global.pauseObj.paused) && !dead {
 	yspeed = 0
 }
 if (hp <= 0 && !dead) {
+	
 	dead = true
 	var inst = instance_create_depth(x,y,1,DeadPlayer)
 	inst.phy_rotation = -image_angle
@@ -62,3 +65,14 @@ if (hp <= 0 && !dead) {
 if (hp < max_hp) && !global.pauseObj.paused {
 	hp+=regen/300
 }
+
+if speed_ > 0 {
+	if image_angle > previous_dir+1 {
+		image_index = 2
+	} else if image_angle < previous_dir-1 {
+		image_index = 3
+	} else if image_angle == previous_dir {
+		image_index = 0
+	}	
+}
+previous_dir = image_angle

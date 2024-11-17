@@ -54,4 +54,10 @@ function intialiseParticles(){
 	part_type_size(global.asteroid_trail, 1,1,-0.03,0.1)
 	part_type_color_mix(global.asteroid_trail, c_orange, c_yellow)
 	
+	global.enemy_laser_trail = part_type_create();
+	part_type_sprite(global.enemy_laser_trail,EnemyLaserSprite, 0, 0,0 );            //The particles speed//part_type_orientation(global.particle1,0,0,0,0,true);        //This changes the rotation of the particle                       //This is the blend mode, either additive or normal
+	//part_type_life(global.asteroid_trail,40,60);
+	part_type_alpha2(global.enemy_laser_trail, 0.8,0);
+	part_type_color_mix(global.enemy_laser_trail, c_lime, c_green)
+	
 }

@@ -36,8 +36,6 @@ particle trail for enemy laser
 
 next level should be set inside a giant space station
  
-make player start in the middle of the level
- 
 ---- extra ideas ----
 
 if there is 2 items in chest have them combine into a level 2
