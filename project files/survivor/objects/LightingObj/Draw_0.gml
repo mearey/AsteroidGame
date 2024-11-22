@@ -11,7 +11,7 @@ var camy = camera_get_view_y(view_camera[0])
 
 surface_set_target(lighting_surface)
 
-draw_set_alpha(0.6)
+draw_set_alpha(0.7)
 draw_set_color(c_black)
 draw_rectangle(0,0,cam_width,cam_height,false)
 draw_set_color(c_white)
@@ -23,6 +23,7 @@ if (instance_exists(Level)) {
 for (var i = 0; i< instance_number(ObjectLightingParent); i++) {
 	var obj = instance_find(ObjectLightingParent, i)
 	draw_sprite_ext(obj.lighting_sprite,0,obj.x-camx,obj.y-camy, obj.lighting_size, obj.lighting_size, obj.image_angle,obj.lighting_colour,obj.lighting_intensity)
+	
 }
 
 gpu_set_blendmode(bm_normal)

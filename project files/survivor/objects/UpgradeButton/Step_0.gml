@@ -4,6 +4,7 @@
 // Inherit the parent event
 event_inherited();
 
+if backwards {
 if hovered && mouse_check_button_pressed(mb_right) {
 	if points > 0 {
 		points -= 2
@@ -19,4 +20,5 @@ if hovered && mouse_check_button_pressed(mb_right) {
 			instance_find(UpgradeSelector, 0).coins += cost*2
 		}
 	}
+}
 }

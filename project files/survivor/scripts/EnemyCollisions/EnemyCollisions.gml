@@ -18,6 +18,9 @@ function EnemyCollisions(){
 	if collision_circle(x,y,sprite_height/2,LaserObj,false,true) {
 		takeDamage(global.player.dmg/1.5)
 	}
+	if collision_circle(x,y,sprite_height/2,ShockProjectile,false,true) {
+		takeDamage(global.player.dmg)
+	}
 
 	if (collision_circle(x,y,sprite_height/2, SwordObject,false,true)){
 		if SwordObject.x != global.player.x {

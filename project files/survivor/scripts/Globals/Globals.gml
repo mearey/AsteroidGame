@@ -6,19 +6,22 @@ function Globals(){
 	global.master_volume = 1
 	global.sfx_level = 1
 	global.music_level = 1
+	global.lighting = true
 	loadOptions()
 	
 	//audio and music
 	global.currentSong = GameSongMenu
 	
 	randomize()
-	cursor_sprite = spriteCursor;
 	global.weaponPool = [CannonMKII_Left, CannonMKII_Right, FrontBeamObj, CannonMKI, OrbitalCannonWeapon, OrbitalBeamWeapon,OrbitalLaserWeapon, SideLaser, LaserMKI, SideBeam, Sword, DisruptionField, MissileLauncher, MineLayer, GrenadeThrower, Flamethrower_, MiniShotgun]
 	global.synergies = [
 		[CannonMKII_Left, CannonMKII_Right, DualCannon], 
 		[FrontBeamObj, SideBeam, BeamUpgraded],
 		[SideLaser, LaserMKI, JointLaser]
 	]
+	
+	//trader list
+	global.seller_list = [DualCannon,BeamUpgraded,JointLaser,ShockLauncher]
 	
 	if !(os_browser == browser_not_a_browser) {
 		bw = browser_width
@@ -55,6 +58,9 @@ function clearEntities() {
 		instance_destroy(self)	
 	}
 	with (HammerController) {
+		instance_destroy(self)	
+	}
+	with (EXPOrbObj) {
 		instance_destroy(self)	
 	}
 }

@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if (!hovered) {
+if (!hovered)  {
 	image_speed = 0
 	if (image_index != 0) {
 		image_index -= 1	
@@ -19,3 +19,8 @@ if (!hovered) {
 } else if mouse_check_button_pressed(mb_left) && locked && cost > 0 {
 	onClick()
 }
+if (mouse_x<bbox_right && mouse_x>bbox_left && mouse_y>bbox_top &&mouse_y<bbox_bottom) {
+	image_speed = 1
+} else {
+	
+}	

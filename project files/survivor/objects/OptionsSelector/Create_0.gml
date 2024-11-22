@@ -95,6 +95,34 @@ ms_btn.max_points = 1
 ms_btn.cost = 0
 ms_btn.points = ini_read_real("SETTINGS", "resolution", 0)
 
+lighting_btn = CreateButton(180-30,"LIGHTING", function () {
+	var temp = GetUpgradeButton("LIGHTING")
+	if self.coins >= temp.cost && temp.points < temp.max_points {
+		temp.points += 1
+		self.coins -= temp.cost
+	}
+	global.lighting = temp.points
+	with (LightingObj) {
+		instance_destroy(self)	
+	}
+	instance_create_depth(0,0,0,LightingObj)
+})
+lighting_btn.max_points = 1
+lighting_btn.cost = 0
+lighting_btn.points = ini_read_real("SETTINGS", "lighting", 1)
+
+cursor_btn = CreateButton(180-15,"CURSOR", function () {
+	var temp = GetUpgradeButton("CURSOR")
+	if self.coins >= temp.cost && temp.points < temp.max_points {
+		temp.points += 1
+		self.coins -= temp.cost
+	}
+	cursor_sprite = asset_get_index("spriteCursor"+string(temp.points))
+})
+cursor_btn.max_points = 3
+cursor_btn.cost = 0
+cursor_btn.points = ini_read_real("SETTINGS", "cursor", 0)
+
 CreateButton(180+30, "BACK", function() {
 	instance_destroy(self)
 	if (instance_exists(Level)) {
@@ -111,6 +139,8 @@ function SaveOptions() {
 	ini_write_real("SETTINGS", "music_volume", regen_btn.points)
 	ini_write_real("SETTINGS", "sfx_volume", magnet_btn.points)
 	ini_write_real("SETTINGS", "master_volume", fr_btn.points)
+	ini_write_real("SETTINGS", "lighting", lighting_btn.points)
+	ini_write_real("SETTINGS", "cursor", cursor_btn.points)
 	//dummy save
 	ini_open("save_options.ini")
 	ini_write_real("dummy","dummy",0)

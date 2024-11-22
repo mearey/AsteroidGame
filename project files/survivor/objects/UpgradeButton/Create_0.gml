@@ -12,3 +12,6 @@ max_points = 5
 cost = 10
 
 upgrade = true
+
+
+backwards = true

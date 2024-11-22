@@ -52,3 +52,21 @@ function unlock() {
 	ini_write_real("LEVELS", "2", 1)
 	ini_close()
 }
+
+function exp() {
+	instance_create_depth(global.player.x,global.player.y,1,EXPOrbObj)	
+}
+
+function trader_() {
+	instance_create_depth(0,0,1,TraderShip)	
+}
+
+function drops() {
+	with (Enemy) {
+		weapon_drop_chance = 1
+	}
+}
+
+function testWeapon() {
+	global.player.addWeapon(ShockLauncher)
+}

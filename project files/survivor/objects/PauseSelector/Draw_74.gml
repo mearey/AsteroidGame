@@ -2,6 +2,80 @@
 // You can write your code in this editor
 /// @description Insert description here
 // You can write your code in this editor
+if trader {
+//draw sell stuff
+var total = 0
+for  (var i = 0; i<array_length(sell_slots); i++;){
+	total += sell_slots[i].lvl*sell_slots[i].scrap
+}
+selltotal = total
+draw_sprite(ScrapSprite,0,surface_get_width(application_surface)/2-123,surface_get_height(application_surface)-230)
+draw_set_halign(fa_left)
+draw_text(surface_get_width(application_surface)/2-103,surface_get_height(application_surface)-230,total)
+draw_set_halign(fa_center)
+
+//remove buttons
+if instance_exists(continue_btn) {
+	instance_destroy(continue_btn)
+	continue_btn = Explosion
+}
+if instance_exists(exit_btn) {
+	instance_destroy(exit_btn)
+	continue_btn = Explosion
+}
+if instance_exists(options_btn) {
+	instance_destroy(options_btn)
+	continue_btn = Explosion
+}
+	
+x_ = 0
+y_ = cam_height/2
+
+draw_sprite_ext(sprite_index,0,x-cam_x,y-cam_y,1,1,0,c_white,1)
+draw_set_alpha(0.8)
+draw_circle_color(x_,y_,340+18,c_black,c_black,false)
+draw_circle(x_,y_,340-13,true)
+draw_circle(x_,y_,340+18,true)
+draw_rectangle_color(cam_width/2-32,cam_height/2+180-32, 33, cam_height-20,c_black,c_black,c_black,c_black,false)
+draw_rectangle_color(cam_width/2,0,cam_width, cam_height,c_black,c_black,c_black,c_black,false)
+draw_line(cam_width/2,0,cam_width/2,cam_height)
+draw_sprite_ext(sprite_index,0,x-cam_x,y-cam_y,1,1,0,c_white,1)
+draw_set_alpha(1)
+
+//draw player on the right
+var num_orbitals = 0;
+draw_sprite_ext(global.player.sprite_index,0,round(cam_width*3/4),round(cam_height/2),7,7,90,c_white,1)
+for (var i = 0; i<array_length(global.player.equipped_weapons); i++;){
+	if string_pos("Orbital",object_get_name(global.player.equipped_weapons[i])) {
+		num_orbitals+=1;
+		draw_sprite_ext(global.player.equipped_weapons[i].sprite_index,0,round(cam_width*3/4)+lengthdir_x(126,rotation/num_orbitals),round(cam_height/2)+lengthdir_y(126,rotation/num_orbitals),7,7,90,c_white,1)	
+	} else {
+		draw_sprite_ext(global.player.equipped_weapons[i].sprite_index,0,round(cam_width*3/4),round(cam_height/2),7,7,90,c_white,1)
+	}
+}
+	
+//DRAW LINES FOR INVENTORY
+var _x = cam_width*3/4
+var _y = cam_height/2
+draw_sprite_ext(Line1,0,_x-100,_y-40,-1,-1,0,c_white,1)
+draw_sprite_ext(Line1,0,_x+100,_y-40,1,-1,0,c_white,1)
+
+draw_sprite_ext(Line1,0,_x-100,_y+40,-1,1,0,c_white,1)
+draw_sprite_ext(Line1,0,_x+100,_y+40,1,1,0,c_white,1)
+
+draw_sprite_ext(Line1,0,_x-25,_y+50,-1,-1,0,c_white,1)
+draw_sprite_ext(Line1,0,_x+25,_y-40,1,1,0,c_white,1)
+
+draw_sprite_ext(Line1,0,_x-10,_y-95,1,1,45/2+90,c_white,1)
+
+//draw rectangle for inventory
+draw_rectangle(cam_width/2-32,cam_height/2+180-32, 33, cam_height-20, true)
+
+//draw rectangle for inventory
+draw_rectangle(cam_width*2/4+32,cam_height/2+180-32, cam_width-33, cam_height-20, true)
+
+} else {
+
 x_ = 0
 y_ = cam_height/2
 draw_set_alpha(0.8)
@@ -133,3 +207,9 @@ draw_sprite_ext(Line1,0,_x-25,_y+50,-1,-1,0,c_white,1)
 draw_sprite_ext(Line1,0,_x+25,_y-40,1,1,0,c_white,1)
 
 draw_sprite_ext(Line1,0,_x-10,_y-95,1,1,45/2+90,c_white,1)
+}
+
+draw_sprite(ScrapSprite,0,surface_get_width(application_surface)-64,32)
+draw_set_halign(fa_left)
+draw_text(surface_get_width(application_surface)-48,32,global.player.scrap)
+draw_set_halign(fa_center)

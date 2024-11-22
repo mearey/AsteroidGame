@@ -11,3 +11,7 @@ with (InvSlot) {
 with (WeaponSlot) {
 	instance_destroy(self)	
 }
+
+with (SellerSlot) {
+	instance_destroy(self)
+}	

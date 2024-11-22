@@ -31,6 +31,7 @@ number = 10;
 
 num_bosses = 1;
 
+
 function spawnEnemy(enemy) {
 	var x_ = -20;
 	var y_ = -20;

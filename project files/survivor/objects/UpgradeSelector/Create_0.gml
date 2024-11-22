@@ -20,7 +20,7 @@ function CreateButton(degree, text, func) {
 	var new_game = instance_create_depth(x_,y_,1,UpgradeButton)
 	new_game.text = text	
 	new_game.onClick = func
-	
+	new_game.backwards = false
 	return new_game
 }
 

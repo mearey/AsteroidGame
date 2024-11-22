@@ -9,10 +9,11 @@ cam_y = camera_get_view_y(view_camera[0])
 cam_width = camera_get_view_width(view_camera[0])
 cam_height = camera_get_view_height(view_camera[0])
 //camera_set_view_pos(view_camera[0],0,0)
-
+selltotal = 0
 x_ = cam_x
 y_ = cam_y + cam_height/2
 
+trader = false
 
 tutorial = false
 
@@ -29,8 +30,12 @@ ini_close()
 
 slots = []
 inv_slots = []
+trader_slots = []
+sell_slots = []
 
 rotation = 0
+
+alarm[1] = 5
 
 function CreateButton(degree, text, func) {
 	var direction_ = degree
@@ -40,13 +45,14 @@ function CreateButton(degree, text, func) {
 	var new_game = instance_create_depth(x_,y_,1,Button)
 	new_game.text = text	
 	new_game.onClick = func
+	return new_game
 }
 
-CreateButton(30,"CONTINUE", function () {
+continue_btn = CreateButton(30,"CONTINUE", function () {
 	global.pauseObj.pause(false)
 })
 
-CreateButton(0,"OPTIONS", function () {
+options_btn = CreateButton(0,"OPTIONS", function () {
 	instance_destroy(self)
 	var camx = camera_get_view_x(view_camera[0])
 	var camy = camera_get_view_y(view_camera[0])
@@ -55,7 +61,7 @@ CreateButton(0,"OPTIONS", function () {
 	instance_create_depth(camx+cam_width/2,camy+cam_height/2,1,OptionsSelector)
 })
 	
-CreateButton(-30, "SAVE & EXIT", function() {
+exit_btn = CreateButton(-30, "SAVE & EXIT", function() {
 	saveState();
 	clearEntities()
 	room_goto(MainMenu)
@@ -65,7 +71,9 @@ CreateButton(-30, "SAVE & EXIT", function() {
 
 function CreateInventory() {
 	with (InvSlot) {
-		instance_destroy(self)	
+		if !selling {
+			instance_destroy(self)	
+		}
 	}
 	with (WeaponSlot) {
 		instance_destroy(self)	
@@ -214,6 +222,9 @@ function CreateInventory() {
 			}
 		}
 	}
+	
+	
+	
 	var skipped = 0
 	inv_slots = []
 	for (var i = 0; i<array_length(global.player.unique_weapons); i++;){
@@ -224,10 +235,20 @@ function CreateInventory() {
 			if (WeaponLevel(slot.item)) >= 10 {
 				slot.blue = true	
 			}
+			slot.lvl = WeaponLevel(slot.item)
 			array_push(inv_slots,slot)
 		} else {
 			skipped+=1	
 		}
 	}
+	
+	for (var i = 0; i<array_length(sell_slots); i++;) {
+		sell_slots[i].x = round(cam_x)+64+((i) mod 9)*64
+		sell_slots[i].y = round(cam_y + cam_height/2)+180+64*floor((i)/9)
+		var inst = instance_create_depth(0,0,0,sell_slots[i].item)
+		sell_slots[i].scrap = inst.scrap
+		instance_destroy(inst)
+	}
+	
 }
 CreateInventory()

@@ -53,6 +53,10 @@ function Fire(type, dir, starting_x, starting_y, acc, spd){
 		var bullet  = instance_create_depth(starting_x,starting_y,1,type)
 		bullet.speed = spd
 		bullet.direction = dir
+	} else if (type = ShockProjectile) {
+		var bullet = instance_create_depth(starting_x,starting_y,1,type)
+		bullet.direction = dir
+		bullet.projectile_speed = spd/2
 	}
 	return bullet
 }

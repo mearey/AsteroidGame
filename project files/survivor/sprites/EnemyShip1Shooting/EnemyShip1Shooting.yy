@@ -36,8 +36,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Enemies",
-    "path":"folders/Sprites/Enemies.yy",
+    "name":"Level1",
+    "path":"folders/Sprites/Enemies/Level1.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

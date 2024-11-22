@@ -16,23 +16,13 @@ damage on post game screen for each weapon
 
 highest damage weaopon on pst game screen
 
-change font on tutorial
-
 add more weapons
 
 miku ship with directed soundwave abiality that deals damage
 
 fix time on post game screen
 
-SAVE EXP
-
-give boss 2 arms
-
-put ability bar near ship in the middle
-
 active items?
-
-particle trail for enemy laser 
 
 next level should be set inside a giant space station
  

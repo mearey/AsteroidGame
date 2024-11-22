@@ -11,7 +11,7 @@ fire_timer = fire_rate;
 damage = 1
 
 evolved = false
-
+scrap = 100
 lvl = 1;
 
 equipped = false

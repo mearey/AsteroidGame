@@ -1,1 +1,3 @@
-part_system_drawit(p_system);
+if !trader {
+	part_system_drawit(p_system);
+}

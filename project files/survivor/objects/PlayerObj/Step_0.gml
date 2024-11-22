@@ -27,7 +27,6 @@ if ((keyboard_check(ord("W"))||keyboard_check(ord("A"))||keyboard_check(ord("S")
 }
 if (keyboard_check(ord("W")) && y>0) {
 	yspeed -= speed_
-	instance_create_layer(x,y,"Foreground", DeadPlayer)
 }
 if (keyboard_check(ord("D")) && x<room_width) {
 	xspeed += speed_

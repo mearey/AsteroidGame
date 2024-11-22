@@ -17,6 +17,7 @@ function saveState(){
 	ini_write_real("STATESTATS", "lvl", global.player.lvl)
 	ini_write_real("STATESTATS", "hp", global.player.hp)
 	ini_write_real("STATESTATS", "dmg", global.player.dmg)
+	ini_write_real("STATESTATS", "scrap", global.player.scrap)
 	
 	//save wave and level
 	ini_write_real("SAVEWAVE", "difficulty", global.level.difficulty)
@@ -69,6 +70,13 @@ function saveState(){
 	ini_write_real("POSTSTATS","exp_gained", global.player.exp_gained)
 	ini_write_real("POSTSTATS","time", global.player.start_time)
 	
+	//save exp
+	for (var i=0 ; i<instance_number(EXPOrbObj); i++) {
+		var enemy = instance_find(EXPOrbObj,i)
+		ini_write_string("EXP", string(i), string(enemy.x)+"_"+string(enemy.y))
+	}
+	ini_write_real("EXP", "num", i)
+	
 	//dummy save
 	ini_open("save_game_state.ini")
 	ini_write_real("dummy","dummy",0)
@@ -96,7 +104,8 @@ function loadState() {
 	
 	//load coins
 	player.coins = ini_read_real("SAVESTATS", "coins", 0)
-	
+	//load scrap
+	player.scrap = ini_read_real("STATESTATS", "scrap", 0)
 	
 	//load weapons
 	var num = ini_read_real("WEAPONS", "num", 1)
@@ -134,6 +143,13 @@ function loadState() {
 			enemy.set_phys_speed(res[4],res[5])
 		}
 	}
+	
+	//load exp
+	for (var i=0 ; i<ini_read_real("EXP","num", 0); i++) {
+		var res = string_split(ini_read_string("EXP", string(i),0), "_")
+		instance_create_depth(real(res[0]),real(res[1]),1,EXPOrbObj)
+	}
+	
 	//load level and wave
 	var diff = ini_read_real("SAVEWAVE", "difficulty", 1)
 	var level = instance_create_depth(0,0,1,asset_get_index(ini_read_string("SAVEWAVE", "level", "Level1")))

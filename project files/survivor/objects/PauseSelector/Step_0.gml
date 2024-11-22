@@ -15,12 +15,29 @@ if active_button != instance_nearest(x,y,Button) {
 	active_button = instance_nearest(x,y,Button)
 	PlaySFX(buttonSwitch,1,1)
 }
-active_button.image_speed = 1
-
+if instance_exists(active_button) {
+	active_button.image_speed = 1
+}
+if !trader {
 if (mouse_x < cam_x+cam_width/2) {
-	active_button.hovered = true
+	if instance_exists(active_button) {
+		active_button.hovered = true
+	}
 	x = x_ + lengthdir_x(340,direction_)
 	y = y_ + lengthdir_y(340,direction_)
+}
+} else {
+if (mouse_x < cam_x+cam_width/2) && mouse_x > 400 {
+	if instance_exists(active_button) {
+		active_button.hovered = true
+	}
+	x = x_ + lengthdir_x(340,direction_)
+	y = y_ + lengthdir_y(340,direction_)
+} else {
+	if instance_exists(active_button) {
+		active_button.hovered = false
+	}
+}
 }
 
 var hovered_ = false
@@ -37,3 +54,4 @@ if hovered_ = false {
 }
 
 }
+

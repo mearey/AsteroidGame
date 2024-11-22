@@ -35,6 +35,14 @@ if set {
 	} else {
 		var enemy_selection = 0
 		timer_ = spawnrate
+		
+		//trader spawn
+		if random(1) < 0.001 {
+			if !instance_exists(TraderShip) {
+				instance_create_depth(global.player.x,global.player.y, 1,TraderShip)
+			}
+		}
+		
 		if (number <= 0) {
 			if (num_bosses <= 0) {
 				//wave is complete

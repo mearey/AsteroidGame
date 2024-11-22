@@ -5,7 +5,7 @@ lighting_colour = c_red
 lighting_size = 2
 hp = 3;
 join_num = 1
-weapon_drop_chance = 0.005
+weapon_drop_chance = 0.0035
 size = 1
 _speed = 0.1;
 

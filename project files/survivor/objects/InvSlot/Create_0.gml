@@ -9,8 +9,11 @@ dragging = false
 blue = false
 
 green = false
-
+lvl = 1
+scrap = 100
 hovered = false
+
+selling = false
 
 weapon = Weapon
 

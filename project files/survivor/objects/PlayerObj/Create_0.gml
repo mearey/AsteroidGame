@@ -39,10 +39,17 @@ regen = global.regen
 
 cdr = global.cdr
 
+scrap = 0
+
 target = self
 
 max_hp = 100;
 hp = max_hp;
+prev_hp = hp
+
+draw_hp = false
+draw_hp_timer = 100
+
 
 max_xp = 12;
 xp = 0;
@@ -116,6 +123,9 @@ function addWeapon(weapon) {
 		}
 	}
 	array_push(weapons,weapon);
+	if !array_contains(global.weaponPool, weapon) {
+		array_push(global.weaponPool, weapon)	
+	}
 	resetWeapons()
 }
 
