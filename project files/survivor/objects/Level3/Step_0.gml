@@ -54,17 +54,27 @@ if !set {
 		num_bosses = 2
 		spawnrate = 6
 	} else {
-		enemylist = [Spider,EyesEnemy,Slime,EnemyFlyObj,EnemySquareObj,EnemyOrbObj,EnemyShip1,EnemyShipMissle,FastEnemyShip,AsteroidObj,GunDebris,SatelliteObj,EnemyWormObj]
+		enemylist = [Spider,EyesEnemy,Slime,EnemyFlyObj,EnemySquareObj,EnemyOrbObj,EnemyShip1,EnemyShipMissle,FastEnemyShip,AsteroidObj,GunDebris,SatelliteObj,EnemyWormObj,DebrisGrabberObj]
 		bosslist = [EnemyFlyBossObj, EnemyOrbBossObj, EnemySquareBossObj, EnemyShipBoss,AsteroidBossObj,EnemyShipMissleBoss,RocketBossObj,SpiderBoss,EyesEnemyBoss]
 		number = 700/(difficulty/800)
 		num_bosses = (difficulty/800)*2
-		spawnrate = max(6 - (difficulty/800), 0.1)
+		spawnrate = max(6 - (difficulty/800), 0.1)/2
 	}
 	set = true
 }
 
-if difficulty > 800 {
-	
+if difficulty > 1000 {
+	with (Enemy) {
+		hp+=1	
+	}
+}
+if difficulty > 2000 {
+	with (Chest) {
+		instance_destroy(self)
+	}
+	with (EXPOrbObj) {
+		instance_destroy(self)	
+	}
 }
 
 

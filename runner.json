@@ -1,0 +1,9 @@
+{ "manifestFiles" : [ "game.unx",
+"survivor.data",
+"survivor.html",
+"survivor.js",
+"survivor.wasm" ], "manifestFilesMD5" : [ "ae25dfd0836ddca20d5d899ec0051f79",
+"49531c0213dd578641fbf8400b31a918",
+"b5e17450590dcc41010fb6fac298081f",
+"cac80e0162f64da089d15c085569b1e6",
+"9bed6921529da631c64dd1de2d4c3ef9" ], "mainJS" : "survivor.js",  "unx": "game.unx", "index": "index.html", "runner": {"version": "2024.8.1.218", "yyc": true}}
