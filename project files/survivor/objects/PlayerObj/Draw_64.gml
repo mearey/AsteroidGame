@@ -4,8 +4,18 @@
 if (!global.pauseObj.paused) {
 	draw_set_alpha(0.7)
 	draw_healthbar(24,16,max_hp*2,25+16,(hp/max_hp)*100,c_black,c_red,c_maroon,0,false,false)
+		draw_set_color(c_aqua)
+	draw_rectangle(24+1.5,16+1.5,max_hp*2+1.5,25+16+1.5, true)
+		draw_set_color(c_red)
+	draw_rectangle(24-1.5,16-1.5,max_hp*2-1.5,25+16-1.5, true)
+	draw_set_color(c_white)
 	draw_rectangle(24,16,max_hp*2,25+16, true)
 	draw_healthbar(24,35+18,200,61+18,(xp/max_xp)*100,c_black,c_aqua,c_aqua,0,false,false)
+	draw_set_color(c_aqua)
+	draw_rectangle(24+1.5,35+18+1.5,200+1.5,61+18+1.5, true)
+		draw_set_color(c_red)
+	draw_rectangle(24-1.5,35+18-1.5,200-1.5,61+18-1.5, true)
+	draw_set_color(c_white)
 	draw_rectangle(24,35+18,200,61+18, true)
 	draw_text(230,61+7, "LVL: " + string(lvl))
 	var skipped = 0;
@@ -66,6 +76,11 @@ if (!global.pauseObj.paused) {
 	if !global.pauseObj.paused {
 	draw_set_alpha(0.7)
 	draw_healthbar(surface_get_width(application_surface)-250,16,surface_get_width(application_surface)-100,25+16,100-(ability_cooldown/(cooldown/global.cdr))*100,c_black,c_green,c_lime,0,false,false)
+	draw_set_color(c_aqua)
+	draw_rectangle(surface_get_width(application_surface)-250+1.5,16+1.5,surface_get_width(application_surface)-100+1.5,25+16+1.5, true)
+	draw_set_color(c_red)
+	draw_rectangle(surface_get_width(application_surface)-250-1.5,16-1.5,surface_get_width(application_surface)-100-1.5,25+16-1.5, true)
+	draw_set_color(c_white)
 	draw_rectangle(surface_get_width(application_surface)-250,16,surface_get_width(application_surface)-100,25+16, true)
 	draw_set_alpha(1)
 }
