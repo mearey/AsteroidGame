@@ -2,8 +2,8 @@
 "survivor.data",
 "survivor.html",
 "survivor.js",
-"survivor.wasm" ], "manifestFilesMD5" : [ "17a74563021f318b0340de66ba401dd1",
+"survivor.wasm" ], "manifestFilesMD5" : [ "127ee617e34f22ed2331fb47c8f0085e",
 "49531c0213dd578641fbf8400b31a918",
 "b5e17450590dcc41010fb6fac298081f",
-"657bf1f728e92cc37adae2fd289f3b2c",
-"63b17599ab50356aed9ba1204212b284" ], "mainJS" : "survivor.js",  "unx": "game.unx", "index": "index.html", "runner": {"version": "2024.8.1.218", "yyc": true}}
+"039d1983b647c2f62d0d21572f4a84dd",
+"4743937e2f6ef31ca43f9660ce948e93" ], "mainJS" : "survivor.js",  "unx": "game.unx", "index": "index.html", "runner": {"version": "2024.8.1.218", "yyc": true}}
