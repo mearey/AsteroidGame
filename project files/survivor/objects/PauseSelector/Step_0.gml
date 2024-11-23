@@ -27,7 +27,7 @@ if (mouse_x < cam_x+cam_width/2) {
 	y = y_ + lengthdir_y(340,direction_)
 }
 } else {
-if (mouse_x < cam_x+cam_width/2) && mouse_x > 400 {
+if (mouse_x < cam_x+cam_width/2) && mouse_x > cam_x+400 && mouse_y < cam_y-300 {
 	if instance_exists(active_button) {
 		active_button.hovered = true
 	}

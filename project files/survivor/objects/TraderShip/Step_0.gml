@@ -8,7 +8,7 @@ if collision_circle(x+x_,y+y_,64,global.player,false,true) {
 	timer -= 1;	
 	x = x-lengthdir_x(1,dir)/2
 	y = y-lengthdir_y(1,dir)/2
-	if timer <= 0 {
+	if timer <= 0 && global.player.hp>0 {
 		instance_find(Pause,0).pause(false)
 		instance_find(PauseSelector,0).trader = true
 		traded = true

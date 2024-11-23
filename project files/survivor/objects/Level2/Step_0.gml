@@ -74,3 +74,9 @@ if difficulty > 800 {
 		boss = true
 	}
 }
+
+if end_ {
+	ini_open("unlocks.ini")
+	ini_write_real("LEVELS", "3", 1)
+	ini_close()
+}

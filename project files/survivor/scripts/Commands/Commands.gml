@@ -50,6 +50,7 @@ function invincible() {
 function unlock() {
 	ini_open("unlocks.ini")
 	ini_write_real("LEVELS", "2", 1)
+	ini_write_real("LEVELS", "3", 1)
 	ini_close()
 }
 
