@@ -79,7 +79,7 @@ if !set {
 
 if difficulty > 1000 {
 	with (Enemy) {
-		hp+=1	
+		hp+=0.1
 	}
 }
 if difficulty > 2000 {

@@ -22,29 +22,33 @@ overclock_timer = 200
 clocking = false
 addition = 0
 
-cooldown = 1000
+cooldown = 1200
 ability_cooldown=cooldown/(global.cdr)
 ability = "Press \'space\' to overclock weapons"
 function ability_() {
 	//speed boost ability here
 	ability_cooldown -= 1
-	if ability_cooldown <= 0 && keyboard_check_pressed(vk_space) {
-		ability_cooldown = 1000/(global.cdr)
+	if ability_cooldown <= 0 && keyboard_check_pressed(vk_space) && !clocking {
+		ability_cooldown = 1200/(global.cdr)
 		clocking = true
 	}
 	if clocking {
+		lighting_colour = c_fuchsia
 		with (Weapon) {
-			fire_rate -= 0.04
-			other.addition += 0.04
+			fire_rate -= fire_rate/60
 		}
+		lighting_size += 0.015
+		lighting_intensity += 0.002
+		addition += 0.1
 		overclock_timer-=1
 		if overclock_timer <= 0 {
 			overclock_timer = 200
 			clocking = false
-			with (Weapon) {
-				fire_rate += other.addition	
-			}
+			resetWeapons()
+			lighting_size = 3
+			lighting_intensity = 0.1
 			addition = 0
+			lighting_colour = c_white
 		}
 	}
 

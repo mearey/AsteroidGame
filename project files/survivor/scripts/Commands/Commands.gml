@@ -68,6 +68,6 @@ function drops() {
 	}
 }
 
-function testWeapon() {
+function testweapon() {
 	global.player.addWeapon(ShockLauncher)
 }
