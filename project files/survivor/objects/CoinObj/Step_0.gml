@@ -12,3 +12,10 @@ if point_distance(x,y,global.player.x,global.player.y) <= global.magnet {
 	phy_position_y += lengthdir_y(speed,point_direction(x,y,global.player.x,global.player.y))
 	speed+=0.3
 }
+
+if !global.pauseObj.paused {
+	lifetime-=1
+	if lifetime <=0 {
+		instance_destroy(self)	
+	}
+}

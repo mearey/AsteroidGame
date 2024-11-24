@@ -3,6 +3,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 clearEntities()
+if dead {
 room_goto(GameSummary)
 var summary = instance_create_depth(x,y,0,PostGameStats)
 //set stats here
@@ -18,3 +19,4 @@ summary.time = time
 summary.weapons = equipped_weapons
 saveTotal()
 wipeSave()
+}

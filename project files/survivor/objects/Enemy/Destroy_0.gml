@@ -8,7 +8,7 @@ if dead {
 		instance_create_depth(x,y,1,Chest)	
 	}
 	if (chubby) {
-		for (var i = random_range(5,15); i>0; i-=1) {
+		for (var i = random_range(5,15*(1+global.luck/4)); i>0; i-=1) {
 			instance_create_depth(x+random_range(-1,1),y+random_range(-1,1),1,CoinObj)	
 		}
 		for (var i=xp*2; i>0; i-=1) {

@@ -14,6 +14,7 @@ function lvlUp() {
 	if (lvl < 10) {
 		lvl+=1
 		fire_rate -= 0.5
+		projectile_speed += 5
 	} else {
 		evolved = true
 		removeWeaponFromPool(DualCannon)

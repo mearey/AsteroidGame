@@ -15,6 +15,7 @@ function lvlUp() {
 	if (lvl < 10) {
 		lvl+=1
 		fire_rate -= fire_rate/4
+		projectile_speed += 2
 	} 
 	if lvl >= 10 {
 		evolved = true

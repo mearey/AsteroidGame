@@ -2,7 +2,9 @@
 // You can write your code in this editor
 
 // Inherit the parent event
+boss =false
 event_inherited();
+
 if !set {
 	//difficulty*60 = frames
 	if difficulty < 100 {
@@ -89,4 +91,6 @@ if difficulty > 2000 {
 	}
 }
 
-
+with (GameSummarySelector) {
+	instance_destroy(self)	
+}

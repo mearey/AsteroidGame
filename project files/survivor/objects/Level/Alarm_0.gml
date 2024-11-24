@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+if !level3 {
 room_goto(GameSummary)
 var summary = instance_create_depth(x,y,0,PostGameStats)
 //set stats here
@@ -15,3 +16,4 @@ summary.weapons = global.player.equipped_weapons
 clearEntities()
 saveTotal()
 wipeSave()
+}

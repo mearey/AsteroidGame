@@ -11,6 +11,7 @@ fire_timer = fire_rate;
 
 lvl = 1;
 
+shockrange = 1
 slot = 2
 scrap = 150
 description = "Launches shock projcectiles that chain to enemies in a large AOE"
@@ -19,6 +20,7 @@ function lvlUp() {
 	if (lvl < 10) {
 		lvl+=1
 		fire_rate -= fire_rate/7
+		shockrange += 0.3
 	} 
 	if lvl >= 10 {
 		evolved = true

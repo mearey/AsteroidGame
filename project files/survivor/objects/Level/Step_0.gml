@@ -9,10 +9,10 @@ if timer > 0 {
 	log(string(difficulty))
 }
 
-if (boss) {
+if (boss) && !level3 {
 	if !instance_exists(boss_obj) {
 		//end
-		if !end_ {
+		if !end_ && !level3 {
 			alarm[0] = 500
 			end_=true
 		}

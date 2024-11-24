@@ -9,7 +9,7 @@ if split {
 draw_self()	
 
 var list = ds_list_create()
-collision_circle_list(x,y,64,Enemy,false,true,list,false)
+collision_circle_list(x,y,64*range,Enemy,false,true,list,false)
 for (var i=0; i<ds_list_size(list);i++) {
 	var last_x = x
 	var last_y = y

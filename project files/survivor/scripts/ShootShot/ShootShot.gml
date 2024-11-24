@@ -15,6 +15,7 @@ function ShootShot(type, dir, starting_x, starting_y, acc, spd, lifetime){
 		var bullet = Fire(type, dir, starting_x, starting_y, acc, spd)
 		bullet.lifetime = lifetime
 	}
+	return bullet
 }
 
 function Fire(type, dir, starting_x, starting_y, acc, spd){

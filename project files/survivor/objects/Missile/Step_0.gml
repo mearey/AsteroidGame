@@ -9,6 +9,10 @@ part_type_direction(global.exhaust,0,0,0,0);
 part_particles_create(global.p_system, x, y, global.exhaust, 1);	
 
 if !global.pauseObj.paused { 
+	lifetime_-=1
+	if lifetime_ <=0 {
+		instance_destroy(self)	
+	}
 	if (target != PlayerObj) && (instance_exists(target)) && !exploded {
 		var target_dir = point_direction(x,y,target.x,target.y)
 		if dir < target_dir {

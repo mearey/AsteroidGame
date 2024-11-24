@@ -20,7 +20,7 @@ move_cooldown = 200;
 
 moves = [
 	function move0() {
-		move_cooldown = 50
+		move_cooldown = 5
 	},
 	function move2() {
 		instance_create_depth(x+10,y,1,Spider)

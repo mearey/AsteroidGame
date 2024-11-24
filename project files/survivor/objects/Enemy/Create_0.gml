@@ -13,7 +13,7 @@ chubby = false
 
 new_ = false
 
-if (random(1) < 0.012) {
+if (random(1) < 0.012*global.luck) {
 	chubby = true	
 	rot = 0
 }
@@ -36,7 +36,7 @@ function takeDamage(damage) {
 		dead = true
 		instance_destroy(self)
 		global.player.enemies_defeated += 1;
-		var coin_chance = 0.05
+		var coin_chance = 0.05*global.luck
 		if (random(1)<coin_chance) {
 			instance_create_depth(x,y,1,CoinObj)
 		}

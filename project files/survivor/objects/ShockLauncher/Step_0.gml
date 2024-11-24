@@ -11,7 +11,8 @@ if (keyboard_check(vk_space) || mouse_check_button(mb_left) || true) {
 		fire_timer -= 1
 	} else {
 		fire_timer = fire_rate;
-		ShootShot(ShockProjectile,global.player.image_angle,x+lengthdir_x(15,image_angle+90),y+lengthdir_y(15,image_angle+90),accuracy,projectile_speed)
+		ShootShot(ShockProjectile,global.player.image_angle,x+lengthdir_x(15,image_angle+90),y+lengthdir_y(15,image_angle+90),accuracy,projectile_speed).range = shockrange
+		PlaySFX(gernadeLaunch,1,2)
 	}
 	}
 }

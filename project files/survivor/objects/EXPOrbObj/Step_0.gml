@@ -40,3 +40,10 @@ if (offscreen_timer <= 0) {
 	var orb = instance_create_depth(x,y,1,EXPOrbNumberObj)
 	orb.number = value	
 }
+
+if !global.pauseObj.paused {
+	lifetime-=1
+	if lifetime <=0 {
+		instance_destroy(self)	
+	}
+}

@@ -8,3 +8,5 @@ projectile_speed = 0;
 accuracy = 0;
 
 split = true
+
+range = 1

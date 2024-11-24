@@ -7,7 +7,7 @@ event_inherited();
 p_x = random_range(-6,6)
 p_y = random_range(-6,6)
 
-hp = 20
+hp = 15
 xp = 1
 
 colour = make_colour_hsv(random(100), 255, colour_get_value(c_green));

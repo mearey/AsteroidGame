@@ -56,7 +56,7 @@ magnet_btn = CreateButton(0,"MAGNET", function () {
 		temp.cost = 10+20*magnet_btn.points
 	}
 })
-magnet_btn.max_points = 5
+magnet_btn.max_points = 12
 magnet_btn.points = ini_read_real("UPGRADES", "magnet", 0)
 magnet_btn.cost = 10+20*magnet_btn.points
 
@@ -85,6 +85,19 @@ aa_btn.points = ini_read_real("UPGRADES", "cdr", 0)
 aa_btn.cost = 20+30+aa_btn.points
 aa_btn.points = ini_read_real("UPGRADES", "cdr", 0)
 
+luck_btn = CreateButton(-180-30,"LUCK", function () {
+	var temp = GetUpgradeButton("LUCK")
+	if self.coins >= temp.cost && temp.points < temp.max_points {
+		temp.points += 1
+		self.coins -= temp.cost
+		temp.cost = 200+20*luck_btn.points*luck_btn.points*luck_btn.points
+	}
+})
+luck_btn.max_points = 10
+luck_btn.points = ini_read_real("UPGRADES", "luck", 0)
+luck_btn.cost = 200+20*luck_btn.points*luck_btn.points*luck_btn.points
+luck_btn.points = ini_read_real("UPGRADES", "luck", 0)
+
 
 CreateButton(180+30, "BACK", function() {
 	SaveUpgrades()
@@ -99,6 +112,7 @@ function SaveUpgrades() {
 	ini_write_real("UPGRADES", "regen", regen_btn.points)
 	ini_write_real("UPGRADES", "magnet", magnet_btn.points)
 	ini_write_real("UPGRADES", "cdr", aa_btn.points)
+	ini_write_real("UPGRADES", "luck", luck_btn.points)
 	ini_write_real("UPGRADES", "multi_shot", ms_btn.points)
 	//save coins
 	ini_write_real("CURRENCY", "coins", coins)

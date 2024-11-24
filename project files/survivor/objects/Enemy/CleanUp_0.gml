@@ -1,11 +1,11 @@
-if random(1)<weapon_drop_chance && dead {
+if random(1)<weapon_drop_chance*global.luck && dead {
 	var drop = instance_create_depth(x,y,0,weaponDrop)
 	randomize()
-	if random(1)<0.05 {
+	if random(1)<0.05*global.luck {
 		drop.number = round(random_range(4,5))		
-	} else if random(1) <0.10 {
+	} else if random(1) <0.10*global.luck {
 		drop.number = round(random_range(3,4))	
-	} else if random(1)<0.20 {
+	} else if random(1)<0.20*global.luck {
 		drop.number = round(random_range(2,3))	
 	} else {
 		drop.number = round(random_range(1,2))	
