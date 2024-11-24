@@ -10,6 +10,8 @@ var button = GetShipUnlockButton(FastShip)
 ini_write_real("SHIPS", "Fastship", !button.locked)
 button = GetShipUnlockButton(MeeleShip)
 ini_write_real("SHIPS", "Meeleship", !button.locked)
+button = GetShipUnlockButton(OverclockShip)
+ini_write_real("SHIPS", "OverclockShip", !button.locked)
 ini_close()
 	
 ini_open("save_total.ini")

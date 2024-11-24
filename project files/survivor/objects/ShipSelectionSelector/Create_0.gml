@@ -75,6 +75,8 @@ CreateButton(180+30,"BACK", function () {
 	ini_write_real("SHIPS", "Fastship", !button.locked)
 	button = GetShipUnlockButton(MeeleShip)
 	ini_write_real("SHIPS", "Meeleship", !button.locked)
+	button = GetShipUnlockButton(OverclockShip)
+	ini_write_real("SHIPS", "OverclockShip", !button.locked)
 	ini_close()
 	
 	ini_open("save_total.ini")
@@ -123,6 +125,17 @@ var button = CreateShipSelectButton(0,MeeleShipSprite,MeeleShip, function () {
 })
 button.cost = 230
 if (ini_read_real("SHIPS", "Meeleship", false)) {
+	button.locked = false	
+}
+
+var button = CreateShipSelectButton(-15,OverclockShipSprite,OverclockShip, function () {
+	display_ship = OverclockShip
+	if !GetShipUnlockButton(OverclockShip).locked {
+		global.ship_selection = OverclockShip
+	}
+})
+button.cost = 450
+if (ini_read_real("SHIPS", "OverclockShip", false)) {
 	button.locked = false	
 }
 
