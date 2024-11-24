@@ -16,10 +16,10 @@ if open {
 			}
 			for (var i = 0; i<num; i++) {
 				var res = ""
-				if (script_exists(asset_get_index(args[0]))) {
-					res = string(script_execute(asset_get_index(args[0])))
+				if (script_exists(asset_get_index(string_lower(args[0])))) {
+					res = string(script_execute(asset_get_index(string_lower(args[0]))))
 				} else {
-					res = "command not found, code: " + string(asset_get_index(args[0]))
+					res = "command not found, code: " + string(asset_get_index(string_lower(args[0])))
 				}
 				array_push(res_list, res)
 				keyboard_string = ""
