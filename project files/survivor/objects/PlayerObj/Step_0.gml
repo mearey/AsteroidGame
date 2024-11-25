@@ -1,6 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+if global.luck <=0 {
+	global.luck = 1	
+}
+
 if !global.pauseObj.paused {
 
 ability_()

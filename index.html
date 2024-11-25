@@ -872,6 +872,7 @@
         enterFullscreenIfSupported();
         lockOrientationIfSupported();
       });
+    window.onclick = function () { window.focus(); }  // ADDED THIS
     </script>
     <script async type="text/javascript" src="survivor.js"></script>
   </body>
