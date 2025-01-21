@@ -30,7 +30,7 @@ if !set {
 		num_bosses = 2
 		spawnrate = 17
 	} else if difficulty < 500 {
-		enemylist = [EnemySquareObj, EnemyFlyObj, EnemySquareObj,EnemySquareObj, EnemyFlyObj, EnemySquareObj,EnemySquareObj, EnemyFlyObj, EnemySquareObj,EnemySquareObj, EnemyFlyObj, EnemySquareObj,EnemyShipMissle]
+		enemylist = [EnemySquareObj, EnemyFlyObj, EnemySquareObj,EnemySquareObj, EnemyFlyObj, EnemySquareObj,EnemySquareObj, EnemyFlyObj, EnemySquareObj,EnemySquareObj, EnemyFlyObj, EnemySquareObj,EnemySquareObj, EnemyFlyObj, EnemySquareObj,EnemySquareObj, EnemyFlyObj, EnemySquareObj,EnemySquareObj, EnemyFlyObj, EnemySquareObj,EnemySquareObj, EnemyFlyObj, EnemySquareObj,EnemyShipMissle]
 		bosslist = [EnemyFlyBossObj, EnemyOrbBossObj]
 		number = 500
 		num_bosses = 1
@@ -54,14 +54,14 @@ if !set {
 		num_bosses = 2
 		spawnrate = 6
 	} else {
-		enemylist = [FastEnemyShip, EnemyShip1, EnemyOrbObj, EnemySquareObj, EnemyWormObj, EnemyFlyObj,FastEnemyShip, EnemyShip1, EnemyOrbObj, EnemySquareObj, EnemyWormObj, EnemyFlyObj,FastEnemyShip, EnemyShip1, EnemyOrbObj, EnemySquareObj, EnemyWormObj, EnemyFlyObj,FastEnemyShip, EnemyShip1, EnemyOrbObj, EnemySquareObj, EnemyWormObj, EnemyFlyObj, EnemyShipMissle]
+		enemylist = [EnemyOrbObj]
 		bosslist = [EnemyFlyBossObj, EnemyOrbBossObj, EnemySquareBossObj, EnemyShipBoss]
 	}
 	set = true
 }
 
 if difficulty > 800 {
-	enemylist = [FastEnemyShip, EnemyShip1, EnemyOrbObj, EnemySquareObj, EnemyWormObj, EnemyFlyObj,FastEnemyShip, EnemyShip1, EnemyOrbObj, EnemySquareObj, EnemyWormObj, EnemyFlyObj, EnemyShipMissle]
+	enemylist = [EnemyOrbObj]
 	bosslist = [EnemyFlyBossObj, EnemyOrbBossObj, EnemySquareBossObj, EnemyShipBoss]
 	if !boss && !instance_exists(boss_obj){
 		//SPAWN BOSS HERE\
