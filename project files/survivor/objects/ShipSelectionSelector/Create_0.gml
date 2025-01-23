@@ -142,7 +142,7 @@ var button = CreateShipSelectButton(-15,OverclockShipSprite,OverclockShip, funct
 		global.ship_selection = OverclockShip
 	}
 })
-button.cost = 450
+button.cost = 900
 if (ini_read_real("SHIPS", "OverclockShip", false)) {
 	button.locked = false	
 }

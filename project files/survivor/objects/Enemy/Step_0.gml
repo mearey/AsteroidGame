@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 //collision circle for player
-if (!global.pauseObj.paused){
+if (!global.pauseObj.paused) && collide{
 	EnemyCollisions()
 }
 

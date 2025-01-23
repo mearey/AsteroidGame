@@ -12,6 +12,7 @@ _speed = 0.1;
 chubby = false
 
 new_ = false
+collide = true
 
 if (random(1) < 0.012*global.luck) {
 	chubby = true	

@@ -58,7 +58,7 @@ magnet_btn = CreateButton(0,"MAGNET", function () {
 })
 magnet_btn.max_points = 12
 magnet_btn.points = ini_read_real("UPGRADES", "magnet", 0)
-magnet_btn.cost = 10+20*magnet_btn.points
+magnet_btn.cost = 10+25*magnet_btn.points
 
 
 ms_btn = CreateButton(15,"MULTI SHOT", function () {

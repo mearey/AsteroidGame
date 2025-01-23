@@ -64,6 +64,7 @@ if (hp <= 0 && !dead) {
 		
 	}
 	alarm[11] =200
+	lighting_size = 0
 }
 if (hp < max_hp) && !global.pauseObj.paused {
 	hp+=regen/300

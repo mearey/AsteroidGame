@@ -15,6 +15,7 @@ damage = 1
 
 lighting_colour = c_purple
 plasma = 0
+collide = false
 function takeDamage(damage) {	
 	hp-=damage;
 	if (hp<=0) {

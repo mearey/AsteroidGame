@@ -11,7 +11,7 @@ if new_ {
 phy_rotation = random_range(0,360)
 
 
-hp = 10*size
+hp = 6*size
 xp = round(size*2)
 
 val = max(18*size,10)
