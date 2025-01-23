@@ -12,3 +12,5 @@ part_type_alpha2(menuparticle, 1,0.5)
 part_type_scale(menuparticle,1,1);
 part_type_size(menuparticle,1,1,-0.03,0)
 part_system_automatic_draw(p_system,false);
+visible = false
+alarm[7] = 1
