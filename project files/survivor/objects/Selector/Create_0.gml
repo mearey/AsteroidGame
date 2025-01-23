@@ -74,7 +74,7 @@ CreateButton(-30, "UPGRADES", function() {
 
 CreateButton(180-30, "SHIP SELECT", function() {
 	instance_destroy(self)
-	instance_create_depth(x,y,1,ShipSelectionSelector)
+	instance_create_depth(room_width/2,room_height/2,1,ShipSelectionSelector)
 })
 
 CreateButton(180+30, "EXIT", function() {game_end()})

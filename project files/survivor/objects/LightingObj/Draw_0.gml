@@ -17,7 +17,7 @@ draw_rectangle(0,0,cam_width,cam_height,false)
 draw_set_color(c_white)
 gpu_set_blendmode(bm_subtract)
 if (instance_exists(Level)) {
-	draw_sprite(global.level.lighting_layer, 0, camx*0.3-room_width/4 - camx, camy*0.3-room_width/4 + cam_height*1.3 - camy-1440)
+	draw_sprite(global.level.lighting_layer, 0, camx*0.3 - camx, camy*0.3- camy)
 }
 
 var num = instance_number(ObjectLightingParent)

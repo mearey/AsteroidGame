@@ -92,6 +92,13 @@ CreateButton(180-30,"BUY", function () {
 		if self.coins >= btn.cost {
 			self.coins -= btn.cost
 			btn.locked = false
+			if display_ship == FastShip {
+				steam_set_achievement("ship_2")	
+			} else if display_ship == MeeleShip {
+				steam_set_achievement("ship_3")	
+			} else if display_ship == OverclockShip {
+				steam_set_achievement("ship_4")	
+			}
 			global.ship_selection = display_ship
 		}
 	}
@@ -109,6 +116,7 @@ var button = CreateShipSelectButton(15,PlayerFastShipSprite,FastShip, function (
 	display_ship = FastShip
 	if !GetShipUnlockButton(FastShip).locked {
 		global.ship_selection = FastShip
+		steam_set_achievement("ship_2")
 	}
 })
 button.cost = 150

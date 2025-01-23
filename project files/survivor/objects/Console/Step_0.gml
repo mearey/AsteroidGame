@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+steam_update()
 if (keyboard_check_released(191)) {
 	open = !open
 	keyboard_string = ""
