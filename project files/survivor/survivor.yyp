@@ -309,6 +309,7 @@
     {"id":{"name":"EnemyShipSprite","path":"sprites/EnemyShipSprite/EnemyShipSprite.yy",},},
     {"id":{"name":"EnemySquareSprite","path":"sprites/EnemySquareSprite/EnemySquareSprite.yy",},},
     {"id":{"name":"ExhaustSprite","path":"sprites/ExhaustSprite/ExhaustSprite.yy",},},
+    {"id":{"name":"ExplosionSprite_Buddy","path":"sprites/ExplosionSprite_Buddy/ExplosionSprite_Buddy.yy",},},
     {"id":{"name":"ExplosionSprite","path":"sprites/ExplosionSprite/ExplosionSprite.yy",},},
     {"id":{"name":"EXPOrb","path":"sprites/EXPOrb/EXPOrb.yy",},},
     {"id":{"name":"EyesSprite","path":"sprites/EyesSprite/EyesSprite.yy",},},
