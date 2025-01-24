@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"level1songvar1",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":138.66673,
+  "name":"level1songvar1",
+  "parent":{
+    "name":"LevelSongs",
+    "path":"folders/Sounds/Music/LevelSongs.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"level1songvar1.wav",
+  "type":0,
+  "volume":0.55,
+}

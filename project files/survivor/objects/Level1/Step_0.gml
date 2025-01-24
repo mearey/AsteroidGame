@@ -3,6 +3,7 @@
 
 // Inherit the parent event
 event_inherited();
+
 if !set {
 	//difficulty*60 = frames
 	if difficulty < 100 {

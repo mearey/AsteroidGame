@@ -10,4 +10,6 @@ foreground_layer = level_2_planet
 
 boss = false
 
-PlaySong(Level2Song)
+songs = [Level2Song]
+
+PlaySong(array_get_random(songs))

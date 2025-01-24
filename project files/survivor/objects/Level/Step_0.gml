@@ -1,6 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
+if !audio_is_playing(global.currentSong) {
+	PlaySong(array_get_random(songs))	
+}
 if !global.pauseObj.paused {
+
 if timer > 0 {
 	timer -= 1	
 } else {

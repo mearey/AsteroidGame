@@ -8,7 +8,7 @@ function Audio(){
 function PlaySong(song) {
 	audio_stop_all()
 	global.currentSong = song
-	global.currentlyPlayingSong = audio_play_sound(song,1,true,global.music_level)
+	global.currentlyPlayingSong = audio_play_sound(song,1,false,global.music_level)
 }
 
 function PlaySFX(sound, pitch1,pitch2) {

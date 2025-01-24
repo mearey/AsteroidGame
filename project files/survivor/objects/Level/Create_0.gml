@@ -3,7 +3,7 @@
 set = false
 level3 = false
 difficulty = 1
-
+songs = []
 lighting_layer = level_1__sun
 
 foreground_layer = level_1__planet

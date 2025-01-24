@@ -10,4 +10,6 @@ foreground_layer = level_1__planet
 
 boss_obj = OrbOfScorb
 
-PlaySong(Level1Song)
+songs = [Level1Song, level1songvar1, level1sonvar3]
+
+PlaySong(array_get_random(songs))
