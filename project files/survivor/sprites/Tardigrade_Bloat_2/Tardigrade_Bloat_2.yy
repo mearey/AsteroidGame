@@ -28,8 +28,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Level_Update_New1",
-    "path":"folders/Sprites/Enemies/Level_Update_New1.yy",
+    "name":"Tardigrade",
+    "path":"folders/Sprites/Enemies/Level_Update_New1/Tardigrade.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
