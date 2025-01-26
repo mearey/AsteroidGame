@@ -2,6 +2,7 @@
 // You can write your code in this editor
 /// @description Insert description here
 // You can write your code in this editor
+
 if trader {
 //draw sell stuff
 var total = 0
@@ -82,6 +83,7 @@ draw_set_alpha(0.8)
 draw_circle_color(x_,y_,340+18,c_black,c_black,false)
 draw_rectangle_color(cam_width/2,0,cam_width, cam_height,c_black,c_black,c_black,c_black,false)
 draw_line(cam_width/2,0,cam_width/2,cam_height)
+draw_set_color(c_white)
 draw_circle(x_,y_,340-13,true)
 draw_circle(x_,y_,340+18,true)
 draw_sprite_ext(sprite_index,0,x-cam_x,y-cam_y,1,1,0,c_white,1)
