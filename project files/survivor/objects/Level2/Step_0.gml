@@ -9,13 +9,13 @@ if !set {
 		bosslist = [AsteroidBossObj]
 		number = 10
 		num_bosses = 1
-		spawnrate = 120
+		spawnrate = 150
 	} else if difficulty < 100 {
 		enemylist = [AsteroidObj, GunDebrisObj]
 		bosslist = [AsteroidBossObj]
 		number = 35
 		num_bosses = 1
-		spawnrate = 110
+		spawnrate = 130
 	} else if difficulty < 200 {
 		enemylist = [AsteroidObj, RocketObj]
 		bosslist = [AsteroidBossObj, RocketBossObj]

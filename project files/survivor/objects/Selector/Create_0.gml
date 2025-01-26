@@ -56,7 +56,7 @@ CreateButton(30,"CONTINUE", function () {
 	}
 })
 
-CreateButton(0,"NEW GAME", function () {
+CreateButton(10,"NEW GAME", function () {
 	
 	room_goto(LevelSelect)
 	
@@ -67,14 +67,18 @@ CreateButton(180,"OPTIONS", function () {
 	instance_create_depth(x,y,1,OptionsSelector)
 })
 	
-CreateButton(-30, "UPGRADES", function() {
+CreateButton(-10, "UPGRADES", function() {
 	instance_destroy(self)
 	instance_create_depth(x,y,1,UpgradeSelector)
 })
 
-CreateButton(180-30, "SHIP SELECT", function() {
+CreateButton(-30, "SHIP SELECT", function() {
 	instance_destroy(self)
 	instance_create_depth(room_width/2,room_height/2,1,ShipSelectionSelector)
+})
+
+CreateButton(180-30, "CREDITS", function() {
+		
 })
 
 CreateButton(180+30, "EXIT", function() {game_end()})

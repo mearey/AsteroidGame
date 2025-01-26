@@ -15,3 +15,7 @@ hp = 2*size
 xp = round(size*1.5)
 
 val = max(18*size,10)
+if random(1) < 0.5 {
+	sprite_index = Asteroid_alt
+	hp=hp*0.8	
+}

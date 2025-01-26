@@ -119,7 +119,7 @@ var button = CreateShipSelectButton(15,PlayerFastShipSprite,FastShip, function (
 		steam_set_achievement("ship_2")
 	}
 })
-button.cost = 150
+button.cost = 80
 if (ini_read_real("SHIPS", "Fastship", false)) {
 	button.locked = false	
 }
