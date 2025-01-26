@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 event_inherited()
+x = room_width/2
+y = room_height/2
 lighting_colour = c_aqua
 p_system = part_system_create_layer("particles", false)
 part_system_depth(p_system, -999);
