@@ -11,7 +11,9 @@ foreground_layer = level_2_planet
 layer_hspeed("Stars",0.5)
 layer_hspeed("Background",0.25)
 
-
+ini_open("unlocks.ini")
+hi = ini_read_real("LEVELS", "hi", -1)
+ini_close()
 
 event_inherited()
 x_ = surface_get_width(application_surface)/2
@@ -30,6 +32,15 @@ Globals()
 coins = 0
 ini_open("save_total.ini")
 coins = ini_read_real("CURRENCY", "coins", 0)
+if coins >= 5000 {
+	steam_set_achievement("gold_total_5000")
+} 
+if coins >= 1000 {
+	steam_set_achievement("gold_total_1000")
+} 
+if coins >= 100 {
+		steam_set_achievement("gold_total_100")
+}
 ini_close()
 //music
 global.currentSong = GameSongMenu
@@ -56,7 +67,7 @@ CreateButton(30,"CONTINUE", function () {
 	}
 })
 
-CreateButton(0,"NEW GAME", function () {
+CreateButton(10,"NEW GAME", function () {
 	
 	room_goto(LevelSelect)
 	
@@ -67,14 +78,18 @@ CreateButton(180,"OPTIONS", function () {
 	instance_create_depth(x,y,1,OptionsSelector)
 })
 	
-CreateButton(-30, "UPGRADES", function() {
+CreateButton(-10, "UPGRADES", function() {
 	instance_destroy(self)
 	instance_create_depth(x,y,1,UpgradeSelector)
 })
 
-CreateButton(180-30, "SHIP SELECT", function() {
+CreateButton(-30, "SHIP SELECT", function() {
 	instance_destroy(self)
 	instance_create_depth(room_width/2,room_height/2,1,ShipSelectionSelector)
+})
+
+CreateButton(180-30, "CREDITS", function() {
+		
 })
 
 CreateButton(180+30, "EXIT", function() {game_end()})

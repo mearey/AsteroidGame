@@ -11,6 +11,8 @@ start_time = current_time
 
 previous_dir = image_angle
 
+nohitcounter = 0
+
 damage_taken = 0
 enemies_defeated = 0
 exp_gained = 0

@@ -101,6 +101,11 @@ luck_btn.points = ini_read_real("UPGRADES", "luck", 0)
 
 CreateButton(180+30, "BACK", function() {
 	SaveUpgrades()
+	//set upgrades acheivement
+	var max_ = fr_btn.max_points+regen_btn.max_points+magnet_btn.max_points+aa_btn.max_points+luck_btn.max_points+ms_btn.max_points
+	if max_ <= fr_btn.points+regen_btn.points+magnet_btn.points+aa_btn.points+luck_btn.points+ms_btn.points {
+		steam_set_achievement("upgrades_max")
+	}
 	//goback to main menu
 	alarm[0] = 2
 }).upgrade = false

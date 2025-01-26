@@ -13,7 +13,7 @@ range = 300
 damage = 5
 
 rotation = 360
-
+image_speed = 0
 description = "Orbits the ship and occasionaly fires a bullet at the nearest enemy"
 
 function lvlUp() {

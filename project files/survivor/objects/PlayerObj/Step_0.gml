@@ -8,7 +8,16 @@ if global.luck <=0 {
 if !global.pauseObj.paused {
 
 ability_()
-	
+//nohit acheivement
+if image_index != 1 {
+	nohitcounter += 1
+	if nohitcounter >= 18000 {
+		steam_set_achievement("nohit_5mins")	
+	}
+} else {
+	nohitcounter = 0	
+}
+
 image_angle = point_direction(x,y,mouse_x,mouse_y)	
 
 if target != self {

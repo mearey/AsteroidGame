@@ -78,6 +78,16 @@ CreateButton(180+30,"BACK", function () {
 	button = GetShipUnlockButton(OverclockShip)
 	ini_write_real("SHIPS", "OverclockShip", !button.locked)
 	ini_close()
+	//unlock acheivement
+	var all_unlocked = true 
+	with (Button) {
+		if locked {
+			all_unlocked = false	
+		}
+	}
+	if all_unlocked {
+		steam_set_achievement("ships_max")	
+	}
 	
 	ini_open("save_total.ini")
 	ini_write_real("CURRENCY", "coins", coins)
@@ -119,7 +129,7 @@ var button = CreateShipSelectButton(15,PlayerFastShipSprite,FastShip, function (
 		steam_set_achievement("ship_2")
 	}
 })
-button.cost = 150
+button.cost = 80
 if (ini_read_real("SHIPS", "Fastship", false)) {
 	button.locked = false	
 }
@@ -136,7 +146,7 @@ if (ini_read_real("SHIPS", "Meeleship", false)) {
 	button.locked = false	
 }
 
-var button = CreateShipSelectButton(-15,OverclockShipSprite,OverclockShip, function () {
+var button = CreateShipSelectButton(-30,OverclockShipSprite,OverclockShip, function () {
 	display_ship = OverclockShip
 	if !GetShipUnlockButton(OverclockShip).locked {
 		global.ship_selection = OverclockShip
@@ -147,5 +157,11 @@ if (ini_read_real("SHIPS", "OverclockShip", false)) {
 	button.locked = false	
 }
 
+var button = CreateShipSelectButton(-15, nocollision, Console, function() {
+	
+})
+button.locked = false
+button.future =  true
+button.future =  true
 
 ini_close()

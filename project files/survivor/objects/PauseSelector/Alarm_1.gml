@@ -12,6 +12,9 @@ if trader {
 	
 	done_btn = CreateButton(30,"DONE", function () {
 		global.pauseObj.pause()
+		if global.player.scrap >= 300 {
+			steam_set_achievement("silver_notspent_300")	
+		}
 	})
 	lighting_sprite = nocollision
 	
