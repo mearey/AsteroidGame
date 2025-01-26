@@ -78,6 +78,16 @@ CreateButton(180+30,"BACK", function () {
 	button = GetShipUnlockButton(OverclockShip)
 	ini_write_real("SHIPS", "OverclockShip", !button.locked)
 	ini_close()
+	//unlock acheivement
+	var all_unlocked = true 
+	with (Button) {
+		if locked {
+			all_unlocked = false	
+		}
+	}
+	if all_unlocked {
+		steam_set_achievement("ships_max")	
+	}
 	
 	ini_open("save_total.ini")
 	ini_write_real("CURRENCY", "coins", coins)

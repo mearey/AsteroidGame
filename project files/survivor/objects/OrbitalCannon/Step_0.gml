@@ -21,5 +21,6 @@ if (fire_timer > 0)&& distance_to_object(target) < range {
 } else if (target != PlayerObj) && distance_to_object(target) < range {
 	fire_timer = fire_rate;
 	ShootShot(BulletObj,point_direction(x,y,target.x, target.y),x,y, accuracy, projectile_speed, 1000)
+	image_speed = 1
 }
 }

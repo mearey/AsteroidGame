@@ -4,6 +4,7 @@ steam_update()
 if (keyboard_check_released(191)) {
 	open = !open
 	keyboard_string = ""
+	steam_set_achievement("console")
 }
 
 if open {

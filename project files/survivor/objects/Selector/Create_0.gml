@@ -30,6 +30,15 @@ Globals()
 coins = 0
 ini_open("save_total.ini")
 coins = ini_read_real("CURRENCY", "coins", 0)
+if coins >= 5000 {
+	steam_set_achievement("gold_total_5000")
+} 
+if coins >= 1000 {
+	steam_set_achievement("gold_total_1000")
+} 
+if coins >= 100 {
+		steam_set_achievement("gold_total_100")
+}
 ini_close()
 //music
 global.currentSong = GameSongMenu
