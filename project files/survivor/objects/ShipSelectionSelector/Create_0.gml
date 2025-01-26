@@ -146,7 +146,7 @@ if (ini_read_real("SHIPS", "Meeleship", false)) {
 	button.locked = false	
 }
 
-var button = CreateShipSelectButton(-15,OverclockShipSprite,OverclockShip, function () {
+var button = CreateShipSelectButton(-30,OverclockShipSprite,OverclockShip, function () {
 	display_ship = OverclockShip
 	if !GetShipUnlockButton(OverclockShip).locked {
 		global.ship_selection = OverclockShip
@@ -157,5 +157,11 @@ if (ini_read_real("SHIPS", "OverclockShip", false)) {
 	button.locked = false	
 }
 
+var button = CreateShipSelectButton(-15, nocollision, Console, function() {
+	
+})
+button.locked = false
+button.future =  true
+button.future =  true
 
 ini_close()

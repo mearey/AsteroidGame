@@ -3,6 +3,9 @@
 draw_set_halign(fa_center)
 draw_set_valign(fa_middle)
 //draw_self()
+if future {
+	text = "COMING SOON"	
+}
 draw_text(x+lengthdir_x(5,point_direction(x,y,mouse_x,mouse_y)),y+lengthdir_y(5,point_direction(x,y,mouse_x,mouse_y)),text)
 
 

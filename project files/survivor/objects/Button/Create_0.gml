@@ -13,4 +13,6 @@ hovered = false
 
 locked = false
 
+future = false
+
 cost = -1

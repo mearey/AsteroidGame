@@ -11,7 +11,9 @@ foreground_layer = level_2_planet
 layer_hspeed("Stars",0.5)
 layer_hspeed("Background",0.25)
 
-
+ini_open("unlocks.ini")
+hi = ini_read_real("LEVELS", "hi", -1)
+ini_close()
 
 event_inherited()
 x_ = surface_get_width(application_surface)/2

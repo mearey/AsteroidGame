@@ -42,7 +42,7 @@ if (ini_read_real("LEVELS", "1", true)) {
 	button.locked = false	
 }
 
-var button = CreateButton(0,level_2_stars, level_2_planet, function () {
+var button = CreateButton(10,level_2_stars, level_2_planet, function () {
 	var player = instance_create_depth(surface_get_width(application_surface)/2,surface_get_height(application_surface)/2,1,global.ship_selection)
 	player.resetWeapons()
 	//draw loadscreen
@@ -54,7 +54,7 @@ if (ini_read_real("LEVELS", "2", false)) {
 	button.locked = false	
 }
 
-var button = CreateButton(-30,level_3__stars, level_3__planet, function () {
+var button = CreateButton(-10,level_3__stars, level_3__planet, function () {
 	var player = instance_create_depth(surface_get_width(application_surface)/2,surface_get_height(application_surface)/2,1,global.ship_selection)
 	player.resetWeapons()
 	//draw loadscreen
@@ -65,6 +65,12 @@ var button = CreateButton(-30,level_3__stars, level_3__planet, function () {
 if (ini_read_real("LEVELS", "3", false)) {
 	button.locked = false	
 }
+
+var button = CreateButton(-30, nocollision, nocollision, function() {
+		
+})
+button.future = true
+button.locked = false
 
 var button = CreateButton(180,nocollision,nocollision, function () {
 	room_goto(MainMenu)
