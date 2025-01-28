@@ -275,6 +275,8 @@
     {"id":{"name":"level1songvar1","path":"sounds/level1songvar1/level1songvar1.yy",},},
     {"id":{"name":"level1sonvar3","path":"sounds/level1sonvar3/level1sonvar3.yy",},},
     {"id":{"name":"Level2Song","path":"sounds/Level2Song/Level2Song.yy",},},
+    {"id":{"name":"level2Songvar2","path":"sounds/level2Songvar2/level2Songvar2.yy",},},
+    {"id":{"name":"level2Songvar3","path":"sounds/level2Songvar3/level2Songvar3.yy",},},
     {"id":{"name":"Level3Song","path":"sounds/Level3Song/Level3Song.yy",},},
     {"id":{"name":"novasfx","path":"sounds/novasfx/novasfx.yy",},},
     {"id":{"name":"plasmaThrowerSFX","path":"sounds/plasmaThrowerSFX/plasmaThrowerSFX.yy",},},
