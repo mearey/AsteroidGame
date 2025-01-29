@@ -13,6 +13,6 @@ boss_obj = OrbOfScorb
 
 level3 = true
 
-songs = [Level3Song]
+songs = [Level3Song, lvl3songvar2, lvl3songvar3]
 
 PlaySong(array_get_random(songs))
