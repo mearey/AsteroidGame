@@ -35,7 +35,7 @@
   "origin":0,
   "parent":{
     "name":"Tardigrade_Special",
-    "path":"folders/Sprites/Enemies/Level_Update_New1/Tardigrade_Special.yy",
+    "path":"folders/Sprites/Enemies/Level4/Tardigrade_Special.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -30,7 +30,7 @@
   "origin":0,
   "parent":{
     "name":"Asteroid_toxic",
-    "path":"folders/Sprites/Enemies/Level_Update_New1/Asteroid_toxic.yy",
+    "path":"folders/Sprites/Enemies/Level4/Asteroid_toxic.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
