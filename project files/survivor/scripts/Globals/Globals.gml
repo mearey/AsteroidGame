@@ -79,7 +79,7 @@ function preGlobals() {
 		global.ship_selection = PlayerObj
 	} else {
 		ini_open("ship_selection.ini")
-		global.ship_selection = ini_read_real("SHIP", "selection", PlayerObj)
+		global.ship_selection = asset_get_index(ini_read_string("SHIP", "selection", "PlayerObj"))
 		ini_close()
 	}
 }

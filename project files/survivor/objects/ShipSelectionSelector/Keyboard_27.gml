@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 ini_open("ship_selection.ini")
-ini_write_real("SHIP","selection", real(global.ship_selection))
+ini_write_string("SHIP","selection", object_get_name(global.ship_selection))
 ini_write_real("dummy","dummy",0)
 ini_close()
 //update unlocks and coins

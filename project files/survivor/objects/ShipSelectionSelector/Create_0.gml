@@ -66,7 +66,7 @@ function CreateShipSelectButton(degree, sprite1, ship, func) {
 
 CreateButton(180+30,"BACK", function () {
 	ini_open("ship_selection.ini")
-	ini_write_real("SHIP","selection", real(global.ship_selection))
+	ini_write_string("SHIP","selection", object_get_name(global.ship_selection))
 	ini_write_real("dummy","dummy",0)
 	ini_close()
 	//update unlocks and coins

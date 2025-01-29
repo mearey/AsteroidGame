@@ -26,12 +26,12 @@ function saveState(){
 	//save weapons
 	var i = 0
 	for (i = 0; i < array_length(global.player.weapons); i++) {
-		ini_write_real("WEAPONS", "weapon_"+string(i), global.player.weapons[i])	
+		ini_write_string("WEAPONS", "weapon_"+string(i), object_get_name(global.player.weapons[i]))	
 	}
 	ini_write_real("WEAPONS", "num", i)
 	
 	for (i = 0; i < array_length(global.player.unique_weapons); i++) {
-		ini_write_real("UWEAPONS", "weapon_"+string(i), global.player.unique_weapons[i])	
+		ini_write_string("UWEAPONS", "weapon_"+string(i), object_get_name(global.player.unique_weapons[i]))	
 	}
 	ini_write_real("UWEAPONS", "Unum", i)
 
@@ -42,7 +42,7 @@ function saveState(){
 	}
 	//save weaponpool
 	for (i = 0; i < array_length(global.weaponPool); i++) {
-		ini_write_real("WEAPONPOOL", "weapon_"+string(i), global.weaponPool[i])
+		ini_write_string("WEAPONPOOL", "weapon_"+string(i), object_get_name(global.weaponPool[i]))
 	}
 	ini_write_real("WEAPONPOOL", "num", i)
 	
@@ -110,12 +110,12 @@ function loadState() {
 	//load weapons
 	var num = ini_read_real("WEAPONS", "num", 1)
 	for (var i = 1; i < num; i++) {
-		array_push(player.weapons, ini_read_real("WEAPONS", "weapon_"+string(i),Weapon))
+		array_push(player.weapons, asset_get_index(ini_read_string("WEAPONS", "weapon_"+string(i),Weapon)))
 	}
 	
 	var Unum = ini_read_real("UWEAPONS", "Unum", 1)
 	for (var i = 1; i < Unum; i++) {
-		array_push(player.unique_weapons, ini_read_real("UWEAPONS", "weapon_"+string(i),Weapon))
+		array_push(player.unique_weapons, asset_get_index(ini_read_string("UWEAPONS", "weapon_"+string(i),Weapon)))
 	}
 	//load equipped weapons
 	i = 0
@@ -125,7 +125,7 @@ function loadState() {
 	//load weaponpool
 	global.weaponPool = []
 	for (i = 0; i < ini_read_real("WEAPONPOOL", "num", 0); i++) {
-		array_push(global.weaponPool,ini_read_real("WEAPONPOOL", "weapon_"+string(i), Weapon))
+		array_push(global.weaponPool,asset_get_index(ini_read_string("WEAPONPOOL", "weapon_"+string(i), Weapon)))
 	}
 	
 	player.spawnWeapons()
