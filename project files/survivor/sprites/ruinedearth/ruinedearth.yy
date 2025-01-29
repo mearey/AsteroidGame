@@ -1,27 +1,27 @@
 {
   "$GMSprite":"",
-  "%Name":"level_1__planet",
+  "%Name":"ruinedearth",
   "bboxMode":0,
-  "bbox_bottom":1274,
-  "bbox_left":144,
-  "bbox_right":812,
-  "bbox_top":638,
+  "bbox_bottom":2366,
+  "bbox_left":1205,
+  "bbox_right":2672,
+  "bbox_top":980,
   "collisionKind":1,
   "collisionTolerance":0,
   "DynamicTexturePage":false,
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"e52155b6-af5e-4ce7-85ab-ccc7b4b2ffc7","name":"e52155b6-af5e-4ce7-85ab-ccc7b4b2ffc7","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"2da15f4b-2d14-4711-83c3-3de7eed4e57e","name":"2da15f4b-2d14-4711-83c3-3de7eed4e57e","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
-  "height":1440,
+  "height":2880,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"5800453c-aee3-41cc-96f6-c0727cb192eb","blendMode":0,"displayName":"default","isLocked":false,"name":"5800453c-aee3-41cc-96f6-c0727cb192eb","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"38bc44b7-bcad-4d5c-96b2-b978d26d34df","blendMode":0,"displayName":"default","isLocked":false,"name":"38bc44b7-bcad-4d5c-96b2-b978d26d34df","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"level_1__planet",
+  "name":"ruinedearth",
   "nineSlice":null,
   "origin":0,
   "parent":{
@@ -33,7 +33,7 @@
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"",
-    "%Name":"level_1__planet",
+    "%Name":"ruinedearth",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -57,7 +57,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"level_1__planet",
+    "name":"ruinedearth",
     "playback":1,
     "playbackSpeed":30.0,
     "playbackSpeedType":0,
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"e52155b6-af5e-4ce7-85ab-ccc7b4b2ffc7","path":"sprites/level_1__planet/level_1__planet.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"c0b07b63-0a71-4e25-80a1-b9ce35bc575a","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"2da15f4b-2d14-4711-83c3-3de7eed4e57e","path":"sprites/ruinedearth/ruinedearth.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"37818f52-0cab-47d8-aaf8-3679b6d22d2c","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":2560,
+  "width":5120,
 }
