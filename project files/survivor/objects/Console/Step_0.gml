@@ -1,10 +1,17 @@
 /// @description Insert description here
 // You can write your code in this editor
 steam_update()
+if steam_initialised() {
+	log("inited")	
+} else {
+	steam_init()
+}	
 if (keyboard_check_released(191)) {
 	open = !open
 	keyboard_string = ""
-	steam_set_achievement("console")
+	if !steam_get_achievement("console") {
+		steam_set_achievement("console")
+	}
 }
 
 if open {
