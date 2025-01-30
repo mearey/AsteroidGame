@@ -2,7 +2,7 @@
 // You can write your code in this editor
 steam_update()
 if steam_initialised() {
-	log("inited")	
+	
 } else {
 	steam_init()
 }	
