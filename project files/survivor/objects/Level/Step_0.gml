@@ -8,9 +8,8 @@ if !global.pauseObj.paused {
 if timer > 0 {
 	timer -= 1	
 } else {
-	difficulty += 1
 	timer = 60
-	log(string(difficulty))
+
 }
 
 if (boss) && !level3 {

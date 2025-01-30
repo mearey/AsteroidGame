@@ -9,7 +9,9 @@ if !(global.pauseObj.paused) {
 spawn_timer_real-=1
 if spawn_timer_real <=0 {
 	spawn_timer_real = spawn_timer
-	instance_create_depth(x,y,1,[AsteroidObj, SatelliteObj, GunDebrisObj, RocketObj,AsteroidObj, SatelliteObj, GunDebrisObj, RocketObj, DebrisGrabberObj][round(random_range(0,4))])
+	var arr =  [AsteroidObj, SatelliteObj, GunDebrisObj, RocketObj,AsteroidObj, SatelliteObj, GunDebrisObj, RocketObj, DebrisGrabberObj]
+	var inst = arr[round(random_range(0,4))]
+	instance_create_depth(x,y,1,inst)
 }
 	
 	

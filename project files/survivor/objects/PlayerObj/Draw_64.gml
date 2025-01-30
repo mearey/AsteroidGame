@@ -46,6 +46,7 @@ if (!global.pauseObj.paused) {
 	draw_set_alpha(1)
 	
 	//display time
+	/*
 	var hours = (((current_time - start_time)/1000)/60)/60
 	var mins = (((current_time - start_time)/1000)/60) - floor(hours)*60
 	var seconds =  ((current_time - start_time)/1000) - floor(hours)*60*60 - floor(mins)*60
@@ -71,7 +72,8 @@ if (!global.pauseObj.paused) {
 	draw_set_halign(fa_right)
 	draw_text(surface_get_width(application_surface)-30,75,time)
 	draw_set_halign(fa_left)
-	
+	*/
+
 	//abilty bar
 	if !global.pauseObj.paused {
 	draw_set_alpha(0.7)

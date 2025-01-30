@@ -25,7 +25,7 @@ if instance_exists(PostGameStats) {
 		draw_text(room_width/2,text_positions[2],"EXP GAINED: " + string(PostGameStats.exp_gained))
 	}
 	if (text_positions[3] >= 150 && text_positions[3] <= 600) {
-		draw_text(room_width/2,text_positions[3],"TIME: " + string(PostGameStats.time))
+		draw_text(room_width/2,text_positions[3],"TIME REMAINING: " + string(PostGameStats.time))
 	}
 	if (text_positions[4] >= 150 && text_positions[4] <= 600) {
 		draw_text(room_width/2,text_positions[4],"FINAL WEAPONS: ")

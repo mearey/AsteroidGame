@@ -7,7 +7,9 @@ for (var i = 0; i<length; i++;) {
 	if x<room_width/2 {
 		modifier = -1	
 	}
-	array_push(body,instance_create_depth(x+80+80*i*modifier,y,1,[AsteroidObjNoOffscreen][round(random_range(0,0))]))	
+	var arr = [AsteroidObjNoOffscreen]
+	var inst = arr[round(random_range(0,0))]
+	array_push(body,instance_create_depth(x+80+80*i*modifier,y,1,inst))	
 	if i == 0 {
 		var link = physics_joint_rope_create(self, body[i], x, y, body[i].x, body[i].y,25, false)
 		physics_joint_set_value(link, phy_joint_damping_ratio, 1)

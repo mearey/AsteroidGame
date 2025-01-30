@@ -36,7 +36,8 @@ function finishlevel() {
 }
 
 function progress() {
-	global.level.difficulty += 1;	
+	global.level.t_min -= 1
+	global.level.difficulty += 53.34
 	if (instance_exists(spawner)){
 		instance_destroy(spawner)	
 	}

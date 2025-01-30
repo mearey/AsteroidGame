@@ -68,7 +68,9 @@ function saveState(){
 	ini_write_real("POSTSTATS","damage_taken", global.player.damage_taken)
 	ini_write_real("POSTSTATS","enemies_killed", global.player.enemies_defeated)
 	ini_write_real("POSTSTATS","exp_gained", global.player.exp_gained)
-	ini_write_real("POSTSTATS","time", global.player.start_time)
+	ini_write_real("POSTSTATS","time_min", Level.t_min)
+	ini_write_real("POSTSTATS","time_sec", Level.t_sec)
+	ini_write_real("POSTSTATS","time_mil", Level.t_mil)
 	
 	//save exp
 	for (var i=0 ; i<instance_number(EXPOrbObj); i++) {
@@ -100,7 +102,6 @@ function loadState() {
 	player.damage_taken = ini_read_real("POSTSTATS","damage_taken", 0)
 	player.enemies_defeated = ini_read_real("POSTSTATS","enemies_killed", 0)
 	player.exp_gained = ini_read_real("POSTSTATS","exp_gained", 0)
-	player.start_time = ini_read_real("POSTSTATS","time", current_time)
 	
 	//load coins
 	player.coins = ini_read_real("SAVESTATS", "coins", 0)
@@ -155,6 +156,11 @@ function loadState() {
 	var level = instance_create_depth(0,0,1,asset_get_index(ini_read_string("SAVEWAVE", "level", "Level1")))
 	
 	level.difficulty = diff
+	ini_close()
+	ini_open("save_game_state.ini")
+	level.t_min = ini_read_real("POSTSTATS","time_min", 0)
+	level.t_sec = ini_read_real("POSTSTATS","time_sec", 0)
+	level.t_mil = ini_read_real("POSTSTATS","time_mil", 0)
 	
 	ini_close()
 }
