@@ -2,17 +2,17 @@
   "$GMSprite":"",
   "%Name":"ingame_tut1",
   "bboxMode":0,
-  "bbox_bottom":637,
-  "bbox_left":223,
-  "bbox_right":1057,
-  "bbox_top":106,
+  "bbox_bottom":684,
+  "bbox_left":154,
+  "bbox_right":1140,
+  "bbox_top":54,
   "collisionKind":1,
   "collisionTolerance":0,
   "DynamicTexturePage":false,
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"3eb5bda0-5c06-4c58-b26e-2894da047bd7","name":"3eb5bda0-5c06-4c58-b26e-2894da047bd7","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"962dec72-4d79-4c97-9451-d1d560a5b77c","name":"962dec72-4d79-4c97-9451-d1d560a5b77c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"3eb5bda0-5c06-4c58-b26e-2894da047bd7","path":"sprites/ingame_tut1/ingame_tut1.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"464cf9d6-69dc-43ef-9f07-941f1ced5ae4","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"962dec72-4d79-4c97-9451-d1d560a5b77c","path":"sprites/ingame_tut1/ingame_tut1.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"40a16481-b353-411c-92f0-a7a66a1f4ae6","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
