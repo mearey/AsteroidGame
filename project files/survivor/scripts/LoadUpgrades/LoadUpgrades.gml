@@ -7,7 +7,7 @@ function LoadUpgrades(){
 	global.regen = ini_read_real("UPGRADES", "regen", 0)
 	global.cdr = ini_read_real("UPGRADES", "cdr", 0)+1
 	global.multi_shot = ini_read_real("UPGRADES", "multi_shot", 0)
-	global.luck = ini_read_real("UPGRADES", "luck", 1)
+	global.luck = ini_read_real("UPGRADES", "luck", 1)/1.7
 	ini_close()
 }
 
@@ -19,6 +19,7 @@ function loadOptions() {
 	global.sfx_level = ini_read_real("SETTINGS", "sfx_volume", 10)/10
 	global.master_volume = ini_read_real("SETTINGS", "master_volume", 10)/10
 	global.lighting = ini_read_real("SETTINGS", "lighting", 1)
+	audio_master_gain(global.master_volume)
 	cursor_sprite = asset_get_index("spriteCursor"+string(ini_read_real("SETTINGS", "cursor", 0)))
 	ini_close()
 }

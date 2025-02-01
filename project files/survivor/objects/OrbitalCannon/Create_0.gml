@@ -19,3 +19,5 @@ description = "Orbits the ship and occasionaly fires a bullet at the nearest ene
 function lvlUp() {
 	lvl+=1;	
 }
+visible = false
+alarm[0] = 4

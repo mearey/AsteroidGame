@@ -1,3 +1,4 @@
+try {
 if (dragging) {
 	if (blue) {
 	draw_sprite_ext(object_get_sprite(item),1,mouse_x-cam_x,mouse_y-cam_y,2.1,2.1,90,c_aqua,1)
@@ -23,4 +24,6 @@ if (dragging) {
 	}
 	draw_sprite_ext(object_get_sprite(item),2,x-cam_x,y-cam_y,2,2,90,c_white,1)
 }
+} catch (err) {
 
+}

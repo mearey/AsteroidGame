@@ -4,7 +4,7 @@
 // Inherit the parent event
 event_inherited();
 
-max_speed = 3;
+max_speed = 4;
 
 dmg = 1.1;
 
@@ -22,7 +22,7 @@ overclock_timer = 200
 clocking = false
 addition = 0
 
-cooldown = 1200
+cooldown = 2000
 ability_cooldown=cooldown/(global.cdr)
 ability = "Press \'space\' to overclock weapons"
 function ability_() {

@@ -15,3 +15,4 @@ if (instance_exists(Level)) {
 	
 x_ = camx+cam_width/2
 y_ = camy+cam_height/2
+loadOptions()

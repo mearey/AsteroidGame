@@ -16,6 +16,8 @@ t_mil = 0
 
 alarm[1] = fps/10
 
+unlock_ = false
+
 boss = false
 
 end_ = false
@@ -36,6 +38,12 @@ bosslist = []
 number = 10;
 
 num_bosses = 1;
+
+with (Level) {
+	if self != other {
+		instance_destroy(self)
+	}
+}
 
 
 function spawnEnemy(enemy) {

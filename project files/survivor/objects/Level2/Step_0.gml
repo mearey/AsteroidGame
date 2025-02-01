@@ -75,6 +75,14 @@ if difficulty > 800 {
 	}
 }
 
+if t_min == 8  && !unlock_ {
+	unlock_ = true
+	ini_open("unlocks.ini")
+	ini_write_real("LEVELS", "3", 1)
+	steam_set_achievement("level_unlock_3")
+	ini_close()
+}
+
 if end_ {
 	ini_open("unlocks.ini")
 	steam_set_achievement("level_2")

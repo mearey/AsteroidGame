@@ -23,3 +23,5 @@ description = "Orbits the ship and constantly beams nearby enemies"
 function lvlUp() {
 	lvl+=1;	
 }
+visible = false
+alarm[0] = 4

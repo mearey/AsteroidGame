@@ -311,6 +311,7 @@
     {"id":{"name":"bulletSprite","path":"sprites/bulletSprite/bulletSprite.yy",},},
     {"id":{"name":"ButtonSprite","path":"sprites/ButtonSprite/ButtonSprite.yy",},},
     {"id":{"name":"ButtonSpriteWithTut","path":"sprites/ButtonSpriteWithTut/ButtonSpriteWithTut.yy",},},
+    {"id":{"name":"ButtonSpriteWithTutUpgrades","path":"sprites/ButtonSpriteWithTutUpgrades/ButtonSpriteWithTutUpgrades.yy",},},
     {"id":{"name":"Cannon_MKI","path":"sprites/Cannon_MKI/Cannon_MKI.yy",},},
     {"id":{"name":"Cannon_Orbital_MKI_","path":"sprites/Cannon_Orbital_MKI_/Cannon_Orbital_MKI_.yy",},},
     {"id":{"name":"Cannon_Orbital_MKI","path":"sprites/Cannon_Orbital_MKI/Cannon_Orbital_MKI.yy",},},

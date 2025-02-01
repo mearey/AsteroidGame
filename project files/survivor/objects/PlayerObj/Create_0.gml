@@ -17,7 +17,7 @@ damage_taken = 0
 enemies_defeated = 0
 exp_gained = 0
 
-max_speed = 2;
+max_speed = 3;
 
 dmg = 1;
 

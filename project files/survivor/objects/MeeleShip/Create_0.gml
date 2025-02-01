@@ -6,7 +6,7 @@ event_inherited();
 
 lighting_size =4
 
-max_speed = 1.4;
+max_speed = 2;
 dmg = 1.5;
 fire_rate = global.fire_rate*1.2
 fire_timer = fire_rate

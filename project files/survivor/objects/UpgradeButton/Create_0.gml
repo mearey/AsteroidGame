@@ -3,7 +3,9 @@
 
 // Inherit the parent event
 event_inherited();
-
+if instance_exists(UpgradeSelector) {
+	sprite_index = ButtonSpriteWithTutUpgrades	
+}
 
 points = 0
 

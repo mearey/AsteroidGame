@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
-images = [Splashscreen_Studio, Splashscreen_Game]
-imagesbw = [Splashscreen_Studio_bw, Splashscreen_Game_bw]
+images = [nocollision,Splashscreen_Studio, Splashscreen_Game]
+imagesbw = [nocollision,Splashscreen_Studio_bw, Splashscreen_Game_bw]
 x=0
 y=0
 step = 0

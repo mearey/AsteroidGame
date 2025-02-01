@@ -93,7 +93,7 @@ luck_btn = CreateButton(-180-30,"LUCK", function () {
 		temp.cost = 200+20*luck_btn.points*luck_btn.points*luck_btn.points
 	}
 })
-luck_btn.max_points = 10
+luck_btn.max_points = 6
 luck_btn.points = ini_read_real("UPGRADES", "luck", 0)
 luck_btn.cost = 200+20*luck_btn.points*luck_btn.points*luck_btn.points
 luck_btn.points = ini_read_real("UPGRADES", "luck", 0)

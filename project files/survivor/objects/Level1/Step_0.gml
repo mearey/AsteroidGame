@@ -35,25 +35,25 @@ if !set {
 		bosslist = [EnemyFlyBossObj, EnemyOrbBossObj]
 		number = 500
 		num_bosses = 1
-		spawnrate = 25
+		spawnrate = 28
 	} else if difficulty < 600 {
 		enemylist = [EnemyOrbObj,EnemyOrbObj, EnemyShip1]
 		bosslist = [EnemyShipBoss, EnemyOrbBossObj]
 		number = 600
 		num_bosses = 1
-		spawnrate = 20
+		spawnrate = 25
 	} else if difficulty < 700 {
 		enemylist = [EnemyOrbObj, EnemySquareObj, EnemyWormObj, EnemyFlyObj,EnemyOrbObj, EnemySquareObj, EnemyWormObj, EnemyFlyObj, EnemyShipMissle]
 		bosslist = [EnemyFlyBossObj, EnemyOrbBossObj, EnemySquareBossObj]
 		number = 650
 		num_bosses = 1
-		spawnrate = 15
+		spawnrate = 20
 	} else if difficulty < 800 {
 		enemylist = [FastEnemyShip, EnemyShip1, EnemyOrbObj, EnemySquareObj, EnemyWormObj, EnemyFlyObj,FastEnemyShip, EnemyShip1, EnemyOrbObj, EnemySquareObj, EnemyWormObj, EnemyFlyObj,FastEnemyShip, EnemyShip1, EnemyOrbObj, EnemySquareObj, EnemyWormObj, EnemyFlyObj,FastEnemyShip, EnemyShip1, EnemyOrbObj, EnemySquareObj, EnemyWormObj, EnemyFlyObj, EnemyShipMissle]
 		bosslist = [EnemyFlyBossObj, EnemyOrbBossObj, EnemySquareBossObj, EnemyShipBoss]
 		number = 700
 		num_bosses = 2
-		spawnrate = 10
+		spawnrate = 15
 	} else {
 		enemylist = [EnemyOrbObj]
 		bosslist = [EnemyFlyBossObj, EnemyOrbBossObj, EnemySquareBossObj, EnemyShipBoss]
@@ -71,6 +71,13 @@ if difficulty > 800 {
 	}
 }
 
+if t_min == 8 && !unlock_ {
+	unlock_ = true
+	ini_open("unlocks.ini")
+	ini_write_real("LEVELS", "2", 1)
+	steam_set_achievement("level_unlock_2")
+	ini_close()
+}
 
 if end_ {
 	ini_open("unlocks.ini")

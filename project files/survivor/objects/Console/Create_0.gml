@@ -6,3 +6,4 @@ res_list = []
 steam_update()
 steam_init()
 steam_update()
+loadOptions()

@@ -14,7 +14,7 @@ lighting_layer = lightingOBJ.lighting_surface
 
 _speed = 0;
 
-hp = 1000;
+hp = 400;
 max_hp= hp;
 
 move_cooldown = 200;

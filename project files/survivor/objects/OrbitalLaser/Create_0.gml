@@ -19,3 +19,5 @@ description = "Orbits the ship and occasionaly fires a laser at the nearest enem
 function lvlUp() {
 	lvl+=1;	
 }
+visible = false
+alarm[0] = 4
