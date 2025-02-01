@@ -265,6 +265,7 @@
     {"id":{"name":"boostsfx","path":"sounds/boostsfx/boostsfx.yy",},},
     {"id":{"name":"buttonSelect","path":"sounds/buttonSelect/buttonSelect.yy",},},
     {"id":{"name":"buttonSwitch","path":"sounds/buttonSwitch/buttonSwitch.yy",},},
+    {"id":{"name":"bwooom","path":"sounds/bwooom/bwooom.yy",},},
     {"id":{"name":"coinGetSound","path":"sounds/coinGetSound/coinGetSound.yy",},},
     {"id":{"name":"dmgsfx","path":"sounds/dmgsfx/dmgsfx.yy",},},
     {"id":{"name":"expGetSound","path":"sounds/expGetSound/expGetSound.yy",},},

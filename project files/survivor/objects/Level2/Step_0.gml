@@ -75,7 +75,7 @@ if difficulty > 800 {
 	}
 }
 
-if t_min == 8  && !unlock_ {
+if t_min == 6  && !unlock_ {
 	unlock_ = true
 	ini_open("unlocks.ini")
 	ini_write_real("LEVELS", "3", 1)
