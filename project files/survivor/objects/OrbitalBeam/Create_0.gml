@@ -3,7 +3,7 @@
 
 // Inherit the parent event
 event_inherited();
-
+brand = "L.U.N.A Prospecting"
 shooting = false
 
 fire_rate = global.player.fire_rate*6;

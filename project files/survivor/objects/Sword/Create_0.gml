@@ -4,6 +4,7 @@
 // Inherit the parent event
 event_inherited();
 description = "Melee weapon that slashes at nearby enemies and deals massive damage"
+brand = "Cleave: Historical Resurgence"
 projectile_speed = global.player.projectile_speed;
 
 accuracy = global.player.accuracy;

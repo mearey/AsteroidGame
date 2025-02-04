@@ -52,13 +52,17 @@ continue_btn = CreateButton(30,"CONTINUE", function () {
 	global.pauseObj.pause(false)
 })
 
-options_btn = CreateButton(0,"OPTIONS", function () {
+options_btn = CreateButton(10,"OPTIONS", function () {
 	instance_destroy(self)
 	var camx = camera_get_view_x(view_camera[0])
 	var camy = camera_get_view_y(view_camera[0])
 	var cam_width = camera_get_view_width(view_camera[0])
 	var cam_height = camera_get_view_height(view_camera[0])
 	instance_create_depth(camx+cam_width/2,camy+cam_height/2,1,OptionsSelector)
+})
+
+continue_btn = CreateButton(-10,"TUTORIAL", function () {
+	instance_create_depth(0,0,1,tutorialObj)
 })
 	
 exit_btn = CreateButton(-30, "SAVE & EXIT", function() {

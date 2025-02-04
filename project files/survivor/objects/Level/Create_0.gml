@@ -6,7 +6,7 @@ difficulty = 1
 songs = []
 lighting_layer = level_1__sun
 
-foreground_layer = level_1__planet
+foreground_layer = ruinedearth
 
 timer = 60
 

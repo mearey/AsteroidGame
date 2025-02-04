@@ -62,7 +62,7 @@ function saveState(){
 	
 	//save ship selection
 	
-	ini_write_real("SHIP", "selection", real(global.ship_selection))
+	ini_write_string("SHIP", "selection", object_get_name(global.ship_selection.object_index))
 	
 	//save time and enemies killed etc
 	ini_write_real("POSTSTATS","damage_taken", global.player.damage_taken)
@@ -91,7 +91,7 @@ function loadState() {
 	var room_ = ini_read_string("STATE", "room", "MainMenu")
 	var x_ = ini_read_real("STATE", "position_x", 0);
 	var y_ = ini_read_real("STATE", "position_y", 0);
-	global.ship_selection = ini_read_real("SHIP", "selection", PlayerObj)
+	global.ship_selection = asset_get_index(ini_read_string("SHIP", "selection", PlayerObj))
 	var player = instance_create_depth(x_,y_,1, global.ship_selection)
 	room_goto(asset_get_index(room_))
 	ini_close()

@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 event_inherited()
+brand = "Scorb Systems"
 slot = 6
 projectile_speed = global.player.projectile_speed*1.2
 fire_rate = global.player.fire_rate*6;

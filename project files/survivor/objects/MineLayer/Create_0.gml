@@ -2,7 +2,7 @@
 // You can write your code in this editor
 event_inherited()
 projectile_speed = global.player.projectile_speed;
-
+brand = "Astral Protection"
 accuracy = global.player.accuracy;
 
 fire_rate = global.player.fire_rate*5;

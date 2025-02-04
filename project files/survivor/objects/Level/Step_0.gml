@@ -40,7 +40,7 @@ if set {
 		timer_ = spawnrate
 		
 		//trader spawn
-		if random(1) < 0.001 {
+		if random(1) < 0.0017 {
 			if !instance_exists(TraderShip) {
 				instance_create_depth(global.player.x,global.player.y, 1,TraderShip)
 			}

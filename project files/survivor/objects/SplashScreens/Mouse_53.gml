@@ -9,5 +9,5 @@ if step == 1 {
 	audio_stop_all()	
 }
 if step >= array_length(images) {
-	room_goto(MainMenu)
+	room_goto(Scrollingstory)
 }

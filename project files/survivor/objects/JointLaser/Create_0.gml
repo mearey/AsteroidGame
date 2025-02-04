@@ -4,7 +4,7 @@
 // Inherit the parent event
 event_inherited();
 projectile_speed = global.player.projectile_speed;
-
+brand = "Scorb Systems"
 accuracy = global.player.accuracy/2;
 scrap = 125
 fire_rate = global.player.fire_rate;

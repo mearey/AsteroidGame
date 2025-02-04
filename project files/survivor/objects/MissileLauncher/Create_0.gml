@@ -6,6 +6,7 @@
 
 // Inherit the parent event
 event_inherited();
+brand = "Astral Protection"
 slot = 1
 fire_rate = global.player.fire_rate*5
 description = "Long range weapon that fires homing missles which explode on impact with any enemy"

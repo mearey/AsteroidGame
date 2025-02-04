@@ -30,7 +30,7 @@ function CreateButton(degree, sprite1, sprite2, func) {
 	return new_game
 }
 
-var button = CreateButton(30,level_1__stars, level_1__planet, function () {
+var button = CreateButton(30,level_1__stars, ruinedearth, function () {
 	var player = instance_create_depth(surface_get_width(application_surface)/2,surface_get_height(application_surface)/2,1,global.ship_selection)
 	player.resetWeapons()
 	//draw loadscreen

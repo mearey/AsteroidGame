@@ -3,9 +3,10 @@
 
 
 
-
 // Inherit the parent event
 event_inherited();
+
+brand = "L.U.N.A Prospecting"
 lighting_colour = c_aqua
 width = 2;
 slot = 9

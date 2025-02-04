@@ -1,5 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+if global.player.scrap >= 300 {
+	steam_set_achievement("silver_notspent_300")	
+}
+
 if !tutorial {
 x_ = cam_x
 y_ = cam_y + cam_height/2

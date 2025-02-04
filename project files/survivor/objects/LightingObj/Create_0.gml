@@ -16,3 +16,4 @@ with LightingObj {
 if count >= 2 {
 	instance_destroy(self)	
 }
+

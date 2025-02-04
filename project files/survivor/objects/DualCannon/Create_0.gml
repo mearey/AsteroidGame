@@ -7,6 +7,7 @@
 // Inherit the parent event
 event_inherited();
 slot = 1
+brand = "Will, Williams & Williamsons"
 damage = 5
 fire_rate = global.player.fire_rate/1.5;
 fire_timer = fire_rate;

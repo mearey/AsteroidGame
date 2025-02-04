@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-sprite_prefetch(level_1__planet)
+sprite_prefetch(ruinedearth)
 sprite_prefetch(level_1__sun)
 sprite_prefetch(level_1__stars)
 

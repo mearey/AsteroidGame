@@ -72,3 +72,7 @@ function drops() {
 function testweapon() {
 	global.player.addWeapon(ShockLauncher)
 }
+
+function end_() {
+	room_goto(EndCutsceneRoom)	
+}

@@ -2,12 +2,13 @@
 // You can write your code in this editor
 
 // Inherit the parent event
+boss_killed= false
 boss =false
 event_inherited();
 
 lighting_layer = level_1__sun
 
-foreground_layer = level_1__planet
+foreground_layer = ruinedearth
 
 boss_obj = OrbOfScorb
 

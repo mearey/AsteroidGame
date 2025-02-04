@@ -6,6 +6,7 @@ event_inherited();
 slot = 2
 width = 1;
 description = "Aimed weapon that fires a small solid beam which damages all enemies in its path"
+brand = "L.U.N.A Prospecting"
 damage = 2
 projectile_speed = 10
 // Inherit the parent event

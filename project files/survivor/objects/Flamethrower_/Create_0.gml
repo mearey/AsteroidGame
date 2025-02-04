@@ -7,6 +7,7 @@
 // Inherit the parent event
 event_inherited();
 slot = 3
+brand = "Deimos Academy of Sciences"
 fire_rate = global.player.fire_rate/4;
 accuracy = global.player.accuracy*15
 projectile_speed = global.player.projectile_speed/1.5

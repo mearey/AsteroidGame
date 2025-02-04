@@ -89,7 +89,7 @@ CreateButton(-30, "SHIP SELECT", function() {
 })
 
 CreateButton(180-30, "CREDITS", function() {
-		
+	room_goto(Credits)
 })
 
 CreateButton(180+30, "EXIT", function() {game_end()})

@@ -6,7 +6,7 @@ event_inherited();
 
 lighting_layer = level_1__sun
 
-foreground_layer = level_1__planet
+foreground_layer = ruinedearth
 
 boss_obj = OrbOfScorb
 

@@ -2,7 +2,7 @@
 // You can write your code in this editor
 event_inherited()
 slot = 8
-
+brand = "L.U.N.A Prospecting"
 fire_rate = global.player.fire_rate*6;
 projectile_speed = 10
 

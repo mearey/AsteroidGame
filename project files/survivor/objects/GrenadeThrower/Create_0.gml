@@ -6,6 +6,7 @@
 
 // Inherit the parent event
 event_inherited();
+brand = "Astral Protection"
 description = "Aimed weapon with a slow fire rate that fires grenades that explode on impact"
 lighting_colour = c_yellow
 slot = 9

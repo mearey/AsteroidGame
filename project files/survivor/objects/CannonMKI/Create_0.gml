@@ -6,6 +6,7 @@
 
 // Inherit the parent event
 event_inherited();
+brand = "Will, Williams & Williamsons"
 slot = 5
 fire_rate = global.player.fire_rate*2;
 

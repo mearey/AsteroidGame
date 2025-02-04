@@ -5,6 +5,7 @@
 event_inherited();
 description = "Creates a field around the ship that damages enemies that enter"
 lvl = 1;
+brand = "L.U.N.A Prospecting"
 
 slot = 5
 

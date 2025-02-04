@@ -6,6 +6,8 @@
 
 // Inherit the parent event
 event_inherited();
+
+brand = "L.U.N.A Prospecting"
 description = "Aimed weapon that fires a solid beam which damages all enemies in its path"
 
 width = 1;

@@ -3,7 +3,7 @@
 event_inherited()
 lighting_colour = c_red
 projectile_speed = global.player.projectile_speed;
-
+brand = "Scorb Systems"
 accuracy = global.player.accuracy/2;
 
 fire_rate = global.player.fire_rate*1.5;
