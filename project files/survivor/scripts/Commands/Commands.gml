@@ -73,6 +73,6 @@ function testweapon() {
 	global.player.addWeapon(ShockLauncher)
 }
 
-function end_() {
+function end_credits() {
 	room_goto(EndCutsceneRoom)	
 }
