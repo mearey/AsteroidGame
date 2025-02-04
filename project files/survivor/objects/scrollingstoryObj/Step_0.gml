@@ -2,7 +2,7 @@
 // You can write your code in this editor
 scroll -= 1
 
-if scroll <= -500 {
+if scroll <= -4000 {
 	room_goto(Splash2)
 }
 

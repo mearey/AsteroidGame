@@ -307,6 +307,7 @@
     {"id":{"name":"lvl3songvar3","path":"sounds/lvl3songvar3/lvl3songvar3.yy",},},
     {"id":{"name":"novasfx","path":"sounds/novasfx/novasfx.yy",},},
     {"id":{"name":"plasmaThrowerSFX","path":"sounds/plasmaThrowerSFX/plasmaThrowerSFX.yy",},},
+    {"id":{"name":"storysong","path":"sounds/storysong/storysong.yy",},},
     {"id":{"name":"swordSwoosh","path":"sounds/swordSwoosh/swordSwoosh.yy",},},
     {"id":{"name":"WeaponGetSound","path":"sounds/WeaponGetSound/WeaponGetSound.yy",},},
     {"id":{"name":"_2nd_from_back_1","path":"sprites/_2nd_from_back_1/_2nd_from_back_1.yy",},},
