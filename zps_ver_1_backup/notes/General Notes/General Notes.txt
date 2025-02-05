@@ -1,0 +1,49 @@
+- make boss 2 for second area - wall of debris?
+
+- write song for second boss
+
+--PLAYTEST NOTES--
+
+put correct stats on weapons to be displayed
+
+add luck stat
+
+damage for each weapons in inventory
+
+delay when unpause
+
+damage on post game screen for each weapon
+
+highest damage weaopon on pst game screen
+
+add more weapons
+
+miku ship with directed soundwave abiality that deals damage
+
+fix time on post game screen
+
+active items?
+
+next level should be set inside a giant space station
+ 
+---- extra ideas ----
+
+if there is 2 items in chest have them combine into a level 2
+
+timestop ability/item
+
+overclock ability/item
+
+field that duplicates projectiles
+
+dash ability/item
+
+when you kill enemies you charge a meter and when u take damage it realses SOMEHING
+
+arcing lightning weapon?
+
+passive items that take up a weapon slot?
+
+unique items that drop from minibosses?
+
+have the wall of debris drop items
