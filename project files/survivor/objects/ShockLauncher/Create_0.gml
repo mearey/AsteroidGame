@@ -10,6 +10,7 @@ fire_rate = global.player.fire_rate*2.3;
 fire_timer = fire_rate;
 
 lvl = 1;
+brand = "PIRATE"
 
 shockrange = 1
 slot = 2

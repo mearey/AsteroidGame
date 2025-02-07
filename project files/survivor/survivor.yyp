@@ -290,6 +290,7 @@
     {"id":{"name":"expGetSound","path":"sounds/expGetSound/expGetSound.yy",},},
     {"id":{"name":"explosion","path":"sounds/explosion/explosion.yy",},},
     {"id":{"name":"GameSongMenu","path":"sounds/GameSongMenu/GameSongMenu.yy",},},
+    {"id":{"name":"GameSongMenuvariation","path":"sounds/GameSongMenuvariation/GameSongMenuvariation.yy",},},
     {"id":{"name":"gernadeLaunch","path":"sounds/gernadeLaunch/gernadeLaunch.yy",},},
     {"id":{"name":"humanbark1","path":"sounds/humanbark1/humanbark1.yy",},},
     {"id":{"name":"humanbark2","path":"sounds/humanbark2/humanbark2.yy",},},
