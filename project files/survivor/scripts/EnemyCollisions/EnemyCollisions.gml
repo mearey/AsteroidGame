@@ -3,8 +3,10 @@
 function EnemyCollisions(){
 
 	if (collision_circle(x,y,sprite_height/2,global.ship_selection,false,true)) {
-		global.player.hp-=damage
-		global.player.takeDamage()
+		if object_index != BuddyObj {
+			global.player.hp-=damage
+			global.player.takeDamage()
+		}
 	}
 
 	if (collision_circle(x,y,sprite_height/2,BeamObj,false,true)) {

@@ -60,6 +60,14 @@ function saveState(){
 	}
 	ini_write_real("ENEMIES", "num", i)
 	
+	
+	//save buddies
+	for (var i=0 ; i<instance_number(BuddyObj); i++) {
+		var enemy = instance_find(BuddyObj,i)
+		ini_write_string("ENEMIES", "bud_"+string(i), object_get_name(enemy.object_index)+"_"+string(enemy.x)+"_"+string(enemy.y)+"_"+string(enemy.collected)+"_"+string(enemy.rotation))
+	}
+	ini_write_real("ENEMIES", "num_buds", i)
+	
 	//save ship selection
 	
 	ini_write_string("SHIP", "selection", object_get_name(global.ship_selection.object_index))
@@ -143,6 +151,17 @@ function loadState() {
 		if object_get_physics(enemy.object_index) {
 			enemy.set_phys_speed(res[4],res[5])
 		}
+	}
+	
+	//load buddies
+	for (var i = 0; i<ini_read_real("ENEMIES","num_buds", 0); i++) {
+		var res = string_split(ini_read_string("ENEMIES", "bud_"+string(i),0), "_")
+		var enemy = instance_create_depth(real(res[1]),real(res[2]),1,asset_get_index(res[0]))
+		enemy.collected = res[3]
+		if enemy.collected {
+			enemy.sprite_index = Buddy_shrink	
+		}
+		enemy.rotation = int64(res[4])
 	}
 	
 	//load exp

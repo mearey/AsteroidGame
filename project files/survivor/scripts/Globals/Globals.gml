@@ -63,6 +63,9 @@ function clearEntities() {
 	with (EXPOrbObj) {
 		instance_destroy(self)	
 	}
+	with(BuddyObj) {
+		instance_destroy(self)	
+	}
 }
 
 function removeWeaponFromPool(weapon) {

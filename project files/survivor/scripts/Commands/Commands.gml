@@ -76,3 +76,7 @@ function testweapon() {
 function end_credits() {
 	room_goto(EndCutsceneRoom)	
 }
+
+function spawn_buddy() {
+	Level.spawnEnemy(BuddyObj)	
+}

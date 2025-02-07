@@ -156,6 +156,11 @@ function takeDamage() {
 	if !audio_is_playing(dmgsfx) and !dead {
 		PlaySFX(dmgsfx,1,1)
 	}
+	with BuddyObj {
+		if collected {
+			explode()	
+		}
+	}
 }
 
 function loadStats() {
