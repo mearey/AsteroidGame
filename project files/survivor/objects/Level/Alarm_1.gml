@@ -17,16 +17,16 @@ if t_sec < 0 {
 	if random(1) < 0.1 {
 		spawnEnemy(array_get_random(bosslist))
 	}
-	if random(1) < 0.1 {
-		spawnEnemy(BuddyObj)	
+	if random(1) < 0.1*global.luck {
+		//spawnEnemy(BuddyObj)	
 	}
 }
 
 if (t_sec>=0||t_min>=0||t_mil>=0) {
-	alarm[1] = fps/10	
+	alarm[1] = 6
 } else if instance_exists(Level3) {
 	//end of level
-	alarm[1] = fps/10
+	alarm[1] = 6
 } else {
 		
 }

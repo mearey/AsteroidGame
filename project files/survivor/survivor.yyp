@@ -218,6 +218,7 @@
     {"id":{"name":"RocketTopObj","path":"objects/RocketTopObj/RocketTopObj.yy",},},
     {"id":{"name":"SatelliteObj","path":"objects/SatelliteObj/SatelliteObj.yy",},},
     {"id":{"name":"scrollingstoryObj","path":"objects/scrollingstoryObj/scrollingstoryObj.yy",},},
+    {"id":{"name":"SecretBoss","path":"objects/SecretBoss/SecretBoss.yy",},},
     {"id":{"name":"Selector","path":"objects/Selector/Selector.yy",},},
     {"id":{"name":"SelectorParent","path":"objects/SelectorParent/SelectorParent.yy",},},
     {"id":{"name":"SellerSlot","path":"objects/SellerSlot/SellerSlot.yy",},},

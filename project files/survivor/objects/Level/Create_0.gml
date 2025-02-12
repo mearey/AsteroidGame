@@ -14,7 +14,7 @@ t_min = 15
 t_sec = 0
 t_mil = 0
 
-alarm[1] = fps/10
+alarm[1] = 6
 
 unlock_ = false
 
