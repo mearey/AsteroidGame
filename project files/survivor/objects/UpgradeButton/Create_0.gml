@@ -9,6 +9,8 @@ if instance_exists(UpgradeSelector) {
 
 points = 0
 
+description = ""
+
 max_points = 5
 
 cost = 10

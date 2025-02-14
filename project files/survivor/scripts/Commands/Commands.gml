@@ -80,3 +80,22 @@ function end_credits() {
 function spawn_buddy() {
 	Level.spawnEnemy(BuddyObj)	
 }
+
+function test_room() {
+	var player = instance_create_depth(surface_get_width(application_surface)/2,surface_get_height(application_surface)/2,1,global.ship_selection)
+	player.resetWeapons()
+	with(Selector) {
+		instance_destroy(self)	
+	}
+
+	instance_create_depth(x,y,1,Level)
+	room_goto(TestRoom)	
+}
+
+function secret_boss() {
+	Level.spawnEnemy(SecretBossObj)	
+}
+
+function spawn_player() {
+	instance_create_depth(0,0,1,global.ship_selection)	
+}

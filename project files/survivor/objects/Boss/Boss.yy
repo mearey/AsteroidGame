@@ -1,7 +1,9 @@
 {
   "$GMObject":"",
   "%Name":"Boss",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"Boss",
   "overriddenProperties":[],
@@ -10,8 +12,8 @@
     "path":"folders/Objects/Enemies/Bosses.yy",
   },
   "parentObjectId":{
-    "name":"Enemy",
-    "path":"objects/Enemy/Enemy.yy",
+    "name":"ObjectLightingParent",
+    "path":"objects/ObjectLightingParent/ObjectLightingParent.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

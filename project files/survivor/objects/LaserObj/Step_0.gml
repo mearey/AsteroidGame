@@ -10,3 +10,4 @@ if !global.pauseObj.paused {
 	y += lengthdir_y(projectile_speed*2,direction)
 	x += lengthdir_x(projectile_speed*2,direction)
 }
+

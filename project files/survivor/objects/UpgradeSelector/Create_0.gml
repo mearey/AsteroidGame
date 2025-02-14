@@ -35,6 +35,7 @@ fr_btn = CreateButton(-30,"FIRE RATE", function () {
 fr_btn.max_points = 4
 fr_btn.points = ini_read_real("UPGRADES", "fire_rate", 0)
 fr_btn.cost = 20+30*fr_btn.points
+fr_btn.description = "Increases fire rate for all weapons"
 
 regen_btn = CreateButton(-15,"REGEN", function () {
 	var temp = GetUpgradeButton("REGEN")
@@ -47,6 +48,7 @@ regen_btn = CreateButton(-15,"REGEN", function () {
 regen_btn.max_points = 5
 regen_btn.points = ini_read_real("UPGRADES", "regen", 0)
 regen_btn.cost = 10+30*regen_btn.points
+regen_btn.description = "Increases the percentage of max hp that constantly regenerates"
 
 magnet_btn = CreateButton(0,"MAGNET", function () {
 	var temp = GetUpgradeButton("MAGNET")
@@ -59,7 +61,7 @@ magnet_btn = CreateButton(0,"MAGNET", function () {
 magnet_btn.max_points = 12
 magnet_btn.points = ini_read_real("UPGRADES", "magnet", 0)
 magnet_btn.cost = 10+25*magnet_btn.points
-
+magnet_btn.description = "Increase pickup range for exp and coins"
 
 ms_btn = CreateButton(15,"MULTI SHOT", function () {
 	var temp = GetUpgradeButton("MULTI SHOT")
@@ -71,6 +73,7 @@ ms_btn = CreateButton(15,"MULTI SHOT", function () {
 ms_btn.max_points = 1
 ms_btn.cost = 150
 ms_btn.points = ini_read_real("UPGRADES", "multi_shot", 0)
+ms_btn.description = "Every projectile shot by the player will be duplicated"
 
 aa_btn = CreateButton(30,"COOLDOWN", function () {
 	var temp = GetUpgradeButton("COOLDOWN")
@@ -84,6 +87,7 @@ aa_btn.max_points = 4
 aa_btn.points = ini_read_real("UPGRADES", "cdr", 0)
 aa_btn.cost = 20+30+aa_btn.points
 aa_btn.points = ini_read_real("UPGRADES", "cdr", 0)
+ms_btn.description = "Decreases cooldown for your ship's ability"
 
 luck_btn = CreateButton(-180-30,"LUCK", function () {
 	var temp = GetUpgradeButton("LUCK")
@@ -97,6 +101,7 @@ luck_btn.max_points = 6
 luck_btn.points = ini_read_real("UPGRADES", "luck", 0)
 luck_btn.cost = 200+20*luck_btn.points*luck_btn.points*luck_btn.points
 luck_btn.points = ini_read_real("UPGRADES", "luck", 0)
+luck_btn.description = "Get luckier :-)"
 
 
 CreateButton(180+30, "BACK", function() {

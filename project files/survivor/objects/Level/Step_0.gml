@@ -11,7 +11,9 @@ if timer > 0 {
 	timer = 60
 
 }
-
+if alarm[1] >= 10 || alarm[1] == -1 {
+	alarm[1] = 6
+}
 if (boss) && !level3 {
 	if !instance_exists(boss_obj) {
 		//end

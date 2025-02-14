@@ -10,11 +10,11 @@ function EnemyCollisions(){
 	}
 
 	if (collision_circle(x,y,sprite_height/2,BeamObj,false,true)) {
-		takeDamage(global.player.dmg/25)
+		takeDamage(global.player.dmg/35)
 	}
 
 	if (collision_circle(x,y,sprite_height/2,BeamObj_2xDamage,false,true)) {
-		takeDamage(global.player.dmg/12)
+		takeDamage(global.player.dmg/18)
 	}
 
 	if collision_circle(x,y,sprite_height/2,LaserObj,false,true) {

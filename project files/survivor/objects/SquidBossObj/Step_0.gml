@@ -7,6 +7,7 @@ event_inherited();
 phy_rotation = -point_direction(x,y,global.player.x,global.player.y)
 
 if !global.pauseObj.paused {
+	EnemyCollisions()
 move_cooldown -= 1;
 
 if move_cooldown <= 0 {

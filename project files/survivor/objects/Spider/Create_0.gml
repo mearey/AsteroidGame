@@ -8,7 +8,7 @@ lighting_colour = c_aqua
 lighting_size = 2
 lighting_intensity = 0.15
 
-hp = 4
+hp = 8
 xp = 3
 
 

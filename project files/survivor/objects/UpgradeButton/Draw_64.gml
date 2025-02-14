@@ -29,3 +29,7 @@ for (var i = 0; i< points; i++) {
 } else {
 	sprite_index = 	ButtonSprite
 }
+
+if hovered {
+	draw_text_ext(room_width/2, room_height/2+210, description,20, 270)	
+}

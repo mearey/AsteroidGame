@@ -7,3 +7,6 @@ if !global.pauseObj.paused {
 if lifetime <= 0 {
 	instance_destroy(self)	
 }
+if x > room_width || y > room_height || x < 0 || y < 0 {
+	instance_destroy(self)	
+}
