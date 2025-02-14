@@ -32,8 +32,8 @@ spawnrate = 240;
 
 timer_ = spawnrate;
 
-enemylist = []
-bosslist = []
+enemylist = [EnemyOrbObj]
+bosslist = [EnemyOrbBossObj]
 
 number = 10;
 

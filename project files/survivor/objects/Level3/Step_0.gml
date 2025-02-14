@@ -61,23 +61,26 @@ if !set {
 		number = 700
 		num_bosses = 2
 		spawnrate = 6
-		spawnEnemy(SquidBossObj)
+		if random(1) < 0.9 {
+			spawnEnemy(SquidBossObj)
+		} else {
+			spawnEnemy(SecretBossObj)	
+		}
 	} else {
 		enemylist = [Spider,EyesEnemy,Slime,EnemyFlyObj,EnemySquareObj,EnemyOrbObj,EnemyShip1,EnemyShipMissle,FastEnemyShip,AsteroidObj,GunDebris,SatelliteObj,EnemyWormObj,DebrisGrabberObj]
 		bosslist = [EnemyFlyBossObj, EnemyOrbBossObj, EnemySquareBossObj, EnemyShipBoss,AsteroidBossObj,EnemyShipMissleBoss,RocketBossObj,SpiderBoss,EyesEnemyBoss]
 		number = 700/(difficulty/800)
 		num_bosses = (difficulty/800)*2
 		spawnrate = max(6 - (difficulty/800), 0.1)/2
-		spawnEnemy(SquidBossObj)
+		if random(1) < 0.9 {
+			spawnEnemy(SquidBossObj)
+		} else {
+			spawnEnemy(SecretBossObj)	
+		}
 	}
 	set = true
 }
 
-if difficulty > 1000 {
-	with (Enemy) {
-		hp+=0.1
-	}
-}
 if difficulty > 2000 {
 	with (Chest) {
 		instance_destroy(self)

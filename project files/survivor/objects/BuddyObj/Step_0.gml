@@ -10,7 +10,7 @@ if collected {
 	if (rotation >= 360) {
 		rotation = 0	
 	} else {
-		rotation += 1;
+		rotation += rate;
 	}
 	
 	
@@ -34,9 +34,9 @@ if (instance_exists(Enemy)) {
 		if (fire_timer > 0) && distance_to_object(target) < range {
 			fire_timer -= 1
 		} else if (target != PlayerObj) && distance_to_object(target) < range {
-			fire_rate = global.player.fire_rate/array_length(PlayerObj.unique_weapons)
+			fire_rate = (global.player.fire_rate/array_length(PlayerObj.unique_weapons))*10
 			fire_timer = fire_rate;
-			ShootShot(array_get_random([LaserObj, Greneade, BulletObj, ShockProjectile, Missile]), point_direction(x,y,target.x, target.y), x,y,1,global.player.projectile_speed,1000)
+			ShootShot(array_get_random([LaserObj, Greneade, BulletObj, ShockProjectile,LaserObj, Greneade, BulletObj, ShockProjectile, Missile]), point_direction(x,y,target.x, target.y), x,y,1,global.player.projectile_speed,100)
 		}
 	}
 }

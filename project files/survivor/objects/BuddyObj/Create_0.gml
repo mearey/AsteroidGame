@@ -12,7 +12,7 @@ rotation = 0
 exploded = false
 _speed = 0
 size = 1
-
+rate = random_range(0,2)
 function explode() {
 	if !exploded {
 		PlaySFX(explosion,1,4)

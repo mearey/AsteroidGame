@@ -63,7 +63,7 @@ function ability_() {
 }
 
 //starting weapons
-var starting_wep = LaserMKI
+var starting_wep = JointLaser
 
 weapons = [starting_wep]
 unique_weapons = [starting_wep]

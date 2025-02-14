@@ -18,7 +18,7 @@ if t_sec < 0 {
 		spawnEnemy(array_get_random(bosslist))
 	}
 	if random(1) < 0.1*global.luck {
-		//spawnEnemy(BuddyObj)	
+		spawnEnemy(BuddyObj)	
 	}
 }
 

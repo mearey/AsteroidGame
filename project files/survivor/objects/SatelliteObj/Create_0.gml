@@ -10,6 +10,10 @@ var rand = random_range(0.9, 1.5)
 image_xscale = rand
 image_yscale = rand
 
+lighting_size = 3
+lighting_colour = c_white
+lighting_intensity = 0.1
+
 hp = 3*rand
 xp = 2*rand
 

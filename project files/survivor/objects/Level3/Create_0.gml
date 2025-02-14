@@ -3,7 +3,7 @@
 
 // Inherit the parent event
 boss_killed= false
-boss =false
+boss = false
 event_inherited();
 
 lighting_layer = level_1__sun

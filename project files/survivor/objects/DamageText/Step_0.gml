@@ -6,3 +6,8 @@ if timer <= 0 {
 	instance_destroy(self)	
 }
 x+=lengthdir_x(1,direction)
+
+
+if instance_number(object_index) > 30 {
+	instance_destroy(self)	
+}

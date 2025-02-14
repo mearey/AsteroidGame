@@ -1,11 +1,16 @@
 /// @description Insert description here
 // You can write your code in this editor
+global.player = self
+with (PlayerObj) {
+	if self.id != other.id {
+		instance_destroy(other)
+		global.player = self
+	}
+}
 event_inherited()
 lighting_colour = c_white
 lighting_size = 3
 Globals()
-
-global.player = self
 
 start_time = current_time
 
