@@ -70,7 +70,12 @@ if difficulty > 800 {
 	bosslist = [AsteroidBossObj, RocketBossObj]
 	if !boss {
 		//SPAWN BOSS HERE\
-		boss_obj = instance_create_depth(global.player.x,global.player.y-300,1,WallOfDebris)
+		if random(1) < 0.7 || !global.secret_upgrade {
+			boss_obj = instance_create_depth(global.player.x,global.player.y-300,1,WallOfDebris)
+		} else {
+			boss_obj = instance_create_depth(global.player.x,global.player.y-300,1,SecretBossObj)
+		}
+
 		boss = true
 	}
 }

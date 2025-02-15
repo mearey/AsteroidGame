@@ -1,3 +1,4 @@
+try {
 if random(1)<weapon_drop_chance*global.luck && dead {
 	var drop = instance_create_depth(x,y,0,weaponDrop)
 	randomize()
@@ -24,4 +25,6 @@ if random(1)<weapon_drop_chance*global.luck && dead {
 		drop.weapon = asset_get_index(weapons[random_range(0,array_length(weapons))])
 	}
 }
-
+} catch (err) {
+	log(err)	
+}

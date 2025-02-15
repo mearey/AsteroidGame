@@ -20,19 +20,19 @@ if !set {
 		num_bosses = 1
 		spawnrate = 32
 	} else if difficulty < 300 {
-		enemylist = [Spider,EyesEnemy,Slime,Slime,Slime]
+		enemylist = [Spider,EyesEnemy,Slime,Slime,Slime,EnemyFish]
 		bosslist = [EyesEnemyBoss,SpiderBoss]
 		number = 200
 		num_bosses = 1
 		spawnrate = 17
 	} else if difficulty < 400 {
-		enemylist = [Spider,EyesEnemy,Slime]
+		enemylist = [Spider,EyesEnemy,Slime,EnemyFish]
 		bosslist = [EyesEnemyBoss,SpiderBoss]
 		number = 250
 		num_bosses = 2
 		spawnrate = 14
 	} else if difficulty < 500 {
-		enemylist = [Spider,EyesEnemy,Slime,EnemySquareObj]
+		enemylist = [Spider,EyesEnemy,Slime]
 		bosslist = [EyesEnemyBoss,SpiderBoss,EnemySquareBossObj]
 		number = 500
 		num_bosses = 1
@@ -47,7 +47,7 @@ if !set {
 			spawnEnemy(SquidBossObj)
 		}
 	} else if difficulty < 700 {
-		enemylist = [Spider,EyesEnemy,Slime, EnemyFlyObj, DebrisGrabberObj]
+		enemylist = [Spider,EyesEnemy,Slime, EnemyFlyObj, DebrisGrabberObj,EnemyFish]
 		bosslist = [EnemyFlyBossObj, EnemyOrbBossObj, EnemySquareBossObj]
 		number = 650
 		num_bosses = 1
@@ -56,23 +56,23 @@ if !set {
 			spawnEnemy(SquidBossObj)
 		}
 	} else if difficulty < 900 {
-		enemylist = [Spider,EyesEnemy,Slime,EnemyFlyObj,EnemySquareObj,EnemyOrbObj,EnemyShip1,EnemyShipMissle,FastEnemyShip,AsteroidObj,GunDebris,SatelliteObj,EnemyWormObj]
+		enemylist = [Spider,EyesEnemy,Slime,EnemyFlyObj,EnemySquareObj,EnemyOrbObj,EnemyShip1,EnemyShipMissle,FastEnemyShip,AsteroidObj,GunDebris,SatelliteObj,EnemyWormObj,EnemyFish]
 		bosslist = [EnemyFlyBossObj, EnemyOrbBossObj, EnemySquareBossObj, EnemyShipBoss,AsteroidBossObj,EnemyShipMissleBoss,RocketBossObj,SpiderBoss,EyesEnemyBoss]
 		number = 700
 		num_bosses = 2
 		spawnrate = 6
-		if random(1) < 0.9 {
+		if random(1) < 0.5 || !global.secret_upgrade {
 			spawnEnemy(SquidBossObj)
 		} else {
 			spawnEnemy(SecretBossObj)	
 		}
 	} else {
-		enemylist = [Spider,EyesEnemy,Slime,EnemyFlyObj,EnemySquareObj,EnemyOrbObj,EnemyShip1,EnemyShipMissle,FastEnemyShip,AsteroidObj,GunDebris,SatelliteObj,EnemyWormObj,DebrisGrabberObj]
+		enemylist = [Spider,EyesEnemy,Slime,EnemyFlyObj,EnemySquareObj,EnemyOrbObj,EnemyShip1,EnemyShipMissle,FastEnemyShip,AsteroidObj,GunDebris,SatelliteObj,EnemyWormObj,DebrisGrabberObj,EnemyFish,EnemyFish]
 		bosslist = [EnemyFlyBossObj, EnemyOrbBossObj, EnemySquareBossObj, EnemyShipBoss,AsteroidBossObj,EnemyShipMissleBoss,RocketBossObj,SpiderBoss,EyesEnemyBoss]
 		number = 700/(difficulty/800)
 		num_bosses = (difficulty/800)*2
 		spawnrate = max(6 - (difficulty/800), 0.1)/2
-		if random(1) < 0.9 {
+		if random(1) < 0.5 || !global.secret_upgrade {
 			spawnEnemy(SquidBossObj)
 		} else {
 			spawnEnemy(SecretBossObj)	

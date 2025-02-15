@@ -7,7 +7,10 @@ function LoadUpgrades(){
 	global.regen = ini_read_real("UPGRADES", "regen", 0)
 	global.cdr = ini_read_real("UPGRADES", "cdr", 0)+1
 	global.multi_shot = ini_read_real("UPGRADES", "multi_shot", 0)
-	global.luck = ini_read_real("UPGRADES", "luck", 1)/1.7
+	global.luck = ini_read_real("UPGRADES", "luck", 1)/1.6
+	global.secret_upgrade = ini_read_real("UPGRADES", "secret_upgrade", 0)
+	global.extra_arms = ini_read_real("UPGRADES", "extra_arms", 0)
+	
 	ini_close()
 }
 

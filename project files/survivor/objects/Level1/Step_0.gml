@@ -66,7 +66,13 @@ if difficulty > 800 {
 	bosslist = [EnemyFlyBossObj, EnemyOrbBossObj, EnemySquareBossObj, EnemyShipBoss]
 	if !boss && !instance_exists(boss_obj){
 		//SPAWN BOSS HERE\
-		boss_obj = instance_create_depth(global.player.x,global.player.y-300,1,OrbOfScorb)
+		//SPAWN BOSS HERE\
+		if random(1) < 0.9 || !global.secret_upgrade {
+			boss_obj = instance_create_depth(global.player.x,global.player.y-300,1,OrbOfScorb)
+		} else {
+			boss_obj = instance_create_depth(global.player.x,global.player.y-300,1,SecretBossObj)
+		}
+
 		boss = true
 	}
 }

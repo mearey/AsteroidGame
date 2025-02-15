@@ -1,5 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
+if global.extra_arms {
+	instance_create_depth(global.player.x,global.player.y,1,Chest)	
+	global.extra_arms = false
+}
 if !audio_is_playing(global.currentSong) {
 	PlaySong(array_get_random(songs))	
 }

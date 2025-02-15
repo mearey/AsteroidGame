@@ -5,8 +5,8 @@ image_xscale = 0.1
 image_yscale = 0.1
 
 var dir = random_range(0,360)
-phy_position_x = global.player.x+lengthdir_x(150,dir)
-phy_position_y = global.player.y+lengthdir_y(150,dir)
+phy_position_x = global.player.x+lengthdir_x(300,dir)
+phy_position_y = global.player.y+lengthdir_y(300,dir)
 
 stage = 0
 lighting_colour = c_white

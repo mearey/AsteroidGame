@@ -95,6 +95,7 @@ function saveState(){
 
 function loadState() {
 	//load room and position
+	global.extra_arms = false
 	ini_open("save_game_state.ini")
 	var room_ = ini_read_string("STATE", "room", "MainMenu")
 	var x_ = ini_read_real("STATE", "position_x", 0);
@@ -149,7 +150,11 @@ function loadState() {
 		enemy.image_xscale = real(res[3])
 		enemy.lighting_size = 2*real(res[3])
 		if object_get_physics(enemy.object_index) {
-			enemy.set_phys_speed(res[4],res[5])
+			try {
+				enemy.set_phys_speed(res[4],res[5])
+			} catch (err) {
+				log(err)	
+			}
 		}
 	}
 	

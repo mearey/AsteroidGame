@@ -12,8 +12,8 @@
     "path":"folders/Objects/Enemies/Bosses.yy",
   },
   "parentObjectId":{
-    "name":"ObjectLightingParent",
-    "path":"objects/ObjectLightingParent/ObjectLightingParent.yy",
+    "name":"Enemy",
+    "path":"objects/Enemy/Enemy.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

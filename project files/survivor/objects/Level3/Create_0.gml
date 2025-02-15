@@ -16,4 +16,8 @@ level3 = true
 
 songs = [Level3Song, lvl3songvar2, lvl3songvar3]
 
+t_min = 99
+t_sec = 59
+t_mil = 0
+
 PlaySong(array_get_random(songs))

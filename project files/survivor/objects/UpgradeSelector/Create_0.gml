@@ -103,6 +103,30 @@ luck_btn.cost = 200+20*luck_btn.points*luck_btn.points*luck_btn.points
 luck_btn.points = ini_read_real("UPGRADES", "luck", 0)
 luck_btn.description = "Get luckier :-)"
 
+secret_btn = CreateButton(-180-15,"SECRET UPGRADE", function () {
+	var temp = GetUpgradeButton("SECRET UPGRADE")
+	if self.coins >= temp.cost && temp.points < temp.max_points {
+		temp.points += 1
+		self.coins -= temp.cost
+	}
+})
+secret_btn.max_points = 1
+secret_btn.cost = 500
+secret_btn.points = ini_read_real("UPGRADES", "secret_upgrade", 0)
+secret_btn.description = "???"
+
+
+ea_btn = CreateButton(-180,"EXTRA ARMS", function () {
+	var temp = GetUpgradeButton("EXTRA ARMS")
+	if self.coins >= temp.cost && temp.points < temp.max_points {
+		temp.points += 1
+		self.coins -= temp.cost
+	}
+})
+ea_btn.max_points = 1
+ea_btn.cost = 200
+ea_btn.points = ini_read_real("UPGRADES", "extra_arms", 0)
+ea_btn.description = "Gain one additional weapon at the start of every level"
 
 CreateButton(180+30, "BACK", function() {
 	SaveUpgrades()
@@ -124,6 +148,8 @@ function SaveUpgrades() {
 	ini_write_real("UPGRADES", "cdr", aa_btn.points)
 	ini_write_real("UPGRADES", "luck", luck_btn.points)
 	ini_write_real("UPGRADES", "multi_shot", ms_btn.points)
+	ini_write_real("UPGRADES", "secret_upgrade", secret_btn.points)
+	ini_write_real("UPGRADES", "extra_arms", ea_btn.points)
 	//save coins
 	ini_write_real("CURRENCY", "coins", coins)
 	//dummy save

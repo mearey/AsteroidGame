@@ -135,6 +135,7 @@
     {"id":{"name":"DualCannon","path":"objects/DualCannon/DualCannon.yy",},},
     {"id":{"name":"EndCutscene","path":"objects/EndCutscene/EndCutscene.yy",},},
     {"id":{"name":"Enemy","path":"objects/Enemy/Enemy.yy",},},
+    {"id":{"name":"EnemyFish","path":"objects/EnemyFish/EnemyFish.yy",},},
     {"id":{"name":"EnemyFlyBossObj","path":"objects/EnemyFlyBossObj/EnemyFlyBossObj.yy",},},
     {"id":{"name":"EnemyFlyObj","path":"objects/EnemyFlyObj/EnemyFlyObj.yy",},},
     {"id":{"name":"EnemyLaser","path":"objects/EnemyLaser/EnemyLaser.yy",},},
