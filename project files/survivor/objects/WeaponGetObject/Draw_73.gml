@@ -34,3 +34,9 @@ if (count >= 1) {
 	instance_destroy(inst)
 }
 
+
+if (mouse_x<bbox_right and mouse_x > bbox_left and mouse_y < bbox_bottom and mouse_y > bbox_top) {
+	var spr = global.ship_selection.sprite_index
+	draw_sprite_ext(spr,0,mouse_x,mouse_y-32*3, 3,3,90,c_white,0.8)
+	draw_sprite_ext(weapon_sprite,0,mouse_x,mouse_y-32*3, 3,3,90,c_white,0.95)
+}

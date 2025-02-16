@@ -130,6 +130,7 @@
     {"id":{"name":"DamageText","path":"objects/DamageText/DamageText.yy",},},
     {"id":{"name":"DeadPlayer","path":"objects/DeadPlayer/DeadPlayer.yy",},},
     {"id":{"name":"DebrisGrabberObj","path":"objects/DebrisGrabberObj/DebrisGrabberObj.yy",},},
+    {"id":{"name":"DiscordButton","path":"objects/DiscordButton/DiscordButton.yy",},},
     {"id":{"name":"DisruptionField","path":"objects/DisruptionField/DisruptionField.yy",},},
     {"id":{"name":"Dogcredit","path":"objects/Dogcredit/Dogcredit.yy",},},
     {"id":{"name":"DualCannon","path":"objects/DualCannon/DualCannon.yy",},},

@@ -11,7 +11,7 @@ if (collision_circle(x,y,8,global.ship_selection,false,true)) {
 	physics_apply_impulse(x,y,lengthdir_x(_speed,point_direction(x,y,global.player.x, global.player.y)), lengthdir_y(_speed,point_direction(x,y,global.player.x, global.player.y)))		
 }
 	
-if (distance_to_object(global.ship_selection) < 250) {
+if (distance_to_object(global.ship_selection) < 400) {
 	physics_apply_impulse(x,y,lengthdir_x(-0.5 ,point_direction(x,y,global.player.x, global.player.y)), lengthdir_y(-0.5,point_direction(x,y,global.player.x, global.player.y)))	
 }
 
