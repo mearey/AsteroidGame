@@ -80,7 +80,7 @@ aa_btn = CreateButton(30,"COOLDOWN", function () {
 	if self.coins >= temp.cost && temp.points < temp.max_points {
 		temp.points += 1
 		self.coins -= temp.cost
-		temp.cost = 20+30*aa_btn.points
+		temp.cost = 5+35*aa_btn.points
 	}
 })
 aa_btn.max_points = 4
@@ -94,7 +94,7 @@ luck_btn = CreateButton(-180-30,"LUCK", function () {
 	if self.coins >= temp.cost && temp.points < temp.max_points {
 		temp.points += 1
 		self.coins -= temp.cost
-		temp.cost = 200+20*luck_btn.points*luck_btn.points*luck_btn.points
+		temp.cost = 100+25*luck_btn.points*luck_btn.points*luck_btn.points
 	}
 })
 luck_btn.max_points = 6
