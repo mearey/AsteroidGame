@@ -85,7 +85,7 @@ aa_btn = CreateButton(30,"COOLDOWN", function () {
 })
 aa_btn.max_points = 4
 aa_btn.points = ini_read_real("UPGRADES", "cdr", 0)
-aa_btn.cost = 20+30+aa_btn.points
+aa_btn.cost = 5+35+aa_btn.points
 aa_btn.points = ini_read_real("UPGRADES", "cdr", 0)
 ms_btn.description = "Decreases the cooldown for your ship's ability"
 
@@ -99,7 +99,7 @@ luck_btn = CreateButton(-180-30,"LUCK", function () {
 })
 luck_btn.max_points = 6
 luck_btn.points = ini_read_real("UPGRADES", "luck", 0)
-luck_btn.cost = 200+20*luck_btn.points*luck_btn.points*luck_btn.points
+luck_btn.cost = 100+25*luck_btn.points*luck_btn.points*luck_btn.points
 luck_btn.points = ini_read_real("UPGRADES", "luck", 0)
 luck_btn.description = "Get luckier :-)"
 
