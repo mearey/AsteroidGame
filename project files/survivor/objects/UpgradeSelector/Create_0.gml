@@ -42,12 +42,12 @@ regen_btn = CreateButton(-15,"REPAIR SYSTEM", function () {
 	if self.coins >= temp.cost && temp.points < temp.max_points {
 		temp.points += 1
 		self.coins -= temp.cost
-		temp.cost = 5+35*regen_btn.points
+		temp.cost = 5+30*regen_btn.points
 	}
 })
 regen_btn.max_points = 5
 regen_btn.points = ini_read_real("UPGRADES", "regen", 0)
-regen_btn.cost = 5+35*regen_btn.points
+regen_btn.cost = 5+30*regen_btn.points
 regen_btn.description = "Increase ship's regeneration "
 
 magnet_btn = CreateButton(0,"MAGNET", function () {
