@@ -109,8 +109,8 @@ lighting_btn.max_points = 1
 lighting_btn.cost = 0
 lighting_btn.points = ini_read_real("SETTINGS", "lighting", 1)
 
-cursor_btn = CreateButton(180-15,"CURSOR", function () {
-	var temp = GetUpgradeButton("CURSOR")
+cursor_btn = CreateButton(180-15,"CURSOR SIZE", function () {
+	var temp = GetUpgradeButton("CURSOR SIZE")
 	if self.coins >= temp.cost && temp.points < temp.max_points {
 		temp.points += 1
 		self.coins -= temp.cost
@@ -120,6 +120,18 @@ cursor_btn = CreateButton(180-15,"CURSOR", function () {
 cursor_btn.max_points = 3
 cursor_btn.cost = 0
 cursor_btn.points = ini_read_real("SETTINGS", "cursor", 0)
+
+cursorc_btn = CreateButton(180,"CURSOR COLOR", function () {
+	var temp = GetUpgradeButton("CURSOR COLOR")
+	if self.coins >= temp.cost && temp.points < temp.max_points {
+		temp.points += 1
+		self.coins -= temp.cost
+	}
+	global.cursor_colour = temp.points
+})
+cursorc_btn.max_points = 3
+cursorc_btn.cost = 0
+cursorc_btn.points = ini_read_real("SETTINGS", "cursor_colour", 0)
 
 CreateButton(180+30, "BACK", function() {
 	instance_destroy(self)
@@ -139,6 +151,7 @@ function SaveOptions() {
 	ini_write_real("SETTINGS", "master_volume", fr_btn.points)
 	ini_write_real("SETTINGS", "lighting", lighting_btn.points)
 	ini_write_real("SETTINGS", "cursor", cursor_btn.points)
+	ini_write_real("SETTINGS", "cursor_colour", cursorc_btn.points)
 	//dummy save
 	ini_open("save_options.ini")
 	ini_write_real("dummy","dummy",0)

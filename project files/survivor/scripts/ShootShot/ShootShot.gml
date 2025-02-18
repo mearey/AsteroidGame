@@ -6,7 +6,7 @@ function ShootShot(type, dir, starting_x, starting_y, acc, spd, lifetime){
 		lifetime = 100
 	}
 	
-	if (global.multi_shot == 1) {
+	if (random(8) < global.multi_shot) {
 		var bullet = Fire(type, dir, starting_x-1, starting_y-1, acc, spd+random_range(-1,1))
 		bullet.lifetime = lifetime
 		var bullet = Fire(type, dir, starting_x+1, starting_y+1, acc, spd+random_range(-1,1))

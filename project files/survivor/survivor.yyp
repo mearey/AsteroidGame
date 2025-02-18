@@ -127,6 +127,7 @@
     {"id":{"name":"Console","path":"objects/Console/Console.yy",},},
     {"id":{"name":"Credit","path":"objects/Credit/Credit.yy",},},
     {"id":{"name":"credithandler","path":"objects/credithandler/credithandler.yy",},},
+    {"id":{"name":"Cursor","path":"objects/Cursor/Cursor.yy",},},
     {"id":{"name":"DamageText","path":"objects/DamageText/DamageText.yy",},},
     {"id":{"name":"DeadPlayer","path":"objects/DeadPlayer/DeadPlayer.yy",},},
     {"id":{"name":"DebrisGrabberObj","path":"objects/DebrisGrabberObj/DebrisGrabberObj.yy",},},

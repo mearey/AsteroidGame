@@ -68,12 +68,13 @@ ms_btn = CreateButton(15,"MULTI SHOT", function () {
 	if self.coins >= temp.cost && temp.points < temp.max_points {
 		temp.points += 1
 		self.coins -= temp.cost
+		temp.cost = 75+50*ms_btn.points
 	}
 })
-ms_btn.max_points = 1
-ms_btn.cost = 150
+ms_btn.max_points = 4
 ms_btn.points = ini_read_real("UPGRADES", "multi_shot", 0)
-ms_btn.description = "Every projectile shot by the player will be duplicated"
+ms_btn.cost = 75+50*ms_btn.points
+ms_btn.description = "Projectiles shot by the player have a greater chance to be duplicated"
 
 aa_btn = CreateButton(30,"COOLDOWN", function () {
 	var temp = GetUpgradeButton("COOLDOWN")
@@ -87,7 +88,7 @@ aa_btn.max_points = 4
 aa_btn.points = ini_read_real("UPGRADES", "cdr", 0)
 aa_btn.cost = 20+30+aa_btn.points
 aa_btn.points = ini_read_real("UPGRADES", "cdr", 0)
-ms_btn.description = "Decreases cooldown for your ship's ability"
+aa_btn.description = "Decreases cooldown for your ship's ability"
 
 luck_btn = CreateButton(-180-30,"LUCK", function () {
 	var temp = GetUpgradeButton("LUCK")
@@ -103,8 +104,8 @@ luck_btn.cost = 200+20*luck_btn.points*luck_btn.points*luck_btn.points
 luck_btn.points = ini_read_real("UPGRADES", "luck", 0)
 luck_btn.description = "Get luckier :-)"
 
-secret_btn = CreateButton(-180-15,"SECRET UPGRADE", function () {
-	var temp = GetUpgradeButton("SECRET UPGRADE")
+secret_btn = CreateButton(-180-15,"???", function () {
+	var temp = GetUpgradeButton("???")
 	if self.coins >= temp.cost && temp.points < temp.max_points {
 		temp.points += 1
 		self.coins -= temp.cost
@@ -116,8 +117,8 @@ secret_btn.points = ini_read_real("UPGRADES", "secret_upgrade", 0)
 secret_btn.description = "???"
 
 
-ea_btn = CreateButton(-180,"EXTRA ARMS", function () {
-	var temp = GetUpgradeButton("EXTRA ARMS")
+ea_btn = CreateButton(-180,"EMBATTLEMENT", function () {
+	var temp = GetUpgradeButton("EMBATTLEMENT")
 	if self.coins >= temp.cost && temp.points < temp.max_points {
 		temp.points += 1
 		self.coins -= temp.cost
