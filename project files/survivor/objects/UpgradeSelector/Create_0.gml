@@ -29,52 +29,52 @@ fr_btn = CreateButton(-30,"FIRE RATE", function () {
 	if self.coins >= temp.cost && temp.points < temp.max_points {
 		temp.points += 1
 		self.coins -= temp.cost
-		temp.cost = 20+30*fr_btn.points
+		temp.cost = 10+30*fr_btn.points
 	}
 })
 fr_btn.max_points = 4
 fr_btn.points = ini_read_real("UPGRADES", "fire_rate", 0)
-fr_btn.cost = 20+30*fr_btn.points
-fr_btn.description = "Increases fire rate for all weapons"
+fr_btn.cost = 10+30*fr_btn.points
+fr_btn.description = "Increase the fire rate for all weapons"
 
-regen_btn = CreateButton(-15,"REGEN", function () {
-	var temp = GetUpgradeButton("REGEN")
+regen_btn = CreateButton(-15,"REPAIR SYSTEM", function () {
+	var temp = GetUpgradeButton("REPAIR SYSTEM")
 	if self.coins >= temp.cost && temp.points < temp.max_points {
 		temp.points += 1
 		self.coins -= temp.cost
-		temp.cost = 10+30*regen_btn.points
+		temp.cost = 5+30*regen_btn.points
 	}
 })
 regen_btn.max_points = 5
 regen_btn.points = ini_read_real("UPGRADES", "regen", 0)
-regen_btn.cost = 10+30*regen_btn.points
-regen_btn.description = "Increases the percentage of max hp that constantly regenerates"
+regen_btn.cost = 5+30*regen_btn.points
+regen_btn.description = "Increase ship's regeneration "
 
 magnet_btn = CreateButton(0,"MAGNET", function () {
 	var temp = GetUpgradeButton("MAGNET")
 	if self.coins >= temp.cost && temp.points < temp.max_points {
 		temp.points += 1
 		self.coins -= temp.cost
-		temp.cost = 10+20*magnet_btn.points
+		temp.cost = 10+15*magnet_btn.points
 	}
 })
 magnet_btn.max_points = 12
 magnet_btn.points = ini_read_real("UPGRADES", "magnet", 0)
-magnet_btn.cost = 10+25*magnet_btn.points
-magnet_btn.description = "Increase pickup range for exp and coins"
+magnet_btn.cost = 10+15*magnet_btn.points
+magnet_btn.description = "Increase the pickup range for exp and coins"
 
 ms_btn = CreateButton(15,"MULTI SHOT", function () {
 	var temp = GetUpgradeButton("MULTI SHOT")
 	if self.coins >= temp.cost && temp.points < temp.max_points {
 		temp.points += 1
 		self.coins -= temp.cost
-		temp.cost = 75+50*ms_btn.points
+		temp.cost = 75+45*ms_btn.points
 	}
 })
 ms_btn.max_points = 4
 ms_btn.points = ini_read_real("UPGRADES", "multi_shot", 0)
-ms_btn.cost = 75+50*ms_btn.points
-ms_btn.description = "Projectiles shot by the player have a greater chance to be duplicated"
+ms_btn.cost = 75+45*ms_btn.points
+ms_btn.description = "Projectiles shot by the player have a chance to be duplicated"
 
 aa_btn = CreateButton(30,"COOLDOWN", function () {
 	var temp = GetUpgradeButton("COOLDOWN")
@@ -88,24 +88,24 @@ aa_btn.max_points = 4
 aa_btn.points = ini_read_real("UPGRADES", "cdr", 0)
 aa_btn.cost = 20+30*aa_btn.points
 aa_btn.points = ini_read_real("UPGRADES", "cdr", 0)
-aa_btn.description = "Decreases cooldown for your ship's ability"
+aa_btn.description = "Decrease the cooldown for your ship's ability"
 
 luck_btn = CreateButton(-180-30,"LUCK", function () {
 	var temp = GetUpgradeButton("LUCK")
 	if self.coins >= temp.cost && temp.points < temp.max_points {
 		temp.points += 1
 		self.coins -= temp.cost
-		temp.cost = 200+20*luck_btn.points*luck_btn.points*luck_btn.points
+		temp.cost = 50+50*luck_btn.points*luck_btn.points*luck_btn.points
 	}
 })
 luck_btn.max_points = 6
 luck_btn.points = ini_read_real("UPGRADES", "luck", 0)
-luck_btn.cost = 200+20*luck_btn.points*luck_btn.points*luck_btn.points
+luck_btn.cost = 50+50*luck_btn.points*luck_btn.points*luck_btn.points
 luck_btn.points = ini_read_real("UPGRADES", "luck", 0)
 luck_btn.description = "Get luckier :-)"
 
-secret_btn = CreateButton(-180-15,"???", function () {
-	var temp = GetUpgradeButton("???")
+secret_btn = CreateButton(-180-15,"PROSPECTING", function () {
+	var temp = GetUpgradeButton("PROSPECTING")
 	if self.coins >= temp.cost && temp.points < temp.max_points {
 		temp.points += 1
 		self.coins -= temp.cost
@@ -114,7 +114,7 @@ secret_btn = CreateButton(-180-15,"???", function () {
 secret_btn.max_points = 1
 secret_btn.cost = 500
 secret_btn.points = ini_read_real("UPGRADES", "secret_upgrade", 0)
-secret_btn.description = "???"
+secret_btn.description = "Begin the gold rush (WARNING: may trigger extradimensional threats)"
 
 
 ea_btn = CreateButton(-180,"EMBATTLEMENT", function () {
@@ -127,7 +127,7 @@ ea_btn = CreateButton(-180,"EMBATTLEMENT", function () {
 ea_btn.max_points = 1
 ea_btn.cost = 200
 ea_btn.points = ini_read_real("UPGRADES", "extra_arms", 0)
-ea_btn.description = "Gain one additional weapon at the start of every level"
+ea_btn.description = "Gain an additional weapon at the start of every level"
 
 CreateButton(180+30, "BACK", function() {
 	SaveUpgrades()
