@@ -132,8 +132,8 @@ ea_btn.description = "Gain an additional weapon at the start of every level"
 CreateButton(180+30, "BACK", function() {
 	SaveUpgrades()
 	//set upgrades acheivement
-	var max_ = fr_btn.max_points+regen_btn.max_points+magnet_btn.max_points+aa_btn.max_points+luck_btn.max_points+ms_btn.max_points
-	if max_ <= fr_btn.points+regen_btn.points+magnet_btn.points+aa_btn.points+luck_btn.points+ms_btn.points {
+	var max_ = fr_btn.max_points+regen_btn.max_points+magnet_btn.max_points+aa_btn.max_points+luck_btn.max_points+ms_btn.max_points+secret_btn.max_points+ea_btn.max_points
+	if max_ <= fr_btn.points+regen_btn.points+magnet_btn.points+aa_btn.points+luck_btn.points+ms_btn.points+secret_btn.points+ea_btn.points {
 		steam_set_achievement("upgrades_max")
 	}
 	//goback to main menu

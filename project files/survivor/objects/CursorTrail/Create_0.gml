@@ -1,10 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
-x = mouse_x
-y = mouse_y
-
 sprite_index = cursor_sprite
-
+alpha = 1
 switch global.cursor_colour {
 	case 0:
 		colour = c_white
@@ -18,8 +15,4 @@ switch global.cursor_colour {
 	case 3:
 		colour = c_aqua
 		break;
-}
-
-if global.cursor_trail {
-	instance_create_depth(x,y,-999,CursorTrail)	
 }

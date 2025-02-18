@@ -23,6 +23,7 @@ function loadOptions() {
 	global.master_volume = ini_read_real("SETTINGS", "master_volume", 10)/10
 	global.lighting = ini_read_real("SETTINGS", "lighting", 1)
 	global.cursor_colour = ini_read_real("SETTINGS", "cursor_colour", 0)
+	global.cursor_trail = ini_read_real("SETTINGS", "cursor_trail", 0)
 	audio_master_gain(global.master_volume)
 	cursor_sprite = asset_get_index("spriteCursor"+string(ini_read_real("SETTINGS", "cursor", 0)))
 	ini_close()

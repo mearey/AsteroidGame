@@ -15,8 +15,8 @@ ability = "Press space to throw a hammer towards your cursor that deals massive 
 
 max_hp=150;
 hp=max_hp;
-cooldown = 250/(global.cdr)
-ability_cooldown = 250/(global.cdr)
+cooldown = 350/(global.cdr)
+ability_cooldown = 350/(global.cdr)
 var starting_wep = Sword
 
 weapons = [starting_wep]
