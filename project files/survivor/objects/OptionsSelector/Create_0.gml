@@ -86,6 +86,8 @@ ms_btn = CreateButton(30,"FULLSCREEN", function () {
 	if self.coins >= temp.cost && temp.points < temp.max_points {
 		temp.points += 1
 		self.coins -= temp.cost
+		SaveOptions()
+		loadOptions()
 	}
 	setResolution(temp.points)
 })
@@ -98,6 +100,8 @@ lighting_btn = CreateButton(180-30,"LIGHTING", function () {
 	if self.coins >= temp.cost && temp.points < temp.max_points {
 		temp.points += 1
 		self.coins -= temp.cost
+		SaveOptions()
+		loadOptions()
 	}
 	global.lighting = temp.points
 	with (LightingObj) {
@@ -114,6 +118,8 @@ cursor_btn = CreateButton(180-15,"CURSOR SIZE", function () {
 	if self.coins >= temp.cost && temp.points < temp.max_points {
 		temp.points += 1
 		self.coins -= temp.cost
+		SaveOptions()
+		loadOptions()
 	}
 	cursor_sprite = asset_get_index("spriteCursor"+string(temp.points))
 })
@@ -126,12 +132,28 @@ cursorc_btn = CreateButton(180,"CURSOR COLOR", function () {
 	if self.coins >= temp.cost && temp.points < temp.max_points {
 		temp.points += 1
 		self.coins -= temp.cost
+		SaveOptions()
+		loadOptions()
 	}
 	global.cursor_colour = temp.points
 })
 cursorc_btn.max_points = 3
 cursorc_btn.cost = 0
 cursorc_btn.points = ini_read_real("SETTINGS", "cursor_colour", 0)
+
+cursort_btn = CreateButton(180+15,"CURSOR TRAIL", function () {
+	var temp = GetUpgradeButton("CURSOR TRAIL")
+	if self.coins >= temp.cost && temp.points < temp.max_points {
+		temp.points += 1
+		self.coins -= temp.cost
+		SaveOptions()
+		loadOptions()
+	}
+	global.cursor_colour = temp.points
+})
+cursort_btn.max_points = 1
+cursort_btn.cost = 0
+cursort_btn.points = ini_read_real("SETTINGS", "cursor_trail", 0)
 
 CreateButton(180+30, "BACK", function() {
 	instance_destroy(self)
@@ -152,6 +174,7 @@ function SaveOptions() {
 	ini_write_real("SETTINGS", "lighting", lighting_btn.points)
 	ini_write_real("SETTINGS", "cursor", cursor_btn.points)
 	ini_write_real("SETTINGS", "cursor_colour", cursorc_btn.points)
+	ini_write_real("SETTINGS", "cursor_trail", cursort_btn.points)
 	//dummy save
 	ini_open("save_options.ini")
 	ini_write_real("dummy","dummy",0)
