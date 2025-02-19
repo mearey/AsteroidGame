@@ -24,7 +24,7 @@ ability = "Press \'space\' to boost"
 function ability_() {
 	//speed boost ability here
 	ability_cooldown -= 1
-	if ability_cooldown <= 0 && keyboard_check_pressed(vk_space) {
+	if ability_cooldown <= 0 && (keyboard_check_pressed(vk_space) || CheckControllerButton()) {
 		ability_cooldown = 500/(global.cdr)
 		speed_holder = max_speed
 		max_speed = max_speed*2

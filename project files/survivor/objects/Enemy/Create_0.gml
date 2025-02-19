@@ -13,8 +13,11 @@ chubby = false
 
 new_ = false
 collide = true
-
-if (random(1) < 0.012*global.luck) {
+var val = 0.012
+if global.secret_upgrade {
+	val = 0.024	
+}
+if (random(1) < val*global.luck) {
 	chubby = true	
 	rot = 0
 }

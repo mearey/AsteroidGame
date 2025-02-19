@@ -84,7 +84,7 @@ time = ""
 function ability_() {
 	//nova ability here
 	ability_cooldown -= 1
-	if ability_cooldown <= 0 && keyboard_check_pressed(vk_space) {
+	if ability_cooldown <= 0 && (keyboard_check_pressed(vk_space) || CheckControllerButton()) {
 		var list = ds_list_create();
 		var num = collision_circle_list(x,y,256,Enemy,false,true,list,false)
 		for (var i = 0; i<num; i++) {

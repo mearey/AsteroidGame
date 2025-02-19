@@ -28,7 +28,7 @@ ability = "Press \'space\' to overclock weapons"
 function ability_() {
 	//speed boost ability here
 	ability_cooldown -= 1
-	if ability_cooldown <= 0 && keyboard_check_pressed(vk_space) && !clocking {
+	if ability_cooldown <= 0 && (keyboard_check_pressed(vk_space) || CheckControllerButton()) && !clocking {
 		ability_cooldown = 1200/(global.cdr)
 		clocking = true
 	}

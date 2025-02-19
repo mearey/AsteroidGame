@@ -31,7 +31,7 @@ alarm[1] = 3
 function ability_() {
 	//nova ability here
 	ability_cooldown -= 1
-	if ability_cooldown <= 0 && keyboard_check_pressed(vk_space) {
+	if ability_cooldown <= 0 && (keyboard_check_pressed(vk_space) || CheckControllerButton()) {
 		hammer.throw_()
 		ability_cooldown = 250/(global.cdr)
 		PlaySFX(swordSwoosh,1,1.3)

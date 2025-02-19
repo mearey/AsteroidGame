@@ -1,5 +1,5 @@
 /// @description Insert description here
 // You can write your code in this editor
-init = false
-alarm[0] = 20
-global.pauseObj.paused = true
+if CheckControllerButton() {
+	room_goto(MainMenu)	
+}

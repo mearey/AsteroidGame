@@ -54,11 +54,11 @@ if (mouse_x-cam_x < bbox_right-cam_x && mouse_x-cam_x > bbox_left-cam_x) && (mou
 	hovered = false
 }
 
-if hovered && mouse_check_button_pressed(mb_left) {
+if hovered && (mouse_check_button_pressed(mb_left) || CheckControllerButton()) {
 	dragging = true
 }
 
-if hovered && keyboard_check(vk_shift) && mouse_check_button_pressed(mb_left) && !selling {
+if hovered && keyboard_check(vk_shift) && (mouse_check_button_pressed(mb_left)|| CheckControllerButton()) && !selling {
 	global.player.equipped_weapons[slot] = item
 	global.player.resetWeapons()
 	instance_find(PauseSelector,0).CreateInventory()

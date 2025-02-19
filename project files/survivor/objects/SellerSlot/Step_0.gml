@@ -7,7 +7,7 @@ if (mouse_x-cam_x < bbox_right-cam_x && mouse_x-cam_x > bbox_left-cam_x) && (mou
 	hovered = false
 }
 
-if hovered && mouse_check_button_pressed(mb_left) {
+if hovered && (mouse_check_button_pressed(mb_left) || CheckControllerButton()) {
 	dragging = true
 }
 

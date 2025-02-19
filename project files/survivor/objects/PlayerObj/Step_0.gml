@@ -27,8 +27,7 @@ if target != self {
 }
 }
 
-
-if ((keyboard_check(ord("W"))||keyboard_check(ord("A"))||keyboard_check(ord("S"))||keyboard_check(ord("D"))) && speed_ < max_speed && !global.pauseObj.paused) {
+if ((keyboard_check(ord("W"))||keyboard_check(ord("A"))||keyboard_check(ord("S"))||keyboard_check(ord("D"))||(abs(gamepad_axis_value(Console.gamepad,gp_axislh)) > 0.1 || abs(gamepad_axis_value(Console.gamepad, gp_axislv)) > 0.1)) && speed_ < max_speed && !global.pauseObj.paused) {
 	speed_ += 0.2;	
 } else if global.pauseObj.paused {
 	speed_ = 0;
@@ -37,6 +36,10 @@ if ((keyboard_check(ord("W"))||keyboard_check(ord("A"))||keyboard_check(ord("S")
 	if global.pauseObj.paused {
 		speed_ = 0	
 	}
+}
+if abs(gamepad_axis_value(Console.gamepad,gp_axislh)) > 0.1 || abs(gamepad_axis_value(Console.gamepad, gp_axislv)) > 0.1 {
+	yspeed += speed_*gamepad_axis_value(Console.gamepad,gp_axislv)
+	xspeed += speed_*gamepad_axis_value(Console.gamepad,gp_axislh)
 }
 if (keyboard_check(ord("W")) && y>0) {
 	yspeed -= speed_
