@@ -132,10 +132,10 @@ cursorc_btn = CreateButton(180,"CURSOR COLOR", function () {
 	if self.coins >= temp.cost && temp.points < temp.max_points {
 		temp.points += 1
 		self.coins -= temp.cost
+		global.cursor_colour = temp.points
 		SaveOptions()
 		loadOptions()
 	}
-	global.cursor_colour = temp.points
 })
 cursorc_btn.max_points = 3
 cursorc_btn.cost = 0
@@ -146,10 +146,11 @@ cursort_btn = CreateButton(180+15,"CURSOR TRAIL", function () {
 	if self.coins >= temp.cost && temp.points < temp.max_points {
 		temp.points += 1
 		self.coins -= temp.cost
+		global.cursor_colour = temp.points
 		SaveOptions()
 		loadOptions()
 	}
-	global.cursor_colour = temp.points
+	
 })
 cursort_btn.max_points = 1
 cursort_btn.cost = 0

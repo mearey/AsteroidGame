@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 sprite_index = cursor_sprite
-alpha = 1
+alpha = 0.6
 switch global.cursor_colour {
 	case 0:
 		colour = c_white
