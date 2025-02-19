@@ -7,7 +7,7 @@ event_inherited();
 lighting_size =4
 
 max_speed = 2;
-dmg = 1.5;
+dmg = 1.15;
 fire_rate = global.fire_rate*1.2
 fire_timer = fire_rate
 
@@ -15,8 +15,8 @@ ability = "Press space to throw a hammer towards your cursor that deals massive 
 
 max_hp=150;
 hp=max_hp;
-cooldown = 350/(global.cdr)
-ability_cooldown = 350/(global.cdr)
+cooldown = 375/(global.cdr)
+ability_cooldown = 375/(global.cdr)
 var starting_wep = Sword
 
 weapons = [starting_wep]
