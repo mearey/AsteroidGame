@@ -6,7 +6,7 @@ event_inherited();
 
 max_speed = 3.7;
 
-dmg = 0.85;
+dmg = 0.90;
 
 ability_cooldown = 0
 

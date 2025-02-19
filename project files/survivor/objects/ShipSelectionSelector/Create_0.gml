@@ -129,7 +129,7 @@ var button = CreateShipSelectButton(15,PlayerFastShipSprite,FastShip, function (
 		steam_set_achievement("ship_2")
 	}
 })
-button.cost = 80
+button.cost = 20
 if (ini_read_real("SHIPS", "Fastship", false)) {
 	button.locked = false	
 }
@@ -141,7 +141,7 @@ var button = CreateShipSelectButton(0,MeeleShipSprite,MeeleShip, function () {
 		global.ship_selection = MeeleShip
 	}
 })
-button.cost = 230
+button.cost = 75
 if (ini_read_real("SHIPS", "Meeleship", false)) {
 	button.locked = false	
 }
@@ -152,7 +152,7 @@ var button = CreateShipSelectButton(-30,OverclockShipSprite,OverclockShip, funct
 		global.ship_selection = OverclockShip
 	}
 })
-button.cost = 900
+button.cost = 999
 if (ini_read_real("SHIPS", "OverclockShip", false)) {
 	button.locked = false	
 }
