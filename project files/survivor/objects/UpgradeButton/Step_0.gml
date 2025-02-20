@@ -5,7 +5,7 @@
 event_inherited();
 
 if backwards {
-if hovered && mouse_check_button_pressed(mb_right) {
+if hovered && (mouse_check_button_pressed(mb_right) || CheckControllerButton() == gp_shoulderl) {
 	if points > 0 {
 		points -= 2
 		onClick()

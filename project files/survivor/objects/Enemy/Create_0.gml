@@ -15,7 +15,7 @@ new_ = false
 collide = true
 var val = 0.012
 if global.secret_upgrade {
-	val = 0.024	
+	val = 0.017
 }
 if (random(1) < val*global.luck) {
 	chubby = true	

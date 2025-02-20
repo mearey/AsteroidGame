@@ -7,3 +7,9 @@ if scroll <= -4250 {
 }
 
 layer_y("Background_1", scroll*0.5)
+
+if CheckControllerButton() {
+	if init {
+		room_goto(Splash2)
+	}
+}

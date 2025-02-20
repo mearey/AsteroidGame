@@ -9,6 +9,9 @@ function CheckControllerButton(){
 		}
 	}*/
 	if (gamepad_button_check_pressed(Console.gamepad,gp_shoulderr)) {
-		return gp_shoulderrb
+		return gp_shoulderr
+	}
+	if (gamepad_button_check_pressed(Console.gamepad,gp_shoulderl)) {
+		return gp_shoulderl
 	}
 }

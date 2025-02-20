@@ -10,6 +10,8 @@ animation = 0;
 
 slot = 0;
 
+hovered = false
+
 alarm[0] = 10;
 
 draw_set_font(DefaultFont)

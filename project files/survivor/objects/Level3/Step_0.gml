@@ -61,7 +61,7 @@ if !set {
 		number = 700
 		num_bosses = 2
 		spawnrate = 6
-		if random(1) < 0.5 || !global.secret_upgrade {
+		if random(1) < 0.6 || !global.secret_upgrade {
 			spawnEnemy(SquidBossObj)
 		} else {
 			spawnEnemy(SecretBossObj)	
