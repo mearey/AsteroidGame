@@ -163,7 +163,9 @@ function takeDamage() {
 	}
 	with BuddyObj {
 		if collected {
-			explode()	
+			explode()
+			audio_stop_sound(buddyexplosion)
+			PlaySFX(buddyexplosion, 0.9,1.1)
 		}
 	}
 }

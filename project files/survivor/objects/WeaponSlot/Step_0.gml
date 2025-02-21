@@ -22,6 +22,6 @@ if (mouse_x < bbox_right && mouse_x > bbox_left) && (mouse_y > bbox_top && mouse
 	dragging = true
 }
 
-if (mouse_x < bbox_right && mouse_x > bbox_left) && (mouse_y > bbox_top && mouse_y < bbox_bottom) && keyboard_check(vk_shift) && mouse_check_button_pressed(mb_left) {
+if (mouse_x < bbox_right && mouse_x > bbox_left) && (mouse_y > bbox_top && mouse_y < bbox_bottom) && ((keyboard_check(vk_shift) && mouse_check_button_pressed(mb_left)) || CheckControllerButton()) {
 	unequipWeapon(weapon)
 }

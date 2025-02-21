@@ -6,7 +6,7 @@ if open {
 	draw_set_color(c_white)
 	draw_rectangle(x,y,x+300,y+400,true)
 	draw_set_color(c_white)
-	draw_set_halign(vk_left)
+	draw_set_halign(fa_left)
 	draw_text(x+20,y+380,keyboard_string)
 	
 	
