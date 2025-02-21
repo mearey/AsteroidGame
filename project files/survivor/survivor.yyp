@@ -557,6 +557,7 @@
     {"id":{"name":"Tardigrade_Special_Death","path":"sprites/Tardigrade_Special_Death/Tardigrade_Special_Death.yy",},},
     {"id":{"name":"Tardigrade_Special_Healthy","path":"sprites/Tardigrade_Special_Healthy/Tardigrade_Special_Healthy.yy",},},
     {"id":{"name":"Toxic_cloud","path":"sprites/Toxic_cloud/Toxic_cloud.yy",},},
+    {"id":{"name":"Trader_ALT","path":"sprites/Trader_ALT/Trader_ALT.yy",},},
     {"id":{"name":"TraderExhaust","path":"sprites/TraderExhaust/TraderExhaust.yy",},},
     {"id":{"name":"TraderSprite","path":"sprites/TraderSprite/TraderSprite.yy",},},
     {"id":{"name":"WallOfDebrisSprite","path":"sprites/WallOfDebrisSprite/WallOfDebrisSprite.yy",},},
