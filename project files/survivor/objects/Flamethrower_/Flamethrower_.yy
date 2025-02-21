@@ -36,8 +36,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Plasmathrower",
-    "path":"sprites/Plasmathrower/Plasmathrower.yy",
+    "name":"BubbleBobble",
+    "path":"sprites/BubbleBobble/BubbleBobble.yy",
   },
   "spriteMaskId":null,
   "visible":true,
