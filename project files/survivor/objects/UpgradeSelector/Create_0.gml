@@ -29,12 +29,12 @@ fr_btn = CreateButton(-30,"FIRE RATE", function () {
 	if self.coins >= temp.cost && temp.points < temp.max_points {
 		temp.points += 1
 		self.coins -= temp.cost
-		temp.cost = 10+30*fr_btn.points
+		temp.cost = 20+25*fr_btn.points
 	}
 })
 fr_btn.max_points = 4
 fr_btn.points = ini_read_real("UPGRADES", "fire_rate", 0)
-fr_btn.cost = 10+30*fr_btn.points
+fr_btn.cost = 20+25*fr_btn.points
 fr_btn.description = "Increase the fire rate for all weapons"
 
 regen_btn = CreateButton(-15,"REPAIR SYSTEM", function () {
@@ -42,13 +42,13 @@ regen_btn = CreateButton(-15,"REPAIR SYSTEM", function () {
 	if self.coins >= temp.cost && temp.points < temp.max_points {
 		temp.points += 1
 		self.coins -= temp.cost
-		temp.cost = 5+30*regen_btn.points
+		temp.cost = 5+35*regen_btn.points
 	}
 })
 regen_btn.max_points = 5
 regen_btn.points = ini_read_real("UPGRADES", "regen", 0)
-regen_btn.cost = 5+30*regen_btn.points
-regen_btn.description = "Increase ship's regeneration "
+regen_btn.cost = 5+35*regen_btn.points
+regen_btn.description = "Increase ship's regeneration"
 
 magnet_btn = CreateButton(0,"MAGNET", function () {
 	var temp = GetUpgradeButton("MAGNET")
@@ -68,12 +68,12 @@ ms_btn = CreateButton(15,"MULTI SHOT", function () {
 	if self.coins >= temp.cost && temp.points < temp.max_points {
 		temp.points += 1
 		self.coins -= temp.cost
-		temp.cost = 75+45*ms_btn.points
+		temp.cost = 50+35*ms_btn.points
 	}
 })
 ms_btn.max_points = 4
 ms_btn.points = ini_read_real("UPGRADES", "multi_shot", 0)
-ms_btn.cost = 75+45*ms_btn.points
+ms_btn.cost = 50+35*ms_btn.points
 ms_btn.description = "Projectiles shot by the player have a chance to be duplicated"
 
 aa_btn = CreateButton(30,"COOLDOWN", function () {
