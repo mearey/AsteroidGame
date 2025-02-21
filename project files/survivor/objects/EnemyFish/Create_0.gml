@@ -6,7 +6,7 @@ event_inherited();
 
 image_angle = point_direction(x,y,global.player.x,global.player.y)
 image_speed = 1;
-fire_rate = 1000
+fire_rate = 2000
 fire_timer = fire_rate
 hp = 15;
 _speed = 0.08;

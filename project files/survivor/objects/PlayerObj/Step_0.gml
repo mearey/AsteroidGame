@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+camera_set_view_pos(view_camera[0], x-camera_get_view_width(view_camera[0])/2, y-camera_get_view_height(view_camera[0])/2)
+
 if global.luck <=0 {
 	global.luck = 1	
 }
@@ -57,6 +59,12 @@ if (keyboard_check(ord("A")) && x>0) {
 if !(global.pauseObj.paused) && !dead {
 	x+=xspeed
 	y+=yspeed
+	if x < 0 || x > room_width {
+		x -= xspeed
+	}
+	if y < 0 || y > room_height {
+		y -= yspeed	
+	}
 	x_speed = xspeed;
 	y_speed = yspeed;
 	xspeed = 0

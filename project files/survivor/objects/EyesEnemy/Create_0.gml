@@ -7,7 +7,7 @@ event_inherited();
 inst = self
 
 alarm[1] = 4
-hp = 10
+hp = 5
 image_speed = 0
 
 lighting_colour = c_lime

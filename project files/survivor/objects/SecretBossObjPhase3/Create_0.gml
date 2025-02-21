@@ -22,7 +22,12 @@ function takeDamage(damage) {
 		if !dead {
 			alarm[3] = 120
 		}
+		ini_close()
+		ini_open("unlocks.ini")
+		ini_write_real("WEAPONS", "secret", true)
+		ini_close()
 		dead = true
+		steam_set_achievement("boss_secret")
 		sprite_index = secret_boss_phase_3_death
 		global.player.enemies_defeated += 1;
 		var coin_chance = 0.05*global.luck

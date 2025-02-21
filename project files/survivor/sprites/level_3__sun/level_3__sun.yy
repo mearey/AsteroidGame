@@ -2,7 +2,7 @@
   "$GMSprite":"",
   "%Name":"level_3__sun",
   "bboxMode":0,
-  "bbox_bottom":2788,
+  "bbox_bottom":2840,
   "bbox_left":1,
   "bbox_right":4582,
   "bbox_top":0,

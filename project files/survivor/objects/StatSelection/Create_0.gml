@@ -6,7 +6,7 @@ stat = stats[random_range(0, 4)]
 
 weapon_get = false
 
-if (random(1)<0.05) {
+if (random(1)<0.3) {
 	weapon_get = true	
 }
 

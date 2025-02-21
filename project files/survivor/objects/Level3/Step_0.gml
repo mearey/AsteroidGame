@@ -71,7 +71,7 @@ if !set {
 		bosslist = [EnemyFlyBossObj, EnemyOrbBossObj, EnemySquareBossObj, EnemyShipBoss,AsteroidBossObj,EnemyShipMissleBoss,RocketBossObj,SpiderBoss,EyesEnemyBoss]
 		number = 700/(difficulty/800)
 		num_bosses = (difficulty/800)*2
-		spawnrate = max(6 - (difficulty/800), 0.1)/2
+		spawnrate = 6
 		if random(1) < 0.5 || !global.secret_upgrade {
 			spawnEnemy(SquidBossObj)
 		} else {
@@ -81,7 +81,8 @@ if !set {
 	set = true
 }
 
-if difficulty > 2000 {
+if difficulty > 1000 {
+	enemylist = [EnemyFlyBossObj, EnemyOrbBossObj, EnemySquareBossObj, EnemyShipBoss,AsteroidBossObj,EnemyShipMissleBoss,RocketBossObj,SpiderBoss,EyesEnemyBoss]
 	with (Chest) {
 		instance_destroy(self)
 	}
