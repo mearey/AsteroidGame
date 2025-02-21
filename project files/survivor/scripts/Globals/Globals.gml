@@ -16,10 +16,10 @@ function Globals(){
 	global.weaponPool = [CannonMKII_Left, CannonMKII_Right, FrontBeamObj, CannonMKI, OrbitalCannonWeapon, OrbitalBeamWeapon,OrbitalLaserWeapon, SideLaser, LaserMKI, SideBeam, Sword, DisruptionField, MissileLauncher, MineLayer, GrenadeThrower, Flamethrower_, MiniShotgun]
 	ini_close()
 	ini_open("unlocks.ini")
-	var thing = ini_read_real("WEAPONS","secret", false)
-	if thing {
+	var boss_weps = ini_read_real("WEAPONS", "secret", 0)
+	if boss_weps == 1 {
+		array_push(global.weaponPool, PointBuster)	
 		array_push(global.weaponPool, ZeroClaw)
-		array_push(global.weaponPool, PointBuster)
 	}
 	ini_close()
 	global.synergies = [
