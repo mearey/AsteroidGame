@@ -305,6 +305,7 @@
     {"id":{"name":"Tooltip","path":"scripts/Tooltip/Tooltip.yy",},},
     {"id":{"name":"beamSFX","path":"sounds/beamSFX/beamSFX.yy",},},
     {"id":{"name":"boostsfx","path":"sounds/boostsfx/boostsfx.yy",},},
+    {"id":{"name":"buddyexplosion","path":"sounds/buddyexplosion/buddyexplosion.yy",},},
     {"id":{"name":"buttonSelect","path":"sounds/buttonSelect/buttonSelect.yy",},},
     {"id":{"name":"buttonSwitch","path":"sounds/buttonSwitch/buttonSwitch.yy",},},
     {"id":{"name":"bwooom","path":"sounds/bwooom/bwooom.yy",},},
