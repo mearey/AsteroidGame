@@ -503,6 +503,7 @@
     {"id":{"name":"RocketBottomhalf","path":"sprites/RocketBottomhalf/RocketBottomhalf.yy",},},
     {"id":{"name":"RocketTophalf","path":"sprites/RocketTophalf/RocketTophalf.yy",},},
     {"id":{"name":"RocketWholeSprite","path":"sprites/RocketWholeSprite/RocketWholeSprite.yy",},},
+    {"id":{"name":"RoomBorder","path":"sprites/RoomBorder/RoomBorder.yy",},},
     {"id":{"name":"ruinedearth","path":"sprites/ruinedearth/ruinedearth.yy",},},
     {"id":{"name":"SateliteDebrisSprite","path":"sprites/SateliteDebrisSprite/SateliteDebrisSprite.yy",},},
     {"id":{"name":"satellitealt2","path":"sprites/satellitealt2/satellitealt2.yy",},},
