@@ -13,27 +13,12 @@ switch number
 		colour = c_green
 	break;
 	case 3: 
-		colour = c_green
+		colour = c_blue
 	break;
 	case 4: 
-		colour = c_blue
+		colour = c_purple
 	break;
 	case 5: 
-		colour = c_blue
-	break;
-	case 6: 
-		colour = c_blue
-	break;
-	case 7: 
-		colour = c_purple
-	break;
-	case 8: 
-		colour = c_purple
-	break;
-	case 9: 
-		colour = c_purple
-	break;
-	case 10: 
 		colour = c_orange
 	break;
 }

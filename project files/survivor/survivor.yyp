@@ -442,6 +442,7 @@
     {"id":{"name":"ExhaustSprite","path":"sprites/ExhaustSprite/ExhaustSprite.yy",},},
     {"id":{"name":"ExplosionSprite","path":"sprites/ExplosionSprite/ExplosionSprite.yy",},},
     {"id":{"name":"EXPOrb","path":"sprites/EXPOrb/EXPOrb.yy",},},
+    {"id":{"name":"EXPOrbRainbow","path":"sprites/EXPOrbRainbow/EXPOrbRainbow.yy",},},
     {"id":{"name":"EyesSprite","path":"sprites/EyesSprite/EyesSprite.yy",},},
     {"id":{"name":"FastShipSprite","path":"sprites/FastShipSprite/FastShipSprite.yy",},},
     {"id":{"name":"Flame","path":"sprites/Flame/Flame.yy",},},

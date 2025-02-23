@@ -28,6 +28,9 @@ function takeDamage(damage) {
 			instance_create_depth(x,y,1,Chest)	
 		}
 	}
+	if damage*10 > 0 {
+		instance_create_depth(random_range(x-sprite_width/2,x+sprite_width/2),random_range(y-sprite_height/2,y+sprite_height/2),1,DamageText).number = damage
+	}
 	white_flash()
 	alarm[0] = 10;
 }

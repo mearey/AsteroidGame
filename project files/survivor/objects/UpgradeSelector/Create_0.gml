@@ -45,10 +45,10 @@ regen_btn = CreateButton(-15,"REPAIR SYSTEM", function () {
 		temp.cost = 5+30*regen_btn.points
 	}
 })
-regen_btn.max_points = 5
+regen_btn.max_points = 7
 regen_btn.points = ini_read_real("UPGRADES", "regen", 0)
 regen_btn.cost = 5+30*regen_btn.points
-regen_btn.description = "Increase ship's regeneration "
+regen_btn.description = "Increase ship's regeneration"
 
 magnet_btn = CreateButton(0,"MAGNET", function () {
 	var temp = GetUpgradeButton("MAGNET")
@@ -58,7 +58,7 @@ magnet_btn = CreateButton(0,"MAGNET", function () {
 		temp.cost = 10+15*magnet_btn.points
 	}
 })
-magnet_btn.max_points = 12
+magnet_btn.max_points = 14
 magnet_btn.points = ini_read_real("UPGRADES", "magnet", 0)
 magnet_btn.cost = 10+15*magnet_btn.points
 magnet_btn.description = "Increase the pickup range for exp and coins"
@@ -71,7 +71,7 @@ ms_btn = CreateButton(15,"MULTI SHOT", function () {
 		temp.cost = 75+45*ms_btn.points
 	}
 })
-ms_btn.max_points = 4
+ms_btn.max_points = 6
 ms_btn.points = ini_read_real("UPGRADES", "multi_shot", 0)
 ms_btn.cost = 75+45*ms_btn.points
 ms_btn.description = "Projectiles shot by the player have a chance to be duplicated"

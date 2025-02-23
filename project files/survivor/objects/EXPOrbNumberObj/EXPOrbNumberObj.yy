@@ -41,8 +41,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"EXPOrb",
-    "path":"sprites/EXPOrb/EXPOrb.yy",
+    "name":"EXPOrbRainbow",
+    "path":"sprites/EXPOrbRainbow/EXPOrbRainbow.yy",
   },
   "spriteMaskId":null,
   "visible":true,

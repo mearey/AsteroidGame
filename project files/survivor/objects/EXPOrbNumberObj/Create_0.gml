@@ -12,3 +12,5 @@ cam_height = camera_get_view_height(view_camera[0])
 offscreen_timer = 500
 visible = false
 alarm[0] = 4
+image_xscale = 2
+image_yscale = 2

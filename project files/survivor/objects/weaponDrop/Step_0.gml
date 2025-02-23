@@ -4,10 +4,8 @@ if animationframe < 15 {
 	animationframe+=0.2
 } else {
 	animationframe = 0	
-}
-	
-	
-	
+}	
+
 if collision_circle(x,y,16,global.ship_selection,false,true) {
 	instance_destroy(self)
 	for (var i=0; i<number; i+=1) {
