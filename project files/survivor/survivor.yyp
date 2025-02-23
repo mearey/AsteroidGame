@@ -374,6 +374,7 @@
     {"id":{"name":"Cannon_MKI","path":"sprites/Cannon_MKI/Cannon_MKI.yy",},},
     {"id":{"name":"Cannon_Orbital_MKI_","path":"sprites/Cannon_Orbital_MKI_/Cannon_Orbital_MKI_.yy",},},
     {"id":{"name":"Cannon_Orbital_MKI","path":"sprites/Cannon_Orbital_MKI/Cannon_Orbital_MKI.yy",},},
+    {"id":{"name":"chest_deviledeggcake","path":"sprites/chest_deviledeggcake/chest_deviledeggcake.yy",},},
     {"id":{"name":"ChestSprite","path":"sprites/ChestSprite/ChestSprite.yy",},},
     {"id":{"name":"ChubbySprite","path":"sprites/ChubbySprite/ChubbySprite.yy",},},
     {"id":{"name":"CoinSprite","path":"sprites/CoinSprite/CoinSprite.yy",},},
