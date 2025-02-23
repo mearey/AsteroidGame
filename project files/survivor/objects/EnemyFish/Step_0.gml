@@ -27,7 +27,7 @@ if (fire_timer > 0) {
 } else {
 	fire_timer = fire_rate
 	var bullet = instance_create_depth(x,y,1,EnemyMissile)
-	bullet.projectile_speed = 5
+	bullet.projectile_speed = 3.5
 	bullet.direction = -phy_rotation
 }
 }

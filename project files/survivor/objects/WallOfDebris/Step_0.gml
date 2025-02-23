@@ -31,7 +31,7 @@ var cam_x = camera_get_view_x(view_get_camera(0))
 var cam_y = camera_get_view_y(view_get_camera(0))
 
 phy_position_x = cam_x+surface_get_width(application_surface)/2
-phy_position_y = cam_y+79+start_y
+phy_position_y = max(0,cam_y+79+start_y)
 phy_rotation=0
 //collisions
 if (!global.pauseObj.paused){
