@@ -10,7 +10,7 @@ size = 1
 _speed = 0.1;
 
 chubby = false
-
+whitef = false
 new_ = false
 collide = true
 var val = 0.012
@@ -57,6 +57,12 @@ function takeDamage(damage) {
 	if damage*10 > 0 {
 		instance_create_depth(random_range(x-sprite_width/2,x+sprite_width/2),random_range(y-sprite_height/2,y+sprite_height/2),1,DamageText).number = damage
 	}
+	white_flash()
+}
+
+function white_flash() {
+	whitef = true
+	alarm[9] = 3
 }
 
 function set_phys_speed(x_,y_) {

@@ -27,6 +27,7 @@ function takeDamage(damage) {
 		
 	}
 	sprite_index = SpiderSpriteDmg;
+	white_flash()
 	alarm[0] = 10;
 	//draw_damage number
 	if damage*10 > 0 {

@@ -22,3 +22,5 @@ if point_distance(x,y,global.player.x,global.player.y) < 256 {
 	global.player.hp-=0.2
 }
 }
+
+event_inherited()

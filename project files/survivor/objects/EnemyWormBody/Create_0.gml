@@ -28,6 +28,7 @@ function takeDamage(damage) {
 		}
 		
 	}
+	white_flash()
 	image_index = 1;
 	alarm[0] = 10;
 	//draw_damage number

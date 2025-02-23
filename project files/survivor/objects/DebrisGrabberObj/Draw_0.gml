@@ -12,3 +12,5 @@ for (var i = 0; i<array_length(grabbed); i+=1){
 	}
 }
 lighting_size = 2+array_length(grabbed)
+
+event_inherited()

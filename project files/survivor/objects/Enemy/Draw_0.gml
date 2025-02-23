@@ -11,4 +11,10 @@ if chubby {
 	draw_sprite_ext(ChubbySprite,0,x,y,1.5,1.5,rot*2,c_white,0.9)
 }
 
-draw_self()
+if whitef {
+	gpu_set_fog(true, c_white, 0, 1000)
+	draw_self()
+    gpu_set_fog(false, c_white,0,1000)
+} else {
+	draw_self()
+}

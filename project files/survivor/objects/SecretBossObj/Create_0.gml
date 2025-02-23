@@ -26,6 +26,7 @@ function takeDamage(damage) {
 		global.player.enemies_defeated += 1;
 		
 	}
+	white_flash()
 	//draw_damage number
 	if damage*10 > 0 {
 		instance_create_depth(random_range(x-sprite_width/2,x+sprite_width/2),random_range(y-sprite_height/2,y+sprite_height/2),1,DamageText).number = damage

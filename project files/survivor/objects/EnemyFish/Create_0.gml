@@ -28,5 +28,6 @@ function takeDamage(damage) {
 			instance_create_depth(x,y,1,Chest)	
 		}
 	}
+	white_flash()
 	alarm[0] = 10;
 }

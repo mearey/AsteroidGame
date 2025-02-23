@@ -36,6 +36,7 @@ function takeDamage(damage) {
 			instance_create_depth(x,y,1,Chest)	
 		}
 	}
+	white_flash()
 	sprite_index = EnemyShipSprite;
 	image_index = 1
 	alarm[0] = 10;

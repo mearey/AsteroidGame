@@ -14,3 +14,5 @@ if chubby {
 }
 
 draw_sprite_ext(sprite_index,image_index,x,y,round(image_xscale),round(image_yscale),image_angle,c_white,1)
+
+event_inherited()
