@@ -2,4 +2,4 @@
 // You can write your code in this editor
 event_inherited()
 lighting_size = 4
-lighting_intensity = 0.2
+lighting_intensity = 0.4

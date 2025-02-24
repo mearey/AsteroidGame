@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"Buddy_SFX_shoot_heroic_2",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.760454,
+  "name":"Buddy_SFX_shoot_heroic_2",
+  "parent":{
+    "name":"heroic",
+    "path":"folders/Sounds/SFX/Buddy Noises/heroic.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"Buddy_SFX_shoot_heroic_2.wav",
+  "type":0,
+  "volume":1.0,
+}

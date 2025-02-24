@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"Buddy_SFX_die_1",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.928798,
+  "name":"Buddy_SFX_die_1",
+  "parent":{
+    "name":"sad",
+    "path":"folders/Sounds/SFX/Buddy Noises/sad.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"Buddy_SFX_die_1.wav",
+  "type":0,
+  "volume":1.0,
+}
