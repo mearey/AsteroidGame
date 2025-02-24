@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 phy_rotation+=rotation
-lighting_size = number/20
+lighting_size = number/10
 
 if (collision_circle(x,y,global.magnet,global.ship_selection,false,true)){
 	var orb = instance_create_depth(x,y,1,EXPOrbSuck)
