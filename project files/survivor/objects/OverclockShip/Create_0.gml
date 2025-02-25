@@ -6,7 +6,7 @@ event_inherited();
 
 max_speed = 4;
 
-dmg = 1.3;
+dmg = 1.1;
 
 ability_cooldown = 0
 
@@ -14,9 +14,9 @@ speed_holder = max_speed
 
 boosting = false
 
-max_hp = 110
+max_hp = 50
 
-hp = 110
+hp = 50
 
 overclock_timer = 200
 clocking = false
@@ -29,13 +29,13 @@ function ability_() {
 	//speed boost ability here
 	ability_cooldown -= 1
 	if ability_cooldown <= 0 && (keyboard_check_pressed(vk_space) || CheckControllerButton()) && !clocking {
-		ability_cooldown = 1200/(global.cdr)
+		ability_cooldown = 2000/(global.cdr)
 		clocking = true
 	}
 	if clocking {
 		lighting_colour = c_fuchsia
 		with (Weapon) {
-			fire_rate -= fire_rate/60
+			fire_rate -= fire_rate/50
 		}
 		lighting_size += 0.015
 		lighting_intensity += 0.002

@@ -27,11 +27,11 @@ moves = [
 	function move2() {
 		instance_create_depth(x+10,y,1,Spider).hp = 20
 		instance_create_depth(x-10,y,1,Spider).hp = 20
-		move_cooldown = 25
+		move_cooldown = 35
 	},
 	function move3() {
 		instance_create_depth(x+10,y,1,Slime).hp = 30
 		instance_create_depth(x-10,y,1,Slime).hp = 30
-		move_cooldown = 35
+		move_cooldown = 45
 	},
 ]
