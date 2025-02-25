@@ -8,6 +8,7 @@ if (collision_circle(x,y,global.magnet,global.ship_selection,false,true)){
 	orb.number = number
 	orb.lighting_colour = c_lime
 	orb.lighting_size = lighting_size
+	orb.sprite_index = sprite_index
 	instance_destroy(self)
 }
 
