@@ -12,7 +12,7 @@ lighting_intensity = 0.2
 max_hp = 1000
 hp = max_hp
 
-damage = 5
+damage = 2
 
 function takeDamage(damage) {	
 	hp-=damage;

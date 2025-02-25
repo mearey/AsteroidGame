@@ -14,7 +14,8 @@ hp = max_hp
 dead = false
 following = false
 
-damage = 5
+
+damage = 2
 
 function takeDamage(damage) {	
 	hp-=damage;

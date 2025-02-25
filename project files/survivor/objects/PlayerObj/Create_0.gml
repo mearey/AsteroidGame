@@ -166,6 +166,11 @@ function takeDamage() {
 			explode()
 			audio_stop_sound(buddyexplosion)
 			PlaySFX(buddyexplosion, 0.9,1.1)
+			if rate < 1.5 {
+				PlaySFX(array_get_random([Buddy_SFX_die_1,Buddy_SFX_die_2,Buddy_SFX_die_3,Buddy_SFX_die_4,Buddy_SFX_die_5]), 0.9,1.1)
+			} else {
+				PlaySFX(array_get_random([Buddy_SFX_die_heroic_1,Buddy_SFX_die_heroic_2,Buddy_SFX_die_heroic_3,Buddy_SFX_die_heroic_4,Buddy_SFX_die_heroic_5]), 0.9,1.1)
+			}
 		}
 	}
 }
