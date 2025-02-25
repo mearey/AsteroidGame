@@ -61,7 +61,7 @@ if !set {
 		bosslist = [EnemyFlyBossObj, EnemyOrbBossObj, EnemySquareBossObj, EnemyShipBoss,AsteroidBossObj,EnemyShipMissleBoss,RocketBossObj,SpiderBoss,EyesEnemyBoss]
 		number = 700
 		num_bosses = 2
-		spawnrate = 6
+		spawnrate = 5
 		hp_mod = 2
 		if random(1) < 0.6 || !global.secret_upgrade {
 			spawnEnemy(SquidBossObj)
@@ -73,7 +73,7 @@ if !set {
 		bosslist = [EnemyFlyBossObj, EnemyOrbBossObj, EnemySquareBossObj, EnemyShipBoss,AsteroidBossObj,EnemyShipMissleBoss,RocketBossObj,SpiderBoss,EyesEnemyBoss]
 		number = 700/(difficulty/800)
 		num_bosses = (difficulty/800)*2
-		spawnrate = 6
+		spawnrate = 3
 		hp_mod = 3
 		if random(1) < 0.5 || !global.secret_upgrade {
 			spawnEnemy(SquidBossObj)

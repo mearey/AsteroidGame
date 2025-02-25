@@ -16,7 +16,7 @@ rot2 = 0
 rot3 = 0
 rot4 = 0
 
-damage = 10
+damage = 2
 
 move_cooldown = 200;
 
