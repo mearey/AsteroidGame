@@ -3,8 +3,8 @@
 
 // Inherit the parent event
 event_inherited();
-max_hp = 2000
-hp = 2000
+max_hp = 1100
+hp = 1100
 
 timer1 = 10 + random(15)
 timer2 = 10 + random(15)
