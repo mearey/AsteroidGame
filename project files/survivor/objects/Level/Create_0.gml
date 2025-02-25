@@ -29,7 +29,7 @@ global.level = self
 start_time = current_time
 
 spawnrate = 240;
-
+hp_mod = 0
 timer_ = spawnrate;
 
 enemylist = [EnemyOrbObj]
@@ -58,7 +58,9 @@ function spawnEnemy(enemy) {
 	} else {
 		y_ = random_range(-20,room_height + 20)
 	}
-	instance_create_depth(x_,y_,1,enemy).new_ = true
+	var inst = instance_create_depth(x_,y_,1,enemy)
+	inst.new_ = true
+	inst.hp+=hp_mod
 	number -= 1;
 }
 
