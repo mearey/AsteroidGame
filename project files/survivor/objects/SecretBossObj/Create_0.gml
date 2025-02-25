@@ -11,8 +11,8 @@ phy_position_y = global.player.y+lengthdir_y(300,dir)
 stage = 0
 lighting_colour = c_white
 lighting_size = 7
-lighting_intensity = 0.1
-max_hp = 1200
+lighting_intensity = 0.2
+max_hp = 1100
 hp = max_hp
 
 damage = 5

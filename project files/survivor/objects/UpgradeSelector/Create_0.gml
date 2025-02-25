@@ -1,4 +1,4 @@
-/// @description Insert description here
+ /// @description Insert description here
 // You can write your code in this editor
 event_inherited()
 active_button = instance_nearest(x,y,Button)
@@ -95,12 +95,12 @@ luck_btn = CreateButton(-180-30,"LUCK", function () {
 	if self.coins >= temp.cost && temp.points < temp.max_points {
 		temp.points += 1
 		self.coins -= temp.cost
-		temp.cost = 50+50*luck_btn.points*luck_btn.points*luck_btn.points
+		temp.cost = 50+16*luck_btn.points*luck_btn.points
 	}
 })
 luck_btn.max_points = 6
 luck_btn.points = ini_read_real("UPGRADES", "luck", 0)
-luck_btn.cost = 50+50*luck_btn.points*luck_btn.points*luck_btn.points
+luck_btn.cost = 50+16*luck_btn.points*luck_btn.points
 luck_btn.points = ini_read_real("UPGRADES", "luck", 0)
 luck_btn.description = "Get luckier :-)"
 
