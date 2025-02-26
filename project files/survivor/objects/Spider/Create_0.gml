@@ -9,7 +9,7 @@ lighting_size = 2
 lighting_intensity = 0.15
 
 hp = 6
-xp = 3
+xp = 2
 
 
 function takeDamage(damage) {	
