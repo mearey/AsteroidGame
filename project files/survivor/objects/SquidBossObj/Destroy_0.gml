@@ -3,7 +3,7 @@
 
 // Inherit the parent event
 event_inherited();
-
+steam_set_achievement("level_3")
 repeat random_range(150,160) {
 	instance_create_depth(x+random_range(-64,64),y+random_range(-64,64),1,CoinObj)	
 }

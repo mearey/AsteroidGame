@@ -44,6 +44,9 @@ function Globals(){
 }
 
 function clearEntities() {
+	with (StatSelection) {
+		instance_destroy(self)	
+	}
 	with (Weapon) {
 		instance_destroy(self)	
 	}
