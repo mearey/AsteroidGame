@@ -3,7 +3,18 @@
 
 // Inherit the parent event
 event_inherited();
+global.neon = 1
+global.shady = 1
 
+if random(1) <= 0.1 {
+	global.neon = 1.5
+	sprite_index = Trader_ALT
+} else if random(1) <= 0.15 {
+	global.shady = 0.7
+	sprite_index = Trader_death
+}
+neon = global.neon
+shady = global.shady
 depth = 2
 
 traded = false

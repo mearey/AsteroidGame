@@ -24,5 +24,5 @@ if !(mouse_check_button(mb_left)) && dragging {
 }
 
 var inst = instance_create_depth(0,0,0,item)
-cost = inst.scrap*1.5
+cost = inst.scrap*1.5*(1/global.neon)*(1/global.shady)
 instance_destroy(inst)
