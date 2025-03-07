@@ -21,5 +21,5 @@
   "sampleRate":44100,
   "soundFile":"Buddy_SFX_shoot3.wav",
   "type":0,
-  "volume":1.0,
+  "volume":0.49,
 }

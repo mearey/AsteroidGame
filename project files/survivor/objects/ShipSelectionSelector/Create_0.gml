@@ -77,6 +77,8 @@ CreateButton(180+30,"BACK", function () {
 	ini_write_real("SHIPS", "Meeleship", !button.locked)
 	button = GetShipUnlockButton(OverclockShip)
 	ini_write_real("SHIPS", "OverclockShip", !button.locked)
+	button = GetShipUnlockButton(ShieldShip)
+	ini_write_real("SHIPS", "ShieldShip", !button.locked)
 	ini_close()
 	//unlock acheivement
 	var all_unlocked = true 
@@ -157,11 +159,15 @@ if (ini_read_real("SHIPS", "OverclockShip", false)) {
 	button.locked = false	
 }
 
-var button = CreateShipSelectButton(-15, nocollision, Console, function() {
-	
+var button = CreateShipSelectButton(-15, ShieldShipSprite, ShieldShip, function() {
+	display_ship = ShieldShip 
+	if !GetShipUnlockButton(ShieldShip).locked {
+		global.ship_selection = ShieldShip
+	}
 })
-button.locked = false
-button.future =  true
-button.future =  true
+if (ini_read_real("SHIPS", "ShieldShip", false)) {
+	button.locked = false	
+}
+button.cost = 650
 
 ini_close()

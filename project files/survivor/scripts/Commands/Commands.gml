@@ -81,6 +81,10 @@ function spawn_buddy() {
 	Level.spawnEnemy(BuddyObj)	
 }
 
+function spawn_halflet() {
+	Level.spawnEnemy(HalfletBuddy)	
+}
+
 function test_room() {
 	var player = instance_create_depth(surface_get_width(application_surface)/2,surface_get_height(application_surface)/2,1,global.ship_selection)
 	player.resetWeapons()
