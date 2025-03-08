@@ -64,6 +64,12 @@ function Fire(type, dir, starting_x, starting_y, acc, spd){
 		bullet.projectile_speed = spd
 		bullet.accuracy = acc
 		PlaySFX(kineticLaunch,1,4)
+	} else {
+	 	var bullet = instance_create_depth(starting_x,starting_y,1,type)
+		bullet.direction = dir
+		bullet.projectile_speed = spd
+		bullet.speed = spd
+		bullet.accuracy = acc
 	}
 	return bullet
 }

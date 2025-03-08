@@ -15,7 +15,7 @@ brand = "PIRATE"
 shockrange = 1
 slot = 1
 scrap = 350
-description = "Sprays a volley of bubbles"
+description = "Sprays a volley of bubbles that capture enemies"
 damage = 6
 function lvlUp() {
 	if (lvl < 10) {

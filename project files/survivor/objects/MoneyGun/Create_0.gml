@@ -20,7 +20,7 @@ damage = 6
 function lvlUp() {
 	if (lvl < 10) {
 		lvl+=1
-		fire_rate -= fire_rate/7
+		fire_rate -= fire_rate/5
 		shockrange += 0.3
 	} 
 	if lvl >= 10 {
