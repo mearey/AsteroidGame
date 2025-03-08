@@ -70,7 +70,6 @@ exit_btn = CreateButton(-30, "SAVE & EXIT", function() {
 	clearEntities()
 	room_goto(MainMenu)
 	global.pauseObj.paused = false
-	PlaySong(GameSongMenu)
 })
 
 function CreateInventory() {
