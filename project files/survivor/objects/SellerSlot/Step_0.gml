@@ -14,15 +14,26 @@ if hovered && (mouse_check_button_pressed(mb_left) || CheckControllerButton()) {
 if !(mouse_check_button(mb_left)) && dragging {
 	dragging = false
 	if mouse_x > surface_get_width(application_surface)/2 {
-		if global.player.scrap >= cost {
-			global.player.scrap-=cost
+		if global.shady ==  0.7 {
+			global.player.hp = global.player.hp/2
 			global.player.addWeapon(item)
 			instance_destroy(self)
 			instance_find(PauseSelector,0).CreateInventory()
+		} else {
+			if global.player.scrap >= cost {
+				global.player.scrap-=cost
+				global.player.addWeapon(item)
+				instance_destroy(self)
+				instance_find(PauseSelector,0).CreateInventory()
+			}
 		}
 	}
 }
 
 var inst = instance_create_depth(0,0,0,item)
-cost = inst.scrap*1.5*(1/global.neon)*(1/global.shady)
+if global.shady == 0.7 {
+	cost = 0.5
+} else {
+	cost = inst.scrap*1.5*(1/global.neon)*(1/global.shady)
+}
 instance_destroy(inst)

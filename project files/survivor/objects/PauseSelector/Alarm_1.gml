@@ -4,7 +4,7 @@ if trader {
 	sell_btn = CreateButton(-10,"SELL", function () {
 		global.player.scrap += selltotal/2
 		for (var i=0; i<array_length(sell_slots); i+=1) {
-			instance_destroy(sell_slots[i])	
+			instance_destroy(sell_slots[i])
 		}
 		sell_slots = []
 		CreateInventory()

@@ -16,5 +16,9 @@ if (dragging) {
 		Weapontip(sprite_get_name((object_get_sprite(item))),item,0)	
 	}
 	draw_set_halign(fa_left)
-	draw_text(x-cam_x+40,y-cam_y,"COST: " + string(cost))
+	if global.shady ==  0.7 {
+		draw_text(x-cam_x+40,y-cam_y,"COST: " + string(cost*100)+"% HP")
+	} else {
+		draw_text(x-cam_x+40,y-cam_y,"COST: " + string(cost))
+	}
 }
