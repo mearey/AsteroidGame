@@ -24,7 +24,7 @@ function Fire(type, dir, starting_x, starting_y, acc, spd){
 		bullet.direction = dir
 		bullet.projectile_speed = spd
 		PlaySFX(laser,1,4)
-	} else if (type = BulletObj) {
+	} else if (type = BulletObj) || type = BigBulletObj {
 		PlaySFX(kineticLaunch,1,4)
 		var bullet = instance_create_depth(starting_x,starting_y,1,type)
 		bullet.direction = dir

@@ -29,7 +29,7 @@ function Globals(){
 	]
 	
 	//trader list
-	global.seller_list = [DualCannon,BeamUpgraded,JointLaser,ShockLauncher]
+	global.seller_list = [Cannon,BlackHole,BubbleBeam,MoneyGun,ShockLauncher]
 	
 	if !(os_browser == browser_not_a_browser) {
 		bw = browser_width
