@@ -6,7 +6,7 @@ projectile_speed = global.player.projectile_speed;
 
 accuracy = global.player.accuracy/2;
 
-fire_rate = global.player.fire_rate*2.3;
+fire_rate = global.player.fire_rate*4.3;
 fire_timer = fire_rate;
 
 lvl = 1;
@@ -25,6 +25,6 @@ function lvlUp() {
 	} 
 	if lvl >= 10 {
 		evolved = true
-		removeWeaponFromPool(SideLaser)
+		removeWeaponFromPool(Cannon)
 	}
 }

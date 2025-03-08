@@ -3,8 +3,8 @@
 
 // Inherit the parent event
 event_inherited();
-image_xscale = 5
-image_yscale = 5
+image_xscale = 4
+image_yscale = 4
 lighting_size = 3
 lighting_intensity = 0.05
 

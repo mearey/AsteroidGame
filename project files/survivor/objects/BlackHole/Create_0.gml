@@ -25,6 +25,6 @@ function lvlUp() {
 	} 
 	if lvl >= 10 {
 		evolved = true
-		removeWeaponFromPool(SideLaser)
+		removeWeaponFromPool(BlackHole)
 	}
 }
