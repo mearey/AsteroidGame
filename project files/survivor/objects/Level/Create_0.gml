@@ -60,7 +60,9 @@ function spawnEnemy(enemy) {
 	}
 	var inst = instance_create_depth(x_,y_,1,enemy)
 	inst.new_ = true
-	inst.hp+=hp_mod
+	if variable_instance_exists(inst.id,"hp") {
+		inst.hp+=hp_mod
+	}
 	number -= 1;
 }
 

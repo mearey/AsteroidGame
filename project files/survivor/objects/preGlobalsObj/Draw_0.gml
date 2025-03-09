@@ -4,5 +4,5 @@
 if room == MainMenu {
 	draw_set_halign(fa_left)
 	//version
-	draw_text(20,room_height-40, "VER: 1.1.0 \nSPACE BUDDY Update")	
+	draw_text(20,room_height-40, "VER: 1.2.0 \nTRADERSPOTTING Update")	
 }

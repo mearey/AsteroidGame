@@ -3,7 +3,7 @@
 slot = 0
 
 item = LaserMKI
-
+alarm[0] = 5
 dragging = false
 
 blue = false

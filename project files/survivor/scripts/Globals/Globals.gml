@@ -77,6 +77,9 @@ function clearEntities() {
 	with(BuddyObj) {
 		instance_destroy(self)	
 	}
+	with (PlayerBullet) {
+		instance_destroy(self)	
+	}
 }
 
 function removeWeaponFromPool(weapon) {

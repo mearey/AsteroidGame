@@ -5,6 +5,8 @@ randomize()
 weapon = LaserMKI
 number = 0
 
+
+
 alarm[2] = 5
 
 animationframe = 0;

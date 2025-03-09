@@ -4,6 +4,7 @@ event_inherited()
 lighting_colour = c_red
 lighting_size = 2
 hp = 3;
+
 join_num = 1
 weapon_drop_chance = 0.0035
 size = 1

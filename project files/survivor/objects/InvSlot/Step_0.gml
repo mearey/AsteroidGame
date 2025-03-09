@@ -3,6 +3,9 @@
 var slot_object = instance_find(WeaponSlot,0)
 
 var pause_obj = instance_find(PauseSelector,0)
+if !pause_obj {
+	instance_destroy(self)
+}
 if !(mouse_check_button(mb_left)) && dragging {
 	dragging = false
 	for (var i =0; i< array_length(pause_obj.slots); i++;) {
@@ -47,6 +50,7 @@ if !(mouse_check_button(mb_left)) && dragging {
 		}
 	}
 }
+try {
 if pause_obj.trader {
 	if 	mouse_x-cam_x < surface_get_width(application_surface)/2 && selling && CheckControllerButton() && hovered {
 		for (var i=0; i<array_length(pause_obj.sell_slots); i+=1) {
@@ -107,3 +111,6 @@ if (hovered || dragging) {
 	}
 }
 
+} catch (err) {
+	
+}	

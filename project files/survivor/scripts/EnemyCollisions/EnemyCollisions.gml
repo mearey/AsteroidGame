@@ -2,10 +2,12 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function EnemyCollisions(){
 
-	if (collision_circle(x,y,sprite_height/2,global.ship_selection,false,true)) {
-		if object_index != BuddyObj {
-			global.player.hp-=damage
-			global.player.takeDamage()
+	if object_index != WallOfDebris {
+		if (collision_circle(x,y,sprite_height/2,global.ship_selection,false,true)) {
+			if object_index != BuddyObj {
+				global.player.hp-=damage
+				global.player.takeDamage()
+			}
 		}
 	}
 

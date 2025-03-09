@@ -213,6 +213,7 @@
     {"id":{"name":"Missile","path":"objects/Missile/Missile.yy",},},
     {"id":{"name":"MissileLauncher","path":"objects/MissileLauncher/MissileLauncher.yy",},},
     {"id":{"name":"MoneyGun","path":"objects/MoneyGun/MoneyGun.yy",},},
+    {"id":{"name":"nopause","path":"objects/nopause/nopause.yy",},},
     {"id":{"name":"NotificationObj","path":"objects/NotificationObj/NotificationObj.yy",},},
     {"id":{"name":"obj_gm_button","path":"objects/obj_gm_button/obj_gm_button.yy",},},
     {"id":{"name":"obj_gm_text","path":"objects/obj_gm_text/obj_gm_text.yy",},},

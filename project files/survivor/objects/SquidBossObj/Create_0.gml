@@ -5,7 +5,7 @@
 event_inherited();
 max_hp = 1100
 hp = 1100
-
+instance_create_depth(0,0,0,nopause)
 timer1 = 10 + random(15)
 timer2 = 10 + random(15)
 timer3 = 10 + random(15)

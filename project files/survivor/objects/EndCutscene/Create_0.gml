@@ -14,3 +14,5 @@ steam_set_achievement("final_landing")
 steam_update()
 audio_stop_all()
 PlaySong(GameSongMenuvariation)
+
+wipeSave()

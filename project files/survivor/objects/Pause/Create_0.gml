@@ -20,7 +20,7 @@ function pause(upgrade) {
 			instance_create_depth(camera_get_view_x(view_camera[0])+ surface_get_width(application_surface)/2,camera_get_view_y(view_camera[0])+ surface_get_height(application_surface)/2,1,StatSelection)
 			instance_create_depth(camera_get_view_x(view_camera[0])+ surface_get_width(application_surface)/2 + (64+16),camera_get_view_y(view_camera[0])+ surface_get_height(application_surface)/2,1,StatSelection)	
 		} else {
-			instance_create_depth(x,y,1,PauseSelector)	
+			instance_create_depth(x,y,1,PauseSelector)
 		}
 	}
 	if paused == false {

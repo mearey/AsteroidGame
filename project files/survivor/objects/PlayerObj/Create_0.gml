@@ -92,7 +92,7 @@ function ability_() {
 			list[| i].phy_speed_x += lengthdir_x(4, dir_)
 			list[| i].phy_speed_y -= lengthdir_y(4, dir_)
 		}
-		ability_cooldown = 1000/(global.cdr)
+		ability_cooldown = 1000/(global.cdr/2)
 		instance_create_depth(x,y,1,shockwaveObj)
 		PlaySFX(novasfx,1,1.3)
 	}

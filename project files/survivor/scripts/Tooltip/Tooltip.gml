@@ -157,8 +157,21 @@ function Weapontip(text, weapon, yoffset){
 			
 			//extra info (weapon in slot)
 			if slot != -1 && yoffset ==0 {
-				
-				draw_sprite_ext(global.player.equipped_weapons[slot].sprite_index, 1,mouse_x-cam_x_+40,mouse_y-cam_y_+80,2,2,0,c_white,1)
+				if object_index == SellerSlot {
+					inst = instance_create_depth(0,0,0,item)
+					with (WeaponSlot) {
+						if slot == inst.slot {
+							grey = true	
+							
+						} else {
+							grey = false	
+						}
+						
+					}
+					instance_destroy(inst)
+				} else {
+					draw_sprite_ext(global.player.equipped_weapons[slot].sprite_index, 1,mouse_x-cam_x_+40,mouse_y-cam_y_+80,2,2,0,c_white,1)
+				}
 			} else {
 				//draw weapon description
 				
@@ -246,7 +259,20 @@ function Weapontip(text, weapon, yoffset){
 			
 			//extra info (weapon in slot)
 			if slot != -1 && yoffset ==0 {
-				draw_sprite_ext(global.player.equipped_weapons[slot].sprite_index, 1,mouse_x-cam_x_-(width+1+20)+40,mouse_y-cam_y_+80,2,2,0,c_white,1)
+				if object_index == SellerSlot {
+					inst = instance_create_depth(0,0,0,item)
+					with (WeaponSlot) {
+						if slot == inst.slot {
+							grey = true	
+						} else {
+							grey = false	
+						}
+						
+					}
+					instance_destroy(inst)
+				} else {
+					draw_sprite_ext(global.player.equipped_weapons[slot].sprite_index, 1,mouse_x-cam_x_+40,mouse_y-cam_y_+80,2,2,0,c_white,1)
+				}
 			} else {
 				
 			}

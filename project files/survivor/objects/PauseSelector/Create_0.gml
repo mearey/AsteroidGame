@@ -1,6 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
 event_inherited()
+if !global.pauseObj.paused {
+	instance_destroy(self)	
+}
 active_button = instance_nearest(x,y,Button)
 //camera reset
 //camera_set_view_target(view_camera[0],NaN)
