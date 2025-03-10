@@ -318,6 +318,7 @@
     {"id":{"name":"Slot","path":"scripts/Slot/Slot.yy",},},
     {"id":{"name":"SpawnWave","path":"scripts/SpawnWave/SpawnWave.yy",},},
     {"id":{"name":"Tooltip","path":"scripts/Tooltip/Tooltip.yy",},},
+    {"id":{"name":"abilitysound","path":"sounds/abilitysound/abilitysound.yy",},},
     {"id":{"name":"beamSFX","path":"sounds/beamSFX/beamSFX.yy",},},
     {"id":{"name":"boostsfx","path":"sounds/boostsfx/boostsfx.yy",},},
     {"id":{"name":"Buddy_SFX_chatter1","path":"sounds/Buddy_SFX_chatter1/Buddy_SFX_chatter1.yy",},},
