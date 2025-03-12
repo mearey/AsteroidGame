@@ -271,7 +271,7 @@ function Weapontip(text, weapon, yoffset){
 					}
 					instance_destroy(inst)
 				} else {
-					draw_sprite_ext(global.player.equipped_weapons[slot].sprite_index, 1,mouse_x-cam_x_+40,mouse_y-cam_y_+80,2,2,0,c_white,1)
+					draw_sprite_ext(global.player.equipped_weapons[slot].sprite_index, 1,mouse_x-cam_x_-150,mouse_y-cam_y_+80,2,2,0,c_white,1)
 				}
 			} else {
 				

@@ -31,6 +31,21 @@ function pause(upgrade) {
 		with (StatSelection) {
 			instance_destroy(self)	
 		}
+		with (Button) {
+			instance_destroy(self)	
+		}
+
+		with (InvSlot) {
+			instance_destroy(self)	
+		}
+
+		with (WeaponSlot) {
+			instance_destroy(self)	
+		}
+
+		with (SellerSlot) {
+			instance_destroy(self)
+		}	
 		physics_pause_enable(false)
 	    paused_surf = -1;
 		//remove weapon get display if it exists

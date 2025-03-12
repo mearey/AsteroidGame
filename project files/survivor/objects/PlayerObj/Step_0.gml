@@ -3,6 +3,7 @@
 
 if ability_cooldown == 1 {
 	PlaySFX(abilitysound,10,10)
+	ability_cooldown -= 1
 }
 
 camera_set_view_pos(view_camera[0], x-camera_get_view_width(view_camera[0])/2, y-camera_get_view_height(view_camera[0])/2)
@@ -33,6 +34,7 @@ if target != self {
 }
 }
 
+if !(global.pauseObj.paused) && !dead {
 if ((keyboard_check(ord("W"))||keyboard_check(ord("A"))||keyboard_check(ord("S"))||keyboard_check(ord("D"))||(abs(gamepad_axis_value(Console.gamepad,gp_axislh)) > 0.1 || abs(gamepad_axis_value(Console.gamepad, gp_axislv)) > 0.1)) && speed_ < max_speed && !global.pauseObj.paused) {
 	speed_ += 0.2;	
 } else if global.pauseObj.paused {
@@ -58,6 +60,7 @@ if (keyboard_check(ord("S")) && y<room_height) {
 }
 if (keyboard_check(ord("A")) && x>0) {
 	xspeed -= speed_
+}
 }
 
 if !(global.pauseObj.paused) && !dead {

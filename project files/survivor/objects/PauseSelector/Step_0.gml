@@ -1,10 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if !audio_is_playing(GameSongMenu) {
-	PlaySong(GameSongMenu)	
-}
-
 if global.player.scrap >= 300 {
 	steam_set_achievement("silver_notspent_300")	
 }

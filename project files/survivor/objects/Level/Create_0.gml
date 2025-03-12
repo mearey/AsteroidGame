@@ -7,7 +7,7 @@ songs = []
 lighting_layer = level_1__sun
 
 foreground_layer = ruinedearth
-
+alarm[2] = 10
 timer = 60
 
 t_min = 15

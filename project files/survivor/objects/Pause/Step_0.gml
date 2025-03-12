@@ -11,3 +11,8 @@ if (keyboard_check_pressed(vk_escape) || gamepad_button_check_pressed(Console.ga
 if paused == true {
 	alarm[0]++;
 }
+if upgrades {
+	if !instance_exists(StatSelection) && !instance_exists(WeaponGetObject)	{
+		pause(false)	
+	}
+}

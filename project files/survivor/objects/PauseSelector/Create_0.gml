@@ -1,6 +1,12 @@
 /// @description Insert description here
 // You can write your code in this editor
 event_inherited()
+with (PauseSelector) {
+	if other.id != self.id {
+		instance_destroy(self)
+	}
+}
+
 if !global.pauseObj.paused {
 	instance_destroy(self)	
 }
