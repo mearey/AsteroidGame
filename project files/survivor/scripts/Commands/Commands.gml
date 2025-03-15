@@ -81,8 +81,9 @@ function spawn_buddy() {
 	Level.spawnEnemy(BuddyObj)	
 }
 
-function spawn_halflet() {
+function spawn_rare_bud() {
 	Level.spawnEnemy(HalfletBuddy)	
+	Level.spawnEnemy(PirateBuddy)
 }
 
 function test_room() {

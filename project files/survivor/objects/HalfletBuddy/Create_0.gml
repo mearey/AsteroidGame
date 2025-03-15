@@ -1,7 +1,6 @@
 /// @description Insert description here
-// You can write your code in this editor
+// You can write your code in this edito
 event_inherited()
-
 PlaySFX(array_get_random([Buddy_SFX_chatter1,Buddy_SFX_chatter2,Buddy_SFX_chatter3,Buddy_SFX_chatter4,Buddy_SFX_chatter5,Buddy_SFX_chatter6,Buddy_SFX_chatter7,Buddy_SFX_chatter8,Buddy_SFX_chatter9]),0.5,0.7)
 hp = 1
 lighting_size = 4
@@ -9,6 +8,7 @@ lighting_intensity = 0.2
 collected = false
 range = 400
 movetimer = 60
+lighting_colour = c_white
 fire_rate = global.player.fire_rate
 fire_timer = fire_rate
 rotation = 0

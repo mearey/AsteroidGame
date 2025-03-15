@@ -1,14 +1,13 @@
 /// @description Insert description here
 // You can write your code in this editor
 event_inherited()
-
 PlaySFX(array_get_random([Buddy_SFX_chatter1,Buddy_SFX_chatter2,Buddy_SFX_chatter3,Buddy_SFX_chatter4,Buddy_SFX_chatter5,Buddy_SFX_chatter6,Buddy_SFX_chatter7,Buddy_SFX_chatter8,Buddy_SFX_chatter9]),0.5,0.7)
 hp = 1
 lighting_size = 4
 lighting_intensity = 0.2
-lighting_colour = c_white
 collected = false
 range = 400
+lighting_colour = c_gray
 movetimer = 60
 fire_rate = global.player.fire_rate
 fire_timer = fire_rate
@@ -30,7 +29,7 @@ function explode() {
 		}
 		exploded = true
 	}
-	sprite_index = Buddy_Explosion
+	sprite_index = Buddy_Pirate_Explosion
 	image_speed = 0.7
 	collected = false
 }
