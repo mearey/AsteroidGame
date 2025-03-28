@@ -59,9 +59,11 @@ function spawnEnemy(enemy) {
 		y_ = random_range(-20,room_height + 20)
 	}
 	var inst = instance_create_depth(x_,y_,1,enemy)
-	inst.new_ = true
-	if variable_instance_exists(inst.id,"hp") {
-		inst.hp+=hp_mod
+	if instance_exists(inst) {
+		inst.new_ = true
+		if variable_instance_exists(inst.id,"hp") {
+			inst.hp+=hp_mod
+		}
 	}
 	number -= 1;
 }

@@ -70,7 +70,7 @@ options_btn = CreateButton(10,"OPTIONS", function () {
 	instance_create_depth(camx+cam_width/2,camy+cam_height/2,1,OptionsSelector)
 })
 
-continue_btn = CreateButton(-10,"TUTORIAL", function () {
+tutorial_btn = CreateButton(-10,"TUTORIAL", function () {
 	instance_create_depth(0,0,1,tutorialObj)
 })
 	

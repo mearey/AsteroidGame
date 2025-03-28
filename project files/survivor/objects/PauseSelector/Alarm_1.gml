@@ -20,7 +20,7 @@ if trader {
 		CreateInventory()
 	})
 	
-	done_btn = CreateButton(30,"", function () {
+	done_btn = CreateButton(30,"CONTINUE", function () {
 		global.pauseObj.pause()
 	})
 	lighting_sprite = nocollision

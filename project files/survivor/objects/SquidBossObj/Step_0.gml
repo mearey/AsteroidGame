@@ -16,7 +16,7 @@ if !global.pauseObj.paused {
 	move_cooldown -= 1;
 
 	if move_cooldown <= 0 {
-		//moves[random_range(0,array_length(moves))]()
+		moves[random_range(0,array_length(moves))]()
 	}
 
 	var cam_x = camera_get_view_x(view_get_camera(0))
