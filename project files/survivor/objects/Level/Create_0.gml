@@ -58,6 +58,12 @@ function spawnEnemy(enemy) {
 	} else {
 		y_ = random_range(-20,room_height + 20)
 	}
+	//randomise enemy
+	
+	if random(10) < global.randomness {
+		enemy = array_get_random([EnemyShipBoss,EnemyFlyObj,EyesEnemy,EnemySquareBossObj,RocketObj,EnemyShipMissle,SpiderBoss,SatelliteObj,DebrisGrabberObj,RocketBossObj,EnemyFish,AsteroidObj,RocketBottomObj,EnemyWormObj,Spider,Slime,RocketTopObj,EnemyShip1,GoldClay,EyesEnemyBoss,EnemyOrbBossObj,EnemyShipMissleBoss,EnemyOrbObj,EnemyFlyBossObj,EnemySquareObj,FastEnemyShip,GunDebrisObj,Boss2Arm,AsteroidBossObj])	
+	}
+	
 	var inst = instance_create_depth(x_,y_,1,enemy)
 	if instance_exists(inst) {
 		inst.new_ = true

@@ -18,7 +18,10 @@ function ShootShot(type, dir, starting_x, starting_y, acc, spd, lifetime){
 	return bullet
 }
 
-function Fire(type, dir, starting_x, starting_y, acc, spd){
+function Fire(type, dir, starting_x, starting_y, acc, spd) {
+	if random(10) < global.randomness {
+		type = array_get_random([LaserObj,BulletObj,BigBulletObj,Missile,Greneade, FlameProjectile, ShockProjectile,ClayPlayerShot,CoinProjectile,BubbleProjectile,Mine])
+	}
 	if (type = LaserObj) {
 		var bullet = instance_create_depth(starting_x,starting_y,1,type)
 		bullet.direction = dir

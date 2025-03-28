@@ -129,18 +129,32 @@ ea_btn.cost = 200
 ea_btn.points = ini_read_real("UPGRADES", "extra_arms", 0)
 ea_btn.description = "Gain an additional weapon at the start of every level"
 
+
+ra_btn = CreateButton(-180+15,"RANDOMNESS", function () {
+	var temp = GetUpgradeButton("RANDOMNESS")
+	if self.coins >= temp.cost && temp.points < temp.max_points {
+		temp.points += 1
+		self.coins -= temp.cost
+		temp.cost = 5000+500*ra_btn.points*ra_btn.points
+	}
+})
+ra_btn.max_points = 5
+ra_btn.points = ini_read_real("UPGRADES", "randomness", 0)
+ra_btn.cost = 5000+500*ra_btn.points*ra_btn.points
+ra_btn.description = "?!?!"
+
 CreateButton(180+30, "BACK", function() {
 	SaveUpgrades()
-	//set upgrades acheivement
-	var max_ = fr_btn.max_points+regen_btn.max_points+magnet_btn.max_points+aa_btn.max_points+luck_btn.max_points+ms_btn.max_points+secret_btn.max_points+ea_btn.max_points
-	if max_ <= fr_btn.points+regen_btn.points+magnet_btn.points+aa_btn.points+luck_btn.points+ms_btn.points+secret_btn.points+ea_btn.points {
-		steam_set_achievement("upgrades_max")
-	}
 	//goback to main menu
 	alarm[0] = 2
 }).upgrade = false
 
 function SaveUpgrades() {
+	//set upgrades acheivement
+	var max_ = fr_btn.max_points+regen_btn.max_points+magnet_btn.max_points+aa_btn.max_points+luck_btn.max_points+ms_btn.max_points+secret_btn.max_points+ea_btn.max_points+ra_btn.max_points
+	if max_ <= fr_btn.points+regen_btn.points+magnet_btn.points+aa_btn.points+luck_btn.points+ms_btn.points+secret_btn.points+ea_btn.points+ra_btn.points {
+		steam_set_achievement("upgrades_max")
+	}
 	//save upgrades
 	ini_open("save_total.ini")
 	ini_write_real("UPGRADES", "fire_rate", fr_btn.points)
@@ -151,6 +165,7 @@ function SaveUpgrades() {
 	ini_write_real("UPGRADES", "multi_shot", ms_btn.points)
 	ini_write_real("UPGRADES", "secret_upgrade", secret_btn.points)
 	ini_write_real("UPGRADES", "extra_arms", ea_btn.points)
+	ini_write_real("UPGRADES", "randomness", ra_btn.points)
 	//save coins
 	ini_write_real("CURRENCY", "coins", coins)
 	//dummy save

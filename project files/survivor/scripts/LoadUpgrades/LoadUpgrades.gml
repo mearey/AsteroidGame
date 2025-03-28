@@ -10,6 +10,7 @@ function LoadUpgrades(){
 	global.luck = ini_read_real("UPGRADES", "luck", 1)/1.6
 	global.secret_upgrade = ini_read_real("UPGRADES", "secret_upgrade", 0)
 	global.extra_arms = ini_read_real("UPGRADES", "extra_arms", 0)
+	global.randomness = ini_read_real("UPGRADES", "randomness", 0)
 	
 	ini_close()
 }
