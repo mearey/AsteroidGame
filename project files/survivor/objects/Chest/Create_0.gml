@@ -6,6 +6,11 @@ lighting_size = 5
 
 treasure_got = false;
 
+if random(1) < 0.05 {
+	sprite_index = chest_deviledeggcake
+}
+
+
 image_speed = 0;
 
 function chestOpen() {

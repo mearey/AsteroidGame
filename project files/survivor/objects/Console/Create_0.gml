@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+global.randomness = 0
 open = false
 controller = false
 res_list = []
