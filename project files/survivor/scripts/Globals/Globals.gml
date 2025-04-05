@@ -44,6 +44,9 @@ function Globals(){
 }
 
 function clearEntities() {
+	if global.pauseObj.paused {
+		global.pauseObj.pause(false)	
+	}
 	with (StatSelection) {
 		instance_destroy(self)	
 	}

@@ -153,11 +153,13 @@ function loadState() {
 		} catch (err) {
 			log(err)	
 		}
-		if object_get_physics(enemy.object_index) {
-			try {
-				enemy.set_phys_speed(res[4],res[5])
-			} catch (err) {
-				log(err)	
+		if instance_exists(enemy) {
+			if object_get_physics(enemy.object_index) {
+				try {
+					enemy.set_phys_speed(res[4],res[5])
+				} catch (err) {
+					log(err)	
+				}
 			}
 		}
 	}

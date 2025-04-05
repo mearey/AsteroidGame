@@ -9,7 +9,7 @@ if global.level.difficulty > 300 {
 	sprite_index  = ScrapperShark_3
 	hp = 250
 }
-lighting_size = 4
+lighting_size = 10
 lighting_colour = c_red
 
 position = random(360)

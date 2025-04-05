@@ -49,7 +49,7 @@ if !global.pauseObj.paused {
 					list[| i].phy_speed_x += lengthdir_x(1.5, dir_)
 					list[| i].phy_speed_y -= lengthdir_y(1.5, dir_)
 					list[| i].takeDamage(global.player.dmg)
-				]
+				}
 			}
 			exploded = true
 		}
