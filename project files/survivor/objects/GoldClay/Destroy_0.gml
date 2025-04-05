@@ -7,19 +7,27 @@ event_inherited();
 if dead {
 	if size > 0.5 {
 		var inst = instance_create_depth(x+random_range(-sprite_height/2,sprite_height/2),y+random_range(-sprite_height/2,sprite_height/2),0,GoldClay)	
-		inst.size = size/2
-		inst.child = true
-		inst.phy_speed_x = phy_speed_x
-		inst.phy_speed_y = phy_speed_y
-		inst.p_x = phy_speed_x+random_range(-3,3)
-		inst.p_y = phy_speed_y+random_range(-3,3)
+		try {
+			inst.size = size/2
+			inst.child = true
+			inst.phy_speed_x = phy_speed_x
+			inst.phy_speed_y = phy_speed_y
+			inst.p_x = phy_speed_x+random_range(-3,3)
+			inst.p_y = phy_speed_y+random_range(-3,3)
+		} catch (err) {
+			log(err)	
+		}
 		var inst = instance_create_depth(x+random_range(-sprite_height/2,sprite_height/2),y+random_range(-sprite_height/2,sprite_height/2),0,GoldClay)	
-		inst.size = size/2
-		inst.child = true
-		inst.phy_speed_x = phy_speed_x
-		inst.phy_speed_y = phy_speed_y
-		inst.p_x = phy_speed_x+random_range(-3,3)
-		inst.p_y = phy_speed_y+random_range(-3,3)
+		try {
+			inst.size = size/2
+			inst.child = true
+			inst.phy_speed_x = phy_speed_x
+			inst.phy_speed_y = phy_speed_y
+			inst.p_x = phy_speed_x+random_range(-3,3)
+			inst.p_y = phy_speed_y+random_range(-3,3)
+		} catch (err) {
+			log(err)	
+		}
 	}
 }	
 

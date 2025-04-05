@@ -44,10 +44,12 @@ if !global.pauseObj.paused {
 			var list = ds_list_create();
 			var num = collision_circle_list(x,y,30*size,Enemy,false,true,list,false)
 			for (var i = 0; i<num; i++) {
-				var dir_ = -point_direction(x,y,list[| i].x,list[| i].y)
-				list[| i].phy_speed_x += lengthdir_x(1.5, dir_)
-				list[| i].phy_speed_y -= lengthdir_y(1.5, dir_)
-				list[| i].takeDamage(global.player.dmg)
+				if instance_exists(list[| i]) {
+					var dir_ = -point_direction(x,y,list[| i].x,list[| i].y)
+					list[| i].phy_speed_x += lengthdir_x(1.5, dir_)
+					list[| i].phy_speed_y -= lengthdir_y(1.5, dir_)
+					list[| i].takeDamage(global.player.dmg)
+				]
 			}
 			exploded = true
 		}

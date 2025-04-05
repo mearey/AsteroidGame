@@ -69,6 +69,10 @@ function drops() {
 	}
 }
 
+function c() {
+	instance_create_depth(PlayerObj.x,PlayerObj.y,1,GoldClay)
+}
+
 function testweapon() {
 	global.player.addWeapon(ShockLauncher)
 }

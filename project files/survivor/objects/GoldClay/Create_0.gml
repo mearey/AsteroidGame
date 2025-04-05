@@ -19,3 +19,8 @@ val = 1
 var arr = [golden_clayA, golden_clayB, golden_clayC]
 
 sprite_index = arr[random_range(0,2)]
+
+if random(1) < 0.2 {
+	instance_destroy(self)
+	instance_create_depth(x,y,depth,SharkEvent)
+}

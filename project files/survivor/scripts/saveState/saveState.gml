@@ -145,10 +145,14 @@ function loadState() {
 	for (var i = 0; i<ini_read_real("ENEMIES","num", 0); i++) {
 		var res = string_split(ini_read_string("ENEMIES", "enemy_"+string(i),0), "_")
 		var enemy = instance_create_depth(real(res[1]),real(res[2]),1,asset_get_index(res[0]))
-		enemy.size = real(res[3])
-		enemy.image_yscale =real(res[3])
-		enemy.image_xscale = real(res[3])
-		enemy.lighting_size = 2*real(res[3])
+		try {
+			enemy.size = real(res[3])
+			enemy.image_yscale =real(res[3])
+			enemy.image_xscale = real(res[3])
+			enemy.lighting_size = 2*real(res[3])
+		} catch (err) {
+			log(err)	
+		}
 		if object_get_physics(enemy.object_index) {
 			try {
 				enemy.set_phys_speed(res[4],res[5])

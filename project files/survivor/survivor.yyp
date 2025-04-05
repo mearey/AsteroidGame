@@ -258,6 +258,7 @@
     {"id":{"name":"Selector","path":"objects/Selector/Selector.yy",},},
     {"id":{"name":"SelectorParent","path":"objects/SelectorParent/SelectorParent.yy",},},
     {"id":{"name":"SellerSlot","path":"objects/SellerSlot/SellerSlot.yy",},},
+    {"id":{"name":"SharkEvent","path":"objects/SharkEvent/SharkEvent.yy",},},
     {"id":{"name":"ShieldShip","path":"objects/ShieldShip/ShieldShip.yy",},},
     {"id":{"name":"ShipSelectionButton","path":"objects/ShipSelectionButton/ShipSelectionButton.yy",},},
     {"id":{"name":"ShipSelectionSelector","path":"objects/ShipSelectionSelector/ShipSelectionSelector.yy",},},
