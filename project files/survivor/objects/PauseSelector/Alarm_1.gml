@@ -7,11 +7,11 @@ if trader {
 	sell_btn = CreateButton(-10,"SELL", function () {
 		global.player.scrap += selltotal/2
 		for (var i=0; i<array_length(sell_slots); i+=1) {
-			for (var c=0;c<array_length(global.player.weapons); c+=1) {
+			for (var b=0;b<array_length(global.player.weapons); b+=1) {
 				log(string(sell_slots[i].item))
-				log(string(global.player.weapons[c]))
-				if sell_slots[i].item == global.player.weapons[c] {
-					array_delete(global.player.weapons,c,1)	
+				log(string(global.player.weapons[b]))
+				if sell_slots[i].item == global.player.weapons[b] {
+					array_delete(global.player.weapons,b,1)	
 				}
 			}
 			instance_destroy(sell_slots[i])
