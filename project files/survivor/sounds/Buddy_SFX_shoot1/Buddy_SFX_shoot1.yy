@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.465488,
+  "duration":0.46548754,
   "name":"Buddy_SFX_shoot1",
   "parent":{
     "name":"sad",

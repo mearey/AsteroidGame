@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":105.3302,
+  "duration":105.33021,
   "name":"Level3Song",
   "parent":{
     "name":"LevelSongs",
