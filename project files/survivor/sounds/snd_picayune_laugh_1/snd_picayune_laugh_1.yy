@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_picayune_laugh_1",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":3.2126532,
+  "name":"snd_picayune_laugh_1",
+  "parent":{
+    "name":"picayune",
+    "path":"folders/Sounds/SFX/picayune.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_picayune_laugh_1.ogg",
+  "type":0,
+  "volume":1.0,
+}
