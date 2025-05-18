@@ -6,7 +6,5 @@ alarm[0]=10
 init = false
 
 function throw_() {
-	with (HammerController) {
-		throw_()	
-	}
+	HammerController.throw_()
 }

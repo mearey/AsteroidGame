@@ -1,7 +1,13 @@
 
 
 if (weapon!=Weapon) {
-	Weapontip(sprite_get_name((weapon.sprite_index)), weapon, 0)
+	try {
+		Weapontip(sprite_get_name((weapon.sprite_index)), weapon, 0)
+	}
+	catch (err) {
+		log(string(err))	
+	}
+		
 }
 
 

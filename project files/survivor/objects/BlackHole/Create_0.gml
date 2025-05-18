@@ -12,6 +12,8 @@ fire_timer = fire_rate;
 lvl = 1;
 brand = "PIRATE"
 
+cd_timer = 50
+
 shockrange = 1
 slot = 7
 scrap = 500

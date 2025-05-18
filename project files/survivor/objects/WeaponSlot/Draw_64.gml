@@ -35,8 +35,8 @@ if (weapon!=Weapon) {
 			draw_sprite_ext(object_get_sprite(weapon),1,x_,y_,2.1,2.1,90,c_lime,1)
 		}
 		if dragging {
-			draw_line_color(mouse_x-cam_x+random_range(-closeness,closeness), mouse_y-cam_y+random_range(-closeness,closeness), synergy.x-cam_x+random_range(-closeness,closeness) ,synergy.y-cam_y+random_range(-closeness,closeness) , c_lime, c_white)
-			draw_line_color(mouse_x-cam_x+random_range(-closeness,closeness), mouse_y-cam_y+random_range(-closeness,closeness), synergy.x-cam_x+random_range(-closeness,closeness) ,synergy.y-cam_y+random_range(-closeness,closeness) , c_white, c_lime)
+			draw_line_color(mouse_x-cam_x+random_range(-closeness/4,closeness/4), mouse_y-cam_y+random_range(-closeness/4,closeness/4), synergy.x-cam_x+random_range(-closeness/4,closeness/4) ,synergy.y-cam_y+random_range(-closeness/4,closeness/4) , c_lime, c_white)
+			draw_line_color(mouse_x-cam_x+random_range(-closeness/4,closeness/4), mouse_y-cam_y+random_range(-closeness/4,closeness/4), synergy.x-cam_x+random_range(-closeness/4,closeness/4) ,synergy.y-cam_y+random_range(-closeness/4,closeness/4) , c_white, c_lime)
 		}
 	}
 }

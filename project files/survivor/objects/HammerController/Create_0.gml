@@ -13,6 +13,7 @@ throwingdir = 0
 function throw_() {
 	throwing = true
 	init = false
+	show_debug_message("before")
 	alarm[5] = 100
 	var dir = point_direction(x,y,mouse_x,mouse_y)
 	throwingdir = dir-90
