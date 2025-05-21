@@ -14,8 +14,14 @@ lighting_colour = c_red
 
 position = random(360)
 
-phy_position_x = PlayerObj.x + lengthdir_x(150,position) 
-phy_position_y = PlayerObj.y + lengthdir_y(150,position) 
+try {
+	phy_position_x = PlayerObj.x + lengthdir_x(150,position) 
+	phy_position_y = PlayerObj.y + lengthdir_y(150,position) 
+}
+catch (err) {
+	instance_destroy(self)
+	log(err)
+}
 
 setup = function () {
 	

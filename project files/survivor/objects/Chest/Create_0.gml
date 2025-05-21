@@ -14,6 +14,9 @@ if random(1) < 0.05 {
 image_speed = 0;
 
 function chestOpen() {
+	if sprite_index == chest_deviledeggcake {
+		PlaySFX(fruitata, 1,1)
+	}
 	physics_apply_impulse(x,y,lengthdir_x(-2,point_direction(x,y,global.player.x, global.player.y)), lengthdir_y(-2,point_direction(x,y,global.player.x, global.player.y)))	
 	if (array_length(global.weaponPool) > 0) {
 		global.pauseObj.pause(false)

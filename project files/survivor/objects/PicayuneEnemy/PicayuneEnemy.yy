@@ -40,8 +40,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"p_drop",
-    "path":"sprites/p_drop/p_drop.yy",
+    "name":"p_picayune",
+    "path":"sprites/p_picayune/p_picayune.yy",
   },
   "spriteMaskId":null,
   "visible":true,

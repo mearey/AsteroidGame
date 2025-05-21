@@ -23,7 +23,7 @@ if image_index != 1 {
 	}
 	if nohitcounter >= 21600 {
 		instance_create_depth(x,y-25,depth, nohittextobj)
-		instance_create_depth(x,y-150, depth, PicayuneEnemy)	
+		instance_create_depth(x,y-150, depth, PicayuneEnemy)
 	}
 } else {
 	nohitcounter = 0	

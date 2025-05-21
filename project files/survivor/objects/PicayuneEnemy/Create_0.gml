@@ -11,7 +11,11 @@ lighting_intensity = 0.15
 hp = 15
 xp = 5
 
-sprite_index = choose(p_drop, p_eyes, p_picayune, p_skull);
+if sprite_index == p_picayune {
+	repeat (random_range(0,2)) {
+		instance_create_depth(x+random_range(-50,50),y+random_range(-50,50),depth, PicayuneEnemy, {sprite_index:choose(p_drop,p_eyes,p_skull)})	
+	}
+}
 
 function takeDamage(damage) {	
 	hp-=damage;

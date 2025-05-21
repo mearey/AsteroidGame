@@ -5,7 +5,7 @@ lighting_size = 1
 lighting_intensity = 0.1
 lighting_sprite = GlowCircleSmallSpr
 
-if random(30) < global.randomness {
+if random(70) < global.randomness {
 	image_index = random_range(0,10)
 	small = false
 	while !small {
