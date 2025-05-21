@@ -109,7 +109,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.13.1.193",
+    "IDEVersion":"2024.13.0.190",
   },
   "name":"survivor",
   "resources":[
@@ -595,6 +595,8 @@
     {"id":{"name":"ScrapperShark_1","path":"sprites/ScrapperShark_1/ScrapperShark_1.yy",},},
     {"id":{"name":"ScrapperShark_2","path":"sprites/ScrapperShark_2/ScrapperShark_2.yy",},},
     {"id":{"name":"ScrapperShark_3","path":"sprites/ScrapperShark_3/ScrapperShark_3.yy",},},
+    {"id":{"name":"ScrapperShark_Glitch","path":"sprites/ScrapperShark_Glitch/ScrapperShark_Glitch.yy",},},
+    {"id":{"name":"ScrapperShark_Void","path":"sprites/ScrapperShark_Void/ScrapperShark_Void.yy",},},
     {"id":{"name":"ScrapSprite","path":"sprites/ScrapSprite/ScrapSprite.yy",},},
     {"id":{"name":"secret_boss_intro","path":"sprites/secret_boss_intro/secret_boss_intro.yy",},},
     {"id":{"name":"secret_boss_phase_1_charge","path":"sprites/secret_boss_phase_1_charge/secret_boss_phase_1_charge.yy",},},

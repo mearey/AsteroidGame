@@ -2,7 +2,7 @@
   "$GMSprite":"",
   "%Name":"credits_alieno",
   "bboxMode":0,
-  "bbox_bottom":312,
+  "bbox_bottom":287,
   "bbox_left":0,
   "bbox_right":213,
   "bbox_top":0,
