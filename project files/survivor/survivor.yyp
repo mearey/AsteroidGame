@@ -462,6 +462,7 @@
     {"id":{"name":"credits_michael","path":"sprites/credits_michael/credits_michael.yy",},},
     {"id":{"name":"credits_playtestinganimated","path":"sprites/credits_playtestinganimated/credits_playtestinganimated.yy",},},
     {"id":{"name":"credits_selina","path":"sprites/credits_selina/credits_selina.yy",},},
+    {"id":{"name":"credits_Stepford1","path":"sprites/credits_Stepford1/credits_Stepford1.yy",},},
     {"id":{"name":"credits_tate","path":"sprites/credits_tate/credits_tate.yy",},},
     {"id":{"name":"credits_wanted","path":"sprites/credits_wanted/credits_wanted.yy",},},
     {"id":{"name":"cursor_blackhole","path":"sprites/cursor_blackhole/cursor_blackhole.yy",},},
