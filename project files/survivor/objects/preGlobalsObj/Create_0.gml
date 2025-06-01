@@ -13,6 +13,7 @@ if (instance_exists(Level)) {
 	cam_height = surface_get_height(application_surface)
 }
 	
+sprite_prefetch(level_2_planet)
 x_ = camx+cam_width/2
 y_ = camy+cam_height/2
 loadOptions()

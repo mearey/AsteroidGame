@@ -7,6 +7,8 @@ if instance_exists(UpgradeSelector) {
 	sprite_index = ButtonSpriteWithTutUpgrades	
 }
 
+max_= false
+ 
 points = 0
 
 description = ""
@@ -19,3 +21,5 @@ upgrade = true
 
 
 backwards = true
+
+alarm[1] = 2

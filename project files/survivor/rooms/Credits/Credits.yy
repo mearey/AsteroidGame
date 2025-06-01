@@ -133,6 +133,7 @@
     {"name":"inst_A016376","path":"rooms/Credits/Credits.yy",},
     {"name":"inst_1CB08A64","path":"rooms/Credits/Credits.yy",},
     {"name":"inst_2FDFBBF0","path":"rooms/Credits/Credits.yy",},
+    {"name":"inst_1ED8A167","path":"rooms/Credits/Credits.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -143,6 +144,7 @@
         {"$GMRInstance":"v2","%Name":"inst_A016376","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_A016376","objectId":{"name":"Exit","path":"objects/Exit/Exit.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1230.0,"y":0.0,},
         {"$GMRInstance":"v2","%Name":"inst_1CB08A64","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1CB08A64","objectId":{"name":"reload","path":"objects/reload/reload.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1180.0,"y":0.0,},
         {"$GMRInstance":"v2","%Name":"inst_2FDFBBF0","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_2FDFBBF0","objectId":{"name":"Credit","path":"objects/Credit/Credit.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":977.0,"y":470.0,},
+        {"$GMRInstance":"v2","%Name":"inst_1ED8A167","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1ED8A167","objectId":{"name":"Credit","path":"objects/Credit/Credit.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":736.0,"y":480.0,},
       ],"layers":[],"name":"Instances_1","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Instances","depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v2","%Name":"inst_34523A7B","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_34523A7B","objectId":{"name":"credithandler","path":"objects/credithandler/credithandler.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":-32.0,"y":0.0,},

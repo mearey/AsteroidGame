@@ -24,7 +24,10 @@ for (var i = 0; i< max_points; i++) {
 for (var i = 0; i< points; i++) {
 	x_ = x-camx+i*8-50
 	y_ = y-camy+20
-	draw_rectangle_color(x_+1,y_+1,x_+6-1,y_+20-1,c_aqua,c_aqua,c_aqua,c_aqua,false)	
+	draw_rectangle_color(x_+1,y_+1,x_+6-1,y_+20-1,c_aqua,c_aqua,c_aqua,c_aqua,false)
+	if max_ {
+		draw_rectangle_color(x_+1,y_+1,x_+6-1,y_+20-1,c_lime,c_lime,c_lime,c_lime,false)
+	}
 }
 } else {
 	sprite_index = 	ButtonSprite

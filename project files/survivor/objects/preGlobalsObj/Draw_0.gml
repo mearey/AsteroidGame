@@ -4,5 +4,5 @@
 if room == MainMenu {
 	draw_set_halign(fa_left)
 	//version
-	draw_text(20,room_height-40, "VER: 1.3.0 \nIn The Jaws Of Madness")	
+	draw_text(20,room_height-40, "VER: 1.4.0 \nThe Final Frontier")	
 }

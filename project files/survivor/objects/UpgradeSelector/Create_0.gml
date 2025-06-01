@@ -18,7 +18,7 @@ function CreateButton(degree, text, func) {
 	y_ = surface_get_height(application_surface)/2 + lengthdir_y(500,direction_)
 
 	var new_game = instance_create_depth(x_,y_,1,UpgradeButton)
-	new_game.text = text	
+	new_game.text = text
 	new_game.onClick = func
 	new_game.backwards = false
 	return new_game
@@ -26,6 +26,10 @@ function CreateButton(degree, text, func) {
 
 fr_btn = CreateButton(-30,"FIRE RATE", function () {
 	var temp = GetUpgradeButton("FIRE RATE")
+	if temp.max_ and (temp.points < temp.max_points) {
+		temp.points += 1
+		return
+	}
 	if self.coins >= temp.cost && temp.points < temp.max_points {
 		temp.points += 1
 		self.coins -= temp.cost
@@ -39,6 +43,10 @@ fr_btn.description = "Increase the fire rate for all weapons"
 
 regen_btn = CreateButton(-15,"REPAIR SYSTEM", function () {
 	var temp = GetUpgradeButton("REPAIR SYSTEM")
+	if temp.max_ and (temp.points < temp.max_points) {
+		temp.points += 1
+		return
+	}
 	if self.coins >= temp.cost && temp.points < temp.max_points {
 		temp.points += 1
 		self.coins -= temp.cost
@@ -52,6 +60,10 @@ regen_btn.description = "Increase ship's regeneration"
 
 magnet_btn = CreateButton(0,"MAGNET", function () {
 	var temp = GetUpgradeButton("MAGNET")
+	if temp.max_ and (temp.points < temp.max_points) {
+		temp.points += 1
+		return
+	}
 	if self.coins >= temp.cost && temp.points < temp.max_points {
 		temp.points += 1
 		self.coins -= temp.cost
@@ -65,6 +77,10 @@ magnet_btn.description = "Increase the pickup range for exp and coins"
 
 ms_btn = CreateButton(15,"MULTI SHOT", function () {
 	var temp = GetUpgradeButton("MULTI SHOT")
+	if temp.max_ and (temp.points < temp.max_points) {
+		temp.points += 1
+		return
+	}
 	if self.coins >= temp.cost && temp.points < temp.max_points {
 		temp.points += 1
 		self.coins -= temp.cost
@@ -78,6 +94,10 @@ ms_btn.description = "Projectiles shot by the player have a chance to be duplica
 
 aa_btn = CreateButton(30,"COOLDOWN", function () {
 	var temp = GetUpgradeButton("COOLDOWN")
+	if temp.max_ and (temp.points < temp.max_points) {
+		temp.points += 1
+		return
+	}
 	if self.coins >= temp.cost && temp.points < temp.max_points {
 		temp.points += 1
 		self.coins -= temp.cost
@@ -92,6 +112,10 @@ aa_btn.description = "Decrease the cooldown for your ship's ability"
 
 luck_btn = CreateButton(-180-30,"LUCK", function () {
 	var temp = GetUpgradeButton("LUCK")
+	if temp.max_ and (temp.points < temp.max_points) {
+		temp.points += 1
+		return
+	}
 	if self.coins >= temp.cost && temp.points < temp.max_points {
 		temp.points += 1
 		self.coins -= temp.cost
@@ -106,6 +130,10 @@ luck_btn.description = "Get luckier :-)"
 
 secret_btn = CreateButton(-180-15,"PROSPECTING", function () {
 	var temp = GetUpgradeButton("PROSPECTING")
+	if temp.max_ and (temp.points < temp.max_points) {
+		temp.points += 1
+		return
+	}
 	if self.coins >= temp.cost && temp.points < temp.max_points {
 		temp.points += 1
 		self.coins -= temp.cost
@@ -119,6 +147,10 @@ secret_btn.description = "Begin the gold rush (WARNING: may trigger extradimensi
 
 ea_btn = CreateButton(-180,"EMBATTLEMENT", function () {
 	var temp = GetUpgradeButton("EMBATTLEMENT")
+	if temp.max_ and (temp.points < temp.max_points) {
+		temp.points += 1
+		return
+	}
 	if self.coins >= temp.cost && temp.points < temp.max_points {
 		temp.points += 1
 		self.coins -= temp.cost
@@ -132,6 +164,10 @@ ea_btn.description = "Gain an additional weapon at the start of every level"
 
 ra_btn = CreateButton(-180+15,"RANDOMNESS", function () {
 	var temp = GetUpgradeButton("RANDOMNESS")
+	if temp.max_ and (temp.points < temp.max_points) {
+		temp.points += 1
+		return
+	}
 	if self.coins >= temp.cost && temp.points < temp.max_points {
 		temp.points += 1
 		self.coins -= temp.cost
@@ -150,6 +186,7 @@ CreateButton(180+30, "BACK", function() {
 }).upgrade = false
 
 function SaveUpgrades() {
+	
 	//set upgrades acheivement
 	var max_ = fr_btn.max_points+regen_btn.max_points+magnet_btn.max_points+aa_btn.max_points+luck_btn.max_points+ms_btn.max_points+secret_btn.max_points+ea_btn.max_points+ra_btn.max_points
 	if max_ <= fr_btn.points+regen_btn.points+magnet_btn.points+aa_btn.points+luck_btn.points+ms_btn.points+secret_btn.points+ea_btn.points+ra_btn.points {

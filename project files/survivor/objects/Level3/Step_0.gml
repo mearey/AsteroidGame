@@ -98,3 +98,11 @@ if difficulty > 1000 {
 with (GameSummarySelector) {
 	instance_destroy(self)	
 }
+
+if t_min == 91  && !unlock_ {
+	unlock_ = true
+	ini_open("unlocks.ini")
+	ini_write_real("LEVELS", "4", 1)
+	steam_set_achievement("level_unlock_4")
+	ini_close()
+}

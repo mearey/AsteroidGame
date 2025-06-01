@@ -7,9 +7,15 @@ x = x_ + lengthdir_x(340,direction_)
 y = y_ + lengthdir_y(340,direction_)
 image_angle = direction_
 
+ini_open("save_total.ini")
 with (Button) {
 	hovered = false;
+	if max_points <= points {
+		ini_write_real("MAX", text, true)
+		max_ = true
+	}
 }
+ini_close()
 
 if active_button != instance_nearest(x,y,Button) {
 	active_button = instance_nearest(x,y,Button)
