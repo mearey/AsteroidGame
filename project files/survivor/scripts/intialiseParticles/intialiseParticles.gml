@@ -54,6 +54,14 @@ function intialiseParticles(){
 	part_type_size(global.asteroid_trail, 1,1,-0.03,0.1)
 	part_type_color_mix(global.asteroid_trail, c_orange, c_yellow)
 	
+	global.asteroid_trail_toxic = part_type_create();
+	part_type_sprite(global.asteroid_trail_toxic,Toxic_cloud, 0, 0,0 );
+	part_type_speed(global.asteroid_trail_toxic,0.2,1,-0.01,0);            //The particles speed//part_type_orientation(global.particle1,0,0,0,0,true);        //This changes the rotation of the particle                       //This is the blend mode, either additive or normal
+	part_type_life(global.asteroid_trail_toxic,40,60);      
+	part_type_alpha2(global.asteroid_trail_toxic, 0.8,0);
+	part_type_size(global.asteroid_trail_toxic, 1,1,-0.03,0.1)
+	part_type_color_mix(global.asteroid_trail_toxic, c_white, c_gray)
+	
 	global.enemy_laser_trail = part_type_create();
 	part_type_sprite(global.enemy_laser_trail,EnemyLaserSprite, 0, 0,0 );            //The particles speed//part_type_orientation(global.particle1,0,0,0,0,true);        //This changes the rotation of the particle                       //This is the blend mode, either additive or normal
 	//part_type_life(global.asteroid_trail,40,60);

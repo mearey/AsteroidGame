@@ -7,19 +7,19 @@ event_inherited();
 if !set {
 	//difficulty*60 = frames
 	if difficulty < 100 {
-		enemylist = [EnemyOrbObj]
+		enemylist = [AsteroidToxic]
 		bosslist = [EnemyOrbBossObj]
-		number = 50
+		number = 10
 		num_bosses = 1
-		spawnrate = 65
+		spawnrate = 150
 	} else if difficulty < 200 {
-		enemylist = [EnemyOrbObj, EnemyOrbObj,EnemyOrbObj,EnemyOrbObj, EnemyWormObj]
+		enemylist = [AsteroidToxic,AsteroidToxic,AsteroidToxic,MotherSpawn,Mother]
 		bosslist = [EnemyOrbBossObj]
-		number = 100
+		number = 200
 		num_bosses = 1
-		spawnrate = 47
+		spawnrate = 100
 	} else if difficulty < 300 {
-		enemylist = [EnemyOrbObj, EnemySquareObj]
+		enemylist = [Tardigra, MotherSpawn, AsteroidToxic, Tardigra]
 		bosslist = [EnemyOrbBossObj, EnemySquareBossObj]
 		number = 200
 		num_bosses = 1

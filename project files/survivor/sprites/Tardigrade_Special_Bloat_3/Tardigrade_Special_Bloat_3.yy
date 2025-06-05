@@ -26,7 +26,7 @@
   ],
   "name":"Tardigrade_Special_Bloat_3",
   "nineSlice":null,
-  "origin":0,
+  "origin":9,
   "parent":{
     "name":"Tardigrade_Special",
     "path":"folders/Sprites/Enemies/Level4/Tardigrade_Special.yy",
@@ -66,21 +66,31 @@
     "playbackSpeedType":0,
     "resourceType":"GMSequence",
     "resourceVersion":"2.0",
+    "seqHeight":64.0,
+    "seqWidth":64.0,
     "showBackdrop":true,
     "showBackdropImage":false,
     "timeUnits":1,
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"fada6ea0-8c5a-4c5a-a241-c087a75a43a6","path":"sprites/Tardigrade_Special_Bloat_3/Tardigrade_Special_Bloat_3.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"9161e9b8-9f11-4924-b913-4d22ec7a6767","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"2b473bc6-99de-4a01-8f84-7e2f5d5452c4","path":"sprites/Tardigrade_Special_Bloat_3/Tardigrade_Special_Bloat_3.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"b478e8e1-5242-4f25-94bd-3ae8b8c39c19","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"2e891d2b-f41b-4dd8-9cf2-b97ab52b0403","path":"sprites/Tardigrade_Special_Bloat_3/Tardigrade_Special_Bloat_3.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"2ebcc706-dafa-49db-bfcf-a4cb7d8ebc58","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{"0":{"$SpriteFrameKeyframe":"","Id":{"name":"3b5d75e7-f7ca-4401-9db7-f52f7a79794e","path":"sprites/Tardigrade_Special_Bloat_3/Tardigrade_Special_Bloat_3.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},},"Disabled":false,"id":"a7155a5b-2264-4e0e-8ef0-cf6d1fd8632a","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"fada6ea0-8c5a-4c5a-a241-c087a75a43a6","path":"sprites/Tardigrade_Special_Bloat_3/Tardigrade_Special_Bloat_3.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"9161e9b8-9f11-4924-b913-4d22ec7a6767","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"2b473bc6-99de-4a01-8f84-7e2f5d5452c4","path":"sprites/Tardigrade_Special_Bloat_3/Tardigrade_Special_Bloat_3.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"b478e8e1-5242-4f25-94bd-3ae8b8c39c19","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"2e891d2b-f41b-4dd8-9cf2-b97ab52b0403","path":"sprites/Tardigrade_Special_Bloat_3/Tardigrade_Special_Bloat_3.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"2ebcc706-dafa-49db-bfcf-a4cb7d8ebc58","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"3b5d75e7-f7ca-4401-9db7-f52f7a79794e","path":"sprites/Tardigrade_Special_Bloat_3/Tardigrade_Special_Bloat_3.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"a7155a5b-2264-4e0e-8ef0-cf6d1fd8632a","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":0,
-    "yorigin":0,
+    "xorigin":32,
+    "yorigin":33,
   },
   "swatchColours":null,
   "swfPrecision":0.5,
