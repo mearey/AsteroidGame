@@ -23,4 +23,8 @@ if y > cam_y+surface_get_height(application_surface) + 100 {
 	phy_position_y = cam_y-50
 }
 
-part_particles_create(global.p_system, x+random_range(-val,val), y+random_range(-val,val), global.asteroid_trail, 1*size);	
+try {
+	part_particles_create(global.p_system, x+random_range(-val,val), y+random_range(-val,val), global.asteroid_trail, 1*size);	
+} catch (err) {
+	log(string(err))
+}

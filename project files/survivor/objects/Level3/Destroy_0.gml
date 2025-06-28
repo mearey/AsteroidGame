@@ -6,6 +6,3 @@ if difficulty > hi {
 	ini_write_real("LEVELS", "hi", difficulty)
 }
 ini_close()
-if boss_killed {
-	room_goto(EndCutsceneRoom)	
-}
