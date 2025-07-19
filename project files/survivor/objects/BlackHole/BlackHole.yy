@@ -37,8 +37,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"cursor_blackhole",
-    "path":"sprites/cursor_blackhole/cursor_blackhole.yy",
+    "name":"Cursor_Blackhole",
+    "path":"sprites/Cursor_Blackhole/Cursor_Blackhole.yy",
   },
   "spriteMaskId":null,
   "visible":true,

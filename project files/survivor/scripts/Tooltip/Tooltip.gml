@@ -66,7 +66,7 @@ function Weapontip(text, weapon, yoffset){
 	cam_x_ = camera_get_view_x(view_camera[0])
 	cam_y_ = camera_get_view_y(view_camera[0]) + yoffset
 	cam_width_ = camera_get_view_width(view_camera[0])
-	if (mouse_x<bbox_right and mouse_x > bbox_left and mouse_y < bbox_bottom and mouse_y > bbox_top) {
+			if (mouse_x<bbox_right and mouse_x > bbox_left and mouse_y < bbox_bottom and mouse_y > bbox_top) {
 		draw_set_valign(fa_top)
 		draw_set_halign(fa_left)
 		text = string_replace_all(text,"_", " ")
@@ -75,6 +75,8 @@ function Weapontip(text, weapon, yoffset){
 		} else {
 			var width = string_width("Weapon currently in slot:")
 		}
+		// Define max_accuracy for both left and right side calculations
+		var max_accuracy = 10;
 		if !(mouse_x > camera_get_view_x(view_camera[0]) + cam_width_/2) {
 			draw_rectangle(mouse_x-cam_x_-1, mouse_y-cam_y_-1, mouse_x-cam_x_ +width+1+20,mouse_y-cam_y_+string_height(text)+301, false)
 			draw_set_color(c_black)
@@ -99,7 +101,7 @@ function Weapontip(text, weapon, yoffset){
 			}
 			draw_text( mouse_x-cam_x_+75+20,mouse_y-cam_y_+string_height(text)+110+22+string_height("S")/2,"Damage:")
 
-			for (var i = 0; i<inst.damage/global.player.dmg; i++) {
+			for (var i = 0; i < min(10, inst.damage/global.player.dmg); i++) {
 				x_ = mouse_x-cam_x_+80+8*i+20
 				y_ = mouse_y-cam_y_+string_height(text)+110+30
 				draw_rectangle_color(x_+1,y_+1,x_+6-1,y_+20-1,c_aqua,c_aqua,c_aqua,c_aqua,false)	
@@ -114,11 +116,10 @@ function Weapontip(text, weapon, yoffset){
 				draw_rectangle(x_-1,y_-1,x_+6+1,y_+20+1,true)
 			}
 			draw_text( mouse_x-cam_x_+75+20,mouse_y-cam_y_+string_height(text)+110+52+string_height("S")/2,"Accuracy:")
-
-			for (var i = 0; i<inst.accuracy; i++) {
+			for (var i = 0; i < min(10, max_accuracy - inst.accuracy); i++) {
 				x_ = mouse_x-cam_x_+80+8*i+20
 				y_ = mouse_y-cam_y_+string_height(text)+110+60
-				draw_rectangle_color(x_+1,y_+1,x_+6-1,y_+20-1,c_aqua,c_aqua,c_aqua,c_aqua,false)	
+				draw_rectangle_color(x_+1,y_+1,x_+6-1,y_+20-1,c_aqua,c_aqua,c_aqua,c_aqua,false)
 			}
 			
 			//DRAW fire rate
@@ -131,7 +132,7 @@ function Weapontip(text, weapon, yoffset){
 			}
 			draw_text( mouse_x-cam_x_+75+20,mouse_y-cam_y_+string_height(text)+110+82+string_height("S")/2,"Fire Rate:")
 
-			for (var i = 0; i<10/(inst.fire_rate/global.player.fire_rate); i++) {
+			for (var i = 0; i < min(10, 10/(inst.fire_rate/global.player.fire_rate)); i++) {
 				x_ = mouse_x-cam_x_+80+8*i+20
 				y_ = mouse_y-cam_y_+string_height(text)+110+90
 				draw_rectangle_color(x_+1,y_+1,x_+6-1,y_+20-1,c_aqua,c_aqua,c_aqua,c_aqua,false)	
@@ -147,7 +148,7 @@ function Weapontip(text, weapon, yoffset){
 			}
 			draw_text( mouse_x-cam_x_+75+20,mouse_y-cam_y_+string_height(text)+110+112+string_height("S")/2,"Shot Speed:")
 
-			for (var i = 0; i<inst.projectile_speed/global.player.projectile_speed; i++) {
+			for (var i = 0; i < min(10, inst.projectile_speed/global.player.projectile_speed); i++) {
 				x_ = mouse_x-cam_x_+80+8*i+20
 				y_ = mouse_y-cam_y_+string_height(text)+110+120
 				draw_rectangle_color(x_+1,y_+1,x_+6-1,y_+20-1,c_aqua,c_aqua,c_aqua,c_aqua,false)	
@@ -182,7 +183,7 @@ function Weapontip(text, weapon, yoffset){
 			draw_rectangle(mouse_x-cam_x_, mouse_y-cam_y_, mouse_x-cam_x_ -(width+20),mouse_y-cam_y_+string_height(text)+300, false)
 			draw_set_color(c_white)
 			draw_line(mouse_x-cam_x_, mouse_y-cam_y_-1+string_height(text)+1, mouse_x-cam_x_ -(width+1+20),mouse_y-cam_y_+string_height(text)+1)
-			draw_line(mouse_x-cam_x_, mouse_y-cam_y_-1+string_height(text)+105, mouse_x-cam_x_ -(width+1+20),mouse_y-cam_y_+string_height(text)+105)
+			draw_line(mouse_x-cam_x_, mouse_y-cam_y_-1+string_height(text)+105, mouse_x-cam_x_ -(width+1+20), mouse_y-cam_y_+string_height(text)+105)
 			draw_text(mouse_x-cam_x_-(width+1+20)+10, mouse_y-cam_y_, text)
 			draw_text(mouse_x-cam_x_-(width+1+20)+10, mouse_y-cam_y_+string_height(text)+6, "Weapon currently in slot:")
 		
@@ -201,7 +202,7 @@ function Weapontip(text, weapon, yoffset){
 			}
 			draw_text( mouse_x-cam_x_+75-190+20,mouse_y-cam_y_+string_height(text)+110+22+string_height("S")/2,"Damage:")
 
-			for (var i = 0; i<inst.damage; i++) {
+			for (var i = 0; i < min(10, inst.damage/global.player.dmg); i++) {
 				x_ = mouse_x-cam_x_+80-190+8*i+20
 				y_ = mouse_y-cam_y_+string_height(text)+110+30
 				draw_rectangle_color(x_+1,y_+1,x_+6-1,y_+20-1,c_aqua,c_aqua,c_aqua,c_aqua,false)	
@@ -217,10 +218,11 @@ function Weapontip(text, weapon, yoffset){
 			}
 			draw_text( mouse_x-cam_x_+75-190+20,mouse_y-cam_y_+string_height(text)+110+52+string_height("S")/2,"Accuracy:")
 
-			for (var i = 0; i<inst.accuracy; i++) {
+			// For right side (mouse_x > center)
+			for (var i = 0; i < min(10, max_accuracy - inst.accuracy); i++) {
 				x_ = mouse_x-cam_x_+80-190+8*i+20
 				y_ = mouse_y-cam_y_+string_height(text)+110+60
-				draw_rectangle_color(x_+1,y_+1,x_+6-1,y_+20-1,c_aqua,c_aqua,c_aqua,c_aqua,false)	
+				draw_rectangle_color(x_+1,y_+1,x_+6-1,y_+20-1,c_aqua,c_aqua,c_aqua,c_aqua,false)
 			}
 			
 			//DRAW fire rate
@@ -233,7 +235,7 @@ function Weapontip(text, weapon, yoffset){
 			}
 			draw_text( mouse_x-cam_x_+75-190+20,mouse_y-cam_y_+string_height(text)+110+82+string_height("S")/2,"Fire Rate:")
 
-			for (var i = 0; i<10/(inst.fire_rate/global.player.fire_rate); i++) {
+			for (var i = 0; i < min(10, 10/(inst.fire_rate/global.player.fire_rate)); i++) {
 				x_ = mouse_x-cam_x_+80-190+8*i+20
 				y_ = mouse_y-cam_y_+string_height(text)+110+90
 				draw_rectangle_color(x_+1,y_+1,x_+6-1,y_+20-1,c_aqua,c_aqua,c_aqua,c_aqua,false)	
@@ -249,7 +251,7 @@ function Weapontip(text, weapon, yoffset){
 			}
 			draw_text( mouse_x-cam_x_+75-190+20,mouse_y-cam_y_+string_height(text)+110+112+string_height("S")/2,"Shot Speed:")
 
-			for (var i = 0; i<inst.projectile_speed; i++) {
+			for (var i = 0; i < min(10, inst.projectile_speed/global.player.projectile_speed); i++) {
 				x_ = mouse_x-cam_x_+80-190+8*i+20
 				y_ = mouse_y-cam_y_+string_height(text)+110+120
 				draw_rectangle_color(x_+1,y_+1,x_+6-1,y_+20-1,c_aqua,c_aqua,c_aqua,c_aqua,false)	

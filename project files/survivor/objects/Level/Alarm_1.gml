@@ -19,7 +19,7 @@ if t_sec < 0 {
 	if random(1) < 0.1 {
 		spawnEnemy(array_get_random(bosslist))
 	}
-	if random(1) < 0.1*global.luck {
+	if random(1) < 0.1*global.luck && t_mil < 14 {
 		if random(1) < 0.1 {
 			spawnEnemy(HalfletBuddy)
 		} else if random(1) < 0.1 {

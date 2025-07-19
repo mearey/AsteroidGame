@@ -180,7 +180,7 @@ for (var i = 0; i<max(10,pspeed); i++) {
 	draw_rectangle_color(x_-1,y_-1,x_+6+1,y_+20+1,c_black,c_black,c_black,c_black, false)
 	draw_rectangle(x_-1,y_-1,x_+6+1,y_+20+1,true)
 }
-draw_text(24*5, surface_get_height(application_surface)/2+30+string_height("S")/2,"Projectile Speed:")
+draw_text(24*5, surface_get_height(application_surface)/2+30+string_height("S")/2,"Shot Speed:")
 
 for (var i = 0; i<pspeed; i++) {
 	x_ = i*8+25*5

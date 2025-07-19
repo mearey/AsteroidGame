@@ -2,7 +2,7 @@
   "$GMFont":"",
   "%Name":"DefaultFont",
   "AntiAlias":0,
-  "applyKerning":0,
+  "applyKerning":1,
   "ascender":18,
   "ascenderOffset":0,
   "bold":false,
@@ -111,7 +111,7 @@
   },
   "hinting":0,
   "includeTTF":false,
-  "interpreter":0,
+  "interpreter":1,
   "italic":false,
   "kerningPairs":[],
   "last":0,
@@ -122,7 +122,7 @@
     "name":"Fonts",
     "path":"folders/Fonts.yy",
   },
-  "pointRounding":0,
+  "pointRounding":2,
   "ranges":[
     {"lower":32,"upper":127,},
     {"lower":9647,"upper":9647,},
@@ -134,7 +134,10 @@
   "sdfSpread":32,
   "size":18.0,
   "styleName":"Medium",
-  "textureGroupId":null,
+  "textureGroupId":{
+    "name":"Default",
+    "path":"texturegroups/Default",
+  },
   "TTFName":"",
   "usesSDF":false,
 }

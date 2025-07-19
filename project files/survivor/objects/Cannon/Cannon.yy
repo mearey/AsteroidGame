@@ -35,8 +35,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"base_cannon",
-    "path":"sprites/base_cannon/base_cannon.yy",
+    "name":"Bastille",
+    "path":"sprites/Bastille/Bastille.yy",
   },
   "spriteMaskId":null,
   "visible":true,

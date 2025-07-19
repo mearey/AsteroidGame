@@ -35,8 +35,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"BubbleBobble",
-    "path":"sprites/BubbleBobble/BubbleBobble.yy",
+    "name":"Bubble_Bobble",
+    "path":"sprites/Bubble_Bobble/Bubble_Bobble.yy",
   },
   "spriteMaskId":null,
   "visible":true,

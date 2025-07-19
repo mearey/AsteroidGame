@@ -142,7 +142,7 @@ secret_btn = CreateButton(-180-15,"PROSPECTING", function () {
 secret_btn.max_points = 1
 secret_btn.cost = 500
 secret_btn.points = ini_read_real("UPGRADES", "secret_upgrade", 0)
-secret_btn.description = "Begin the gold rush (WARNING: may trigger extradimensional threats)"
+secret_btn.description = "Begin the GOLD RUSH\n(WARNING: lures in extradimensional threats and loan sharks)"
 
 
 ea_btn = CreateButton(-180,"EMBATTLEMENT", function () {

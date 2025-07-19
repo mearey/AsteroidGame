@@ -35,8 +35,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"moneypouch",
-    "path":"sprites/moneypouch/moneypouch.yy",
+    "name":"Moneypouch",
+    "path":"sprites/Moneypouch/Moneypouch.yy",
   },
   "spriteMaskId":null,
   "visible":true,
