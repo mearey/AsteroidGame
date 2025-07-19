@@ -14,7 +14,7 @@ damage = 6
 function lvlUp() {
 	if (lvl < 10) {
 		lvl+=1
-		fire_rate -= fire_rate/5
+		fire_rate -= fire_rate/8
 	} 
 	if lvl >= 10 {
 		evolved = true

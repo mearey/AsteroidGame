@@ -8,6 +8,8 @@ lighting_layer = level_2__sun
 
 foreground_layer = level_2_planet
 
+boss_obj = WallOfDebris
+
 boss = false
 
 songs = [Level2Song, level2Songvar2, level2Songvar3]

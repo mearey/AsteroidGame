@@ -5,7 +5,7 @@ x = room_width/2
 y = 0
 scroll = 900
 draw_set_halign(fa_center)
-draw_set_font(SmallUIFont)
+draw_set_font(mx7)
 init = false
 alarm[0] = 15
 PlaySong(storysong)
