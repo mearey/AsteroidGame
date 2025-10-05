@@ -700,6 +700,8 @@
     {"id":{"name":"WallOfDebrisSprite","path":"sprites/WallOfDebrisSprite/WallOfDebrisSprite.yy",},},
     {"id":{"name":"WeaponGetAnimation","path":"sprites/WeaponGetAnimation/WeaponGetAnimation.yy",},},
     {"id":{"name":"Weapons_Tutorial","path":"sprites/Weapons_Tutorial/Weapons_Tutorial.yy",},},
+    {"id":{"name":"wizard","path":"sprites/wizard/wizard.yy",},},
+    {"id":{"name":"wizardRed","path":"sprites/wizardRed/wizardRed.yy",},},
     {"id":{"name":"WormHead","path":"sprites/WormHead/WormHead.yy",},},
     {"id":{"name":"WormSegment","path":"sprites/WormSegment/WormSegment.yy",},},
     {"id":{"name":"Zero_Claw","path":"sprites/Zero_Claw/Zero_Claw.yy",},},
