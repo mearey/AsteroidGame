@@ -25,4 +25,5 @@ function CheckControllerButton(){
 	if (gamepad_button_check_pressed(Console.gamepad,gp_shoulderl)) {
 		return gp_shoulderl
 	}
+	return false
 }

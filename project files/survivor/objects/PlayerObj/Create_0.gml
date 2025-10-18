@@ -10,7 +10,9 @@ with (PlayerObj) {
 event_inherited()
 lighting_colour = c_white
 lighting_size = 3
-Globals()
+if room != MainMenu {
+	Globals()
+}
 
 start_time = current_time
 

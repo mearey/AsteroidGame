@@ -720,8 +720,8 @@
     {"roomId":{"name":"Scrollingstory","path":"rooms/Scrollingstory/Scrollingstory.yy",},},
     {"roomId":{"name":"Credits","path":"rooms/Credits/Credits.yy",},},
     {"roomId":{"name":"EndCutsceneRoom","path":"rooms/EndCutsceneRoom/EndCutsceneRoom.yy",},},
-    {"roomId":{"name":"TestRoom","path":"rooms/TestRoom/TestRoom.yy",},},
     {"roomId":{"name":"Level4Room","path":"rooms/Level4Room/Level4Room.yy",},},
+    {"roomId":{"name":"TestRoom","path":"rooms/TestRoom/TestRoom.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
