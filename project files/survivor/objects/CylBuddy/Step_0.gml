@@ -30,7 +30,7 @@ if collision_circle(x,y,16,PlayerObj,false,true) && collected = false {
 	if instance_number(BuddyObj) >= 10 {
 		steam_set_achievement("spacebuddies")		
 	}
-	sprite_index = Buddy_Pirate_shrink
+	sprite_index = Buddy_Cyl_shrink1
 }
 if (instance_exists(Enemy)) {
 	var target = instance_nearest(x,y,Enemy)

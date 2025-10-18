@@ -23,7 +23,7 @@ for (var i = 0; i<10; i++) {
 }
 draw_text( surface_get_width(application_surface)/2+i*8-22*5,surface_get_height(application_surface)/2+string_height("S")/2,"Speed:")
 
-for (var i = 0; i<inst.max_speed*2; i++) {
+for (var i = 0; i<inst.max_speed*2.2; i++) {
 	x_ = surface_get_width(application_surface)/2+i*8-4*5
 	y_ = surface_get_height(application_surface)/2
 	draw_rectangle_color(x_+1,y_+1,x_+6-1,y_+20-1,c_aqua,c_aqua,c_aqua,c_aqua,false)	

@@ -5,5 +5,5 @@
 event_inherited();
 
 if sprite_index == p_picayune {
-	instance_create_depth(x,y,depth,BuddyObj, {sprite_index:Buddy_Cyl_1})
+	instance_create_depth(x,y,depth,CylBuddy)
 }

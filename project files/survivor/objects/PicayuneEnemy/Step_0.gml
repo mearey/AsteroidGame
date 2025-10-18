@@ -14,7 +14,7 @@ image_angle = 0
 phy_rotation = 0
 
 if x < global.player.x {
-	image_xscale = -1
+	image_xscale = -1.1
 } else {
-	image_xscale = 1
+	image_xscale = 1.1
 }

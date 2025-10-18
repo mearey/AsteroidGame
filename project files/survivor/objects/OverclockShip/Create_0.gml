@@ -4,7 +4,7 @@
 // Inherit the parent event
 event_inherited();
 
-max_speed = 4;
+max_speed = 3.6;
 
 dmg = 1.1;
 

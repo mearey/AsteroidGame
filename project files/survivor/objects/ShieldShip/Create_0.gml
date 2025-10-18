@@ -22,7 +22,7 @@ cooldown = 4000
 ability_cooldown=cooldown/(global.cdr)
 ability = "Press \'space\' to summon a buddy"
 function ability_() {
-	//speed boost ability here
+	//nuddy ability here
 	ability_cooldown -= 1
 	if ability_cooldown <= 0 && (keyboard_check_pressed(vk_space) || CheckControllerButton()) {
 		ability_cooldown = 4000/(global.cdr)
