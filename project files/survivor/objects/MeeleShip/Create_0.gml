@@ -6,14 +6,14 @@ event_inherited();
 
 lighting_size =4
 
-max_speed = 2;
+max_speed = 2.2;
 dmg = 1.2;
 fire_rate = global.fire_rate*1.2
 fire_timer = fire_rate
 
-ability = "Press space to throw a hammer towards your cursor that deals massive damage and heals your ship for a small percentage of the damgage"
+ability = "Press \'space'\ to throw a hammer towards your cursor, dealing massive damage and healing for a small percentage of the damage"
 
-max_hp=150;
+max_hp=140;
 hp=max_hp;
 cooldown = 375/(global.cdr)
 ability_cooldown = 375/(global.cdr)
@@ -33,7 +33,7 @@ function ability_() {
 	ability_cooldown -= 1
 	if ability_cooldown <= 0 && (keyboard_check_pressed(vk_space) || CheckControllerButton()) {
 		hammer.throw_()
-		ability_cooldown = 250/(global.cdr)
+		ability_cooldown = 375/(global.cdr)
 		PlaySFX(swordSwoosh,1,1.3)
 		PlaySFX(swordSwoosh,1,1.3)
 		PlaySFX(swordSwoosh,1,1.3)

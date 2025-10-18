@@ -4,7 +4,7 @@
 // Inherit the parent event
 event_inherited();
 
-max_speed = 3.7;
+max_speed = 4;
 
 dmg = 1.0;
 
@@ -18,14 +18,14 @@ max_hp = 80
 
 hp = 80
 
-cooldown = 500
+cooldown = 550
 ability_cooldown=cooldown/(global.cdr)
-ability = "Press \'space\' to boost"
+ability = "Press \'space\' to boost your speed"
 function ability_() {
 	//speed boost ability here
 	ability_cooldown -= 1
 	if ability_cooldown <= 0 && (keyboard_check_pressed(vk_space) || CheckControllerButton()) {
-		ability_cooldown = 500/(global.cdr)
+		ability_cooldown = 550/(global.cdr)
 		speed_holder = max_speed
 		max_speed = max_speed*2
 		alarm[1] = 75
