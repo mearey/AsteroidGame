@@ -24,7 +24,7 @@ addition = 0
 
 cooldown = 2000
 ability_cooldown=cooldown/(global.cdr)
-ability = "Press \'space\' to overclock weapons"
+ability = "Press \'space\' to overclock weapons, unleashing a barrage of projectiles"
 function ability_() {
 	//speed boost ability here
 	ability_cooldown -= 1

@@ -4,15 +4,15 @@
 // Inherit the parent event
 event_inherited();
 new_ = false
-lighting_colour = c_aqua
-lighting_size = 2
-lighting_intensity = 0.15
+lighting_colour = c_yellow
+lighting_size = 6
+lighting_intensity = 0.25
 
-hp = 15
+hp = 50
 xp = 5
 
 if sprite_index == p_picayune {
-	repeat (random_range(0,2)) {
+	repeat (random_range(0,3)) {
 		instance_create_depth(x+random_range(-50,50),y+random_range(-50,50),depth, PicayuneEnemy, {sprite_index:choose(p_drop,p_eyes,p_skull)})	
 	}
 }

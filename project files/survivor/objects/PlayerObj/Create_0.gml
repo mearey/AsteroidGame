@@ -22,7 +22,7 @@ damage_taken = 0
 enemies_defeated = 0
 exp_gained = 0
 
-max_speed = 3;
+max_speed = 3.2;
 
 dmg = 1;
 
@@ -69,7 +69,7 @@ cooldown = 1000
 dead = false
 
 ability_cooldown = cooldown/global.cdr
-ability = "Press \'space\' to activate a knockback nova"
+ability = "Press \'space\' to activate a knockback nova, pushing away enemies"
 
 var starting_wep = CannonMKI
 
