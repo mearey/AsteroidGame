@@ -17,41 +17,32 @@ draw_set_halign(fa_right)
 //DRAW speed
 for (var i = 0; i<10; i++) {
 	x_ = surface_get_width(application_surface)/2+i*8-4*5
-	y_ = surface_get_height(application_surface)/2
+	y_ = surface_get_height(application_surface)/2+30
 	draw_rectangle_color(x_-1,y_-1,x_+6+1,y_+20+1,c_black,c_black,c_black,c_black, false)
 	draw_rectangle(x_-1,y_-1,x_+6+1,y_+20+1,true)
 }
-draw_text( surface_get_width(application_surface)/2+i*8-22*5,surface_get_height(application_surface)/2+string_height("S")/2,"Speed:")
+draw_text( surface_get_width(application_surface)/2+i*8-22*5,surface_get_height(application_surface)/2+30+string_height("S")/2,"Speed:")
 
 for (var i = 0; i<inst.max_speed*2.2; i++) {
 	x_ = surface_get_width(application_surface)/2+i*8-4*5
-	y_ = surface_get_height(application_surface)/2
+	y_ = surface_get_height(application_surface)/2+30
 	draw_rectangle_color(x_+1,y_+1,x_+6-1,y_+20-1,c_aqua,c_aqua,c_aqua,c_aqua,false)	
 }
 
 //DRAW DAMAGE
 for (var i = 0; i<10; i++) {
 	x_ = surface_get_width(application_surface)/2+i*8-4*5
-	y_ = surface_get_height(application_surface)/2+30
-	draw_rectangle_color(x_-1,y_-1,x_+6+1,y_+20+1,c_black,c_black,c_black,c_black, false)
-	draw_rectangle(x_-1,y_-1,x_+6+1,y_+20+1,true)
-}
-draw_text( surface_get_width(application_surface)/2+i*8-22*5,surface_get_height(application_surface)/2+30+string_height("S")/2,"Damage:")
-
-for (var i = 0; i<inst.dmg*7-3; i++) {
-	x_ = surface_get_width(application_surface)/2+i*8-4*5
-	y_ = surface_get_height(application_surface)/2+30
-	draw_rectangle_color(x_+1,y_+1,x_+6-1,y_+20-1,c_aqua,c_aqua,c_aqua,c_aqua,false)	
-}
-
-//DRAW FIRE RATE
-for (var i = 0; i<10; i++) {
-	x_ = surface_get_width(application_surface)/2+i*8-4*5
 	y_ = surface_get_height(application_surface)/2+60
 	draw_rectangle_color(x_-1,y_-1,x_+6+1,y_+20+1,c_black,c_black,c_black,c_black, false)
 	draw_rectangle(x_-1,y_-1,x_+6+1,y_+20+1,true)
 }
-draw_text( surface_get_width(application_surface)/2+i*8-22*5,surface_get_height(application_surface)/2+60+string_height("S")/2,"Fire Rate:")
+draw_text( surface_get_width(application_surface)/2+i*8-22*5,surface_get_height(application_surface)/2+60+string_height("S")/2,"Damage:")
+
+for (var i = 0; i<inst.dmg*7-3; i++) {
+	x_ = surface_get_width(application_surface)/2+i*8-4*5
+	y_ = surface_get_height(application_surface)/2+60
+	draw_rectangle_color(x_+1,y_+1,x_+6-1,y_+20-1,c_aqua,c_aqua,c_aqua,c_aqua,false)	
+}
 
 for (var i = 0; i<10/inst.fire_rate; i++) {
 	x_ = surface_get_width(application_surface)/2+i*8-4*5

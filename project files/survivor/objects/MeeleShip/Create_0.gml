@@ -8,7 +8,7 @@ lighting_size =4
 
 max_speed = 2.2;
 dmg = 1.2;
-fire_rate = global.fire_rate*1.2
+fire_rate = global.fire_rate
 fire_timer = fire_rate
 
 ability = "Press \'space'\ to throw a hammer towards your cursor, dealing massive damage and healing for a small percentage of the damage"
