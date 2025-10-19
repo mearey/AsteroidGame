@@ -1,0 +1,38 @@
+/// @description Insert description here
+// You can write your code in this editor
+
+// Inherit the parent event
+event_inherited();
+new_ = false
+lighting_colour = c_white
+lighting_size = 10
+lighting_intensity = 0.10
+
+hp = 50
+xp = 10
+
+if sprite_index == level5_boss_phasefirst {
+	repeat (random_range(0,4)) {
+		instance_create_depth(x+random_range(-50,50),y+random_range(-50,50),depth, PicayuneEnemy, {sprite_index:choose(p_drop,p_eyes,p_skull)})	
+	}
+}
+
+function takeDamage(damage) {	
+	hp-=damage;
+	if (hp<=0) {
+		dead = true
+		PlaySFX(array_get_random([snd_picayune_laugh_1, snd_picayune_laugh_2, snd_picayune_laugh_2, snd_picayune_laugh_2]),0.5,1.2)
+		instance_destroy(self)
+		global.player.enemies_defeated += 1;
+		var coin_chance = 1
+		if (random(1)<coin_chance) {
+			instance_create_depth(x,y,1,CoinObj)
+		}
+	}
+	white_flash()
+	alarm[0] = 10;
+	//draw_damage number
+	if damage*20 > 0 {
+		instance_create_depth(random_range(x-sprite_width/2,x+sprite_width/2),random_range(y-sprite_height/2,y+sprite_height/2),1,DamageText).number = damage
+	}
+}
