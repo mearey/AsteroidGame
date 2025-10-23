@@ -99,7 +99,7 @@ with (GameSummarySelector) {
 	instance_destroy(self)	
 }
 
-if t_min == 91  && !unlock_ {
+if t_min >= 15  && !unlock_ {
 	unlock_ = true
 	ini_open("unlocks.ini")
 	ini_write_real("LEVELS", "4", 1)
