@@ -34,12 +34,17 @@ if collision_circle(x,y,16,PlayerObj,false,true) && collected = false {
 	sprite_index = Buddy_shrink
 }
 if (instance_exists(Enemy)) {
+	var rate__ = 0.25
+	if collected {
+		rate__ = 1
+	} 
+	
 	var target = instance_nearest(x,y,Enemy)
 	if (target != PlayerObj) && distance_to_object(target) < range {
 		if (fire_timer > 0) && distance_to_object(target) < range {
 			fire_timer -= 1
 		} else if (target != PlayerObj) && distance_to_object(target) < range {
-			fire_rate = (global.player.fire_rate/array_length(PlayerObj.unique_weapons))*10
+			fire_rate = (global.player.fire_rate/array_length(PlayerObj.unique_weapons))*10*rate
 			fire_timer = fire_rate;
 			ShootShot(array_get_random([LaserObj, Greneade, BulletObj, ShockProjectile,LaserObj, Greneade, BulletObj, ShockProjectile, Missile]), point_direction(x,y,target.x, target.y), x,y,1,global.player.projectile_speed,100)
 			if random(1) < 0.05 {

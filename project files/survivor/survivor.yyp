@@ -166,6 +166,7 @@
     {"id":{"name":"Cursor","path":"objects/Cursor/Cursor.yy",},},
     {"id":{"name":"CursorTrail","path":"objects/CursorTrail/CursorTrail.yy",},},
     {"id":{"name":"CylBuddy","path":"objects/CylBuddy/CylBuddy.yy",},},
+    {"id":{"name":"CylShot","path":"objects/CylShot/CylShot.yy",},},
     {"id":{"name":"DamageText","path":"objects/DamageText/DamageText.yy",},},
     {"id":{"name":"DeadPlayer","path":"objects/DeadPlayer/DeadPlayer.yy",},},
     {"id":{"name":"DebrisGrabberObj","path":"objects/DebrisGrabberObj/DebrisGrabberObj.yy",},},

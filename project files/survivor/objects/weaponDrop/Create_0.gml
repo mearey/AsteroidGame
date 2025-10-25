@@ -5,7 +5,7 @@ randomize()
 weapon = LaserMKI
 number = 0
 
-
+depth = -999
 
 alarm[2] = 5
 

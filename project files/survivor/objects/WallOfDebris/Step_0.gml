@@ -30,9 +30,14 @@ if start_y < 0 {
 var cam_x = camera_get_view_x(view_get_camera(0))
 var cam_y = camera_get_view_y(view_get_camera(0))
 
+phy_speed_x = 0
+phy_speed_y = 0
+phy_linear_velocity_x = 0
+phy_linear_velocity_y = 0
+phy_angular_velocity = 0
 phy_position_x = cam_x+surface_get_width(application_surface)/2
 phy_position_y = max(0,cam_y+79+start_y)
-phy_rotation=0
+phy_rotation = 0
 //collisions
 if (!global.pauseObj.paused){
 	if (collision_rectangle(0,0,room_width,160, global.ship_selection,false,true)) {

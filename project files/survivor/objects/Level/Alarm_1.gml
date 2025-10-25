@@ -20,11 +20,17 @@ if t_sec < 0 {
 		spawnEnemy(array_get_random(bosslist))
 	}
 	if random(1) < 0.1*global.luck && t_mil < 14 {
+		ini_open("unlocks.ini")
+		var unlocked = ini_read_real("unlocks", "cyl", true)
+		ini_close()
 		if random(1) < 0.1 {
 			spawnEnemy(HalfletBuddy)
 		} else if random(1) < 0.1 {
 			spawnEnemy(PirateBuddy)
-		} else {
+		} else if random(1) < 0.1 && unlocked {
+			spawnEnemy(CylBuddy)	
+		}
+		else {
 			spawnEnemy(BuddyObj)
 		}
 	}
