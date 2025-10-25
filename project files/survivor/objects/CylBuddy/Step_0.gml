@@ -28,7 +28,10 @@ if collision_circle(x,y,16,PlayerObj,false,true) && collected = false {
 	PlaySFX(array_get_random([Buddy_SFX_recruit1,Buddy_SFX_recruit2,Buddy_SFX_recruit3,Buddy_SFX_recruit4,Buddy_SFX_recruit5,Buddy_SFX_recruit6,Buddy_SFX_recruit7]),0.9,1.1)
 	collected = true	
 	if instance_number(BuddyObj) >= 10 {
-		steam_set_achievement("spacebuddies")		
+		steam_set_achievement("spacebuddies")	
+		ini_open("unlocks.ini")
+		ini_write_real("unlocks", "cyl", true)
+		ini_close()
 	}
 	sprite_index = Buddy_Cyl_shrink1
 }
@@ -40,7 +43,7 @@ if (instance_exists(Enemy)) {
 		} else if (target != PlayerObj) && distance_to_object(target) < range {
 			fire_rate = (global.player.fire_rate/array_length(PlayerObj.unique_weapons))*10
 			fire_timer = fire_rate;
-			ShootShot(array_get_random([Greneade, BulletObj, Greneade, BulletObj, Missile, BigBulletObj]), point_direction(x,y,target.x, target.y), x,y,1,global.player.projectile_speed,100)
+			ShootShot(CylShot, point_direction(x,y,target.x, target.y), x,y,1,global.player.projectile_speed,100)
 			if random(1) < 0.05 {
 				PlaySFX(array_get_random([Buddy_SFX_shoot1,Buddy_SFX_shoot2,Buddy_SFX_shoot3,Buddy_SFX_shoot4]), 0.9,1.1)	
 			}
