@@ -9,3 +9,11 @@ if spr != nocollision {
 if (locked) {
 	draw_sprite(LockedSprite,0,x+lengthdir_x(5,point_direction(x,y,instance_find(SelectorParent,0).x,instance_find(SelectorParent,0).y)),y+lengthdir_y(5,point_direction(x,y,mouse_x,mouse_y)))	
 }
+
+if spr == level_3__stars {
+	ini_open("unlocks.ini")
+	if ini_read_real("LEVELS", "3", 0) {
+		draw_text(x+lengthdir_x(5,point_direction(x,y,mouse_x,mouse_y))-sprite_get_width(sprite_index)/2+3+9+20,y+lengthdir_y(5,point_direction(x,y,mouse_x,mouse_y))- sprite_get_height(sprite_index)/2+3+70,"ENDLESS")	
+	}
+	ini_close()
+}

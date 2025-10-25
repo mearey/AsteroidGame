@@ -27,16 +27,6 @@ if !global.pauseObj.paused {
 	}
 }
 
-draw_sprite_ext(back_leg_1,0,x,y,1,1,rot1,c_white,1)
-draw_sprite_ext(back_leg_2,0,x,y,1,1,rot1+random_range(-3,3),c_white,1)
-
-draw_sprite_ext(front_1,0,x,y,1,1,rot2,c_white,1)
-draw_sprite_ext(front_2,0,x,y,1,1,rot2+random_range(-3,3),c_white,1)
-
-draw_sprite_ext(_2nd_from_back_1,0,x,y,1,1,rot3,c_white,1)
-draw_sprite_ext(_2nd_from_back_2,0,x,y,1,1,rot3+random_range(-3,3),c_white,1)
-
-draw_sprite_ext(_3rd_from_back_1,0,x,y,1,1,rot4,c_white,1)
-draw_sprite_ext(_3rd_from_back_2,0,x,y,1,1,rot4+random_range(-3,3),c_white,1)
+draw_sprite_ext(level5_throne,0,room_width/2,room_height/2,1,1,0,c_white,1)
 
 draw_self()

@@ -5,7 +5,7 @@
 event_inherited();
 
 lighting_size =4
-
+sprite_index = MeeleShipSprite
 max_speed = 2.2;
 dmg = 1.2;
 fire_rate = global.fire_rate

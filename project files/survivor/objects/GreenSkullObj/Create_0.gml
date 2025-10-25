@@ -8,7 +8,7 @@ lighting_colour = c_red
 lighting_size = 4
 lighting_intensity = 0.15
 
-hp = 15
+hp = 10
 xp = 5
 
 

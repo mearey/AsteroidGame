@@ -14,5 +14,5 @@ lighting_size = 4
 lighting_colour = c_lime
 lighting_intensity = 0.2
 
-hp = 5*rand
+hp = 7*rand
 xp = 3*rand

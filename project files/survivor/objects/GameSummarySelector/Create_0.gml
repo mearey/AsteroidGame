@@ -2,6 +2,7 @@
 // You can write your code in this editor
 
 instance_destroy(Pause)
+instance_create(0,0,Pause)
 
 mouse_pos = mouse_y
 

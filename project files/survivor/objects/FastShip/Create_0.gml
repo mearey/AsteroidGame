@@ -17,6 +17,7 @@ boosting = false
 max_hp = 80
 
 hp = 80
+sprite_index = PlayerFastShipSprite
 
 cooldown = 600
 ability_cooldown=cooldown/(global.cdr)

@@ -10,4 +10,3 @@ if (global.player.equipped_weapons[temp.slot] != Weapon) {
 }
 
 instance_destroy(temp)
-

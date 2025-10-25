@@ -7,8 +7,11 @@ paused_surf = -1;
 
 upgrades = false
 
-
-
+with Pause {
+	if self.id != other.id {
+		instance_destroy(other)	
+	}
+}
 function pause(upgrade) {
 	paused = !paused;
 	if paused_surf == -1 {
