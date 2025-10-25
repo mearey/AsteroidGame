@@ -26,8 +26,8 @@ if hp <= max_hp*2/3 {
 		]
 	} else {
 		sprite_index = level5_boss_phases2
-		phy_position_x = centerx + lengthdir_x(350, dir)
-		phy_position_y = centery + lengthdir_y(350, dir)
+		phy_position_x = lerp(phy_position_x, centerx + lengthdir_x(350, dir),0.1)
+		phy_position_y = lerp(phy_position_x, centery + lengthdir_y(350, dir),0.1)
 		phy_rotation = 0
 		moves = [
 			function move0() {
@@ -64,6 +64,7 @@ if hp <= max_hp*2/3 {
 				move_cooldown = 400
 				centery = random_range(400,room_height-400)
 				centerx = random_range(400,room_width-400)
+				audio_play_sound(bwooom,1,false)
 			}
 		]
 	}
