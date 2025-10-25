@@ -8,7 +8,7 @@ lighting_colour = c_aqua
 lighting_size = 4
 lighting_intensity = 0.15
 
-hp = 60
+hp = 20
 xp = 20
 
 image_xscale = 3
@@ -20,6 +20,7 @@ function takeDamage(damage) {
 	if (hp<=0) {
 		dead = true
 		instance_destroy(self)
+		instance_create_depth(x,y,depth,Chest)
 		global.player.enemies_defeated += 1;
 		var coin_chance = 0.05
 		if (random(1)<coin_chance) {

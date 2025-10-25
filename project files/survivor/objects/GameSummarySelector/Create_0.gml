@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+instance_destroy(Pause)
+
 mouse_pos = mouse_y
 
 active_button = instance_nearest(x,y,Button)
