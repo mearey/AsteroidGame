@@ -34,9 +34,9 @@ if collision_circle(x,y,16,PlayerObj,false,true) && collected = false {
 	sprite_index = Buddy_shrink
 }
 if (instance_exists(Enemy)) {
-	var rate = 0.25
+	var rate__ = 0.25
 	if collected {
-		rate = 1
+		rate__ = 1
 	} 
 	
 	var target = instance_nearest(x,y,Enemy)
