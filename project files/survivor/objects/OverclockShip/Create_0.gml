@@ -3,7 +3,7 @@
 
 // Inherit the parent event
 event_inherited();
-
+sprite_index = OverclockShipSprite
 max_speed = 3.8;
 
 dmg = 1.1;

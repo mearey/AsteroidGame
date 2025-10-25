@@ -32,31 +32,31 @@ if !set {
 		spawnrate = 32
 	} else if difficulty < 500 {
 		enemylist = [GreenSkullObj, PentagramObj, GreenSkullObj,GreenSkullObj, PentagramObj, GreenSkullObj,GreenSkullObj, PentagramObj, GreenSkullObj,GreenSkullObj, PentagramObj, GreenSkullObj,GreenSkullObj, PentagramObj, GreenSkullObj,GreenSkullObj, PentagramObj, GreenSkullObj,GreenSkullObj, PentagramObj, GreenSkullObj,GreenSkullObj, PentagramObj, GreenSkullObj, Mother]
-		bosslist = [RedSkullObj]
+		bosslist = [RedSkullObj, TardigradeBoss]
 		number = 500
 		num_bosses = 1
 		spawnrate = 28
 	} else if difficulty < 600 {
 		enemylist = [GreenSkullObj,GreenSkullObj, Tardigra, WizardObj]
-		bosslist = [RedSkullObj]
+		bosslist = [RedSkullObj, TardigradeBoss]
 		number = 600
 		num_bosses = 1
 		spawnrate = 25
 	} else if difficulty < 700 {
 		enemylist = [GreenSkullObj, GreenSkullObj, RedSkullObj, PentagramObj,GreenSkullObj, GreenSkullObj, RedSkullObj, PentagramObj, WizardObj]
-		bosslist = [RedSkullObj]
+		bosslist = [TardigradeBoss]
 		number = 650
 		num_bosses = 1
 		spawnrate = 20
 	} else if difficulty < 800 {
 		enemylist = [FastEnemyShip, Tardigra, GreenSkullObj, GreenSkullObj, RedSkullObj, PentagramObj,WizardObj, Tardigra, GreenSkullObj, GreenSkullObj, RedSkullObj, PentagramObj,WizardObj, Tardigra, GreenSkullObj, GreenSkullObj, RedSkullObj, PentagramObj,WizardObj, Tardigra, GreenSkullObj, GreenSkullObj, RedSkullObj, PentagramObj, WizardObj]
-		bosslist = [RedSkullObj]
+		bosslist = [TardigradeBoss]
 		number = 700
 		num_bosses = 2
 		spawnrate = 15
 	} else {
 		enemylist = [GreenSkullObj]
-		bosslist = [RedSkullObj]
+		bosslist = [TardigradeBoss]
 	}
 	set = true
 }
@@ -72,5 +72,8 @@ if difficulty > 800 {
 		boss = true
 	}
 }
+
+
+
 
 

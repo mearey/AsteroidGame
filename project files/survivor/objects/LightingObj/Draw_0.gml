@@ -11,7 +11,7 @@ var camy = camera_get_view_y(view_camera[0])
 
 surface_set_target(lighting_surface)
 
-draw_set_alpha(0.7)
+draw_set_alpha(0.6)
 draw_set_color(c_black)
 draw_rectangle(0,0,cam_width,cam_height,false)
 draw_set_color(c_white)

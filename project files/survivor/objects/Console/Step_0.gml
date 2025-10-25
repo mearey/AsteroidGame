@@ -6,7 +6,7 @@ if ((abs(gamepad_axis_value(gamepad,gp_axisrh)) > 0.1 || abs(gamepad_axis_value(
 	var rv = gamepad_axis_value(gamepad, gp_axisrv)
 	var dir = point_direction(0,0,rh,rv)
 	if global.pauseObj.paused {
-		window_mouse_set(window_mouse_get_x()+gamepad_axis_value(gamepad,gp_axisrh)*12,window_mouse_get_y()+gamepad_axis_value(gamepad,gp_axisrv)*12)
+		window_mouse_set(window_mouse_get_x()+gamepad_axis_value(gamepad,gp_axisrh)*15,window_mouse_get_y()+gamepad_axis_value(gamepad,gp_axisrv)*15)
 	} else {
 		if room == MainMenu || room == LevelSelect {
 			new_x = lerp(new_x, window_get_width()/2+lengthdir_x(window_get_width()*0.25,dir), 0.1)

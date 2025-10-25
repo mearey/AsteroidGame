@@ -13,7 +13,7 @@ lighting_size = 3
 if room != MainMenu {
 	Globals()
 }
-
+sprite_index = Sprite1
 start_time = current_time
 
 previous_dir = image_angle

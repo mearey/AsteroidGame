@@ -10,7 +10,7 @@ foreground_layer = uranus
 hp_mod = 0
 boss_obj = OrbOfScorb
 
-level3 = true
+level3 = false
 
 songs = [Level4song3, Level4song4, lvl4song1, lvl4song2]
 

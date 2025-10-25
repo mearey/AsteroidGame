@@ -3,7 +3,7 @@
 
 // Inherit the parent event
 event_inherited();
-
+sprite_index = ShieldShipSprite
 max_speed = 3;
 
 dmg = 0.8;

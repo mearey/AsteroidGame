@@ -5,7 +5,7 @@ var camy = camera_get_view_y(view_camera[0])
 
 
 if upgrade {
-if cost!=0 {
+if cost!=0 && !max_{
 	if x > surface_get_width(application_surface)/2{
 		draw_text(x+100,y,string(cost))
 		draw_sprite(CoinSprite,0,x-camx+80,y-camy)
