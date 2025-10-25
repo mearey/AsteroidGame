@@ -3,36 +3,39 @@
 
 // Inherit the parent event
 event_inherited();
-new_ = false
-lighting_colour = c_white
-lighting_size = 10
-lighting_intensity = 0.10
+max_hp = 10000
+hp = 10000
+instance_create_depth(0,0,0,nopause)
+timer1 = 10 + random(15)
+timer2 = 10 + random(15)
+timer3 = 10 + random(15)
+timer4 = 10 + random(15)
 
-hp = 50
-xp = 10
+rot1 = 0
+rot2 = 0
+rot3 = 0
+rot4 = 0
 
-if sprite_index == level5_boss_phasefirst {
-	repeat (random_range(0,4)) {
-		instance_create_depth(x+random_range(-50,50),y+random_range(-50,50),depth, PicayuneEnemy, {sprite_index:choose(p_drop,p_eyes,p_skull)})	
-	}
-}
+damage = 2
 
-function takeDamage(damage) {	
-	hp-=damage;
-	if (hp<=0) {
-		dead = true
-		PlaySFX(array_get_random([snd_picayune_laugh_1, snd_picayune_laugh_2, snd_picayune_laugh_2, snd_picayune_laugh_2]),0.5,1.2)
-		instance_destroy(self)
-		global.player.enemies_defeated += 1;
-		var coin_chance = 1
-		if (random(1)<coin_chance) {
-			instance_create_depth(x,y,1,CoinObj)
+move_cooldown = 200;
+
+moves = [
+	function move0() {
+		move_cooldown = 5
+	},
+	function move2() {
+		repeat (2) {
+			var inst = instance_create_depth(x+10,y,1,Spider)
+			inst.hp = 20
 		}
-	}
-	white_flash()
-	alarm[0] = 10;
-	//draw_damage number
-	if damage*20 > 0 {
-		instance_create_depth(random_range(x-sprite_width/2,x+sprite_width/2),random_range(y-sprite_height/2,y+sprite_height/2),1,DamageText).number = damage
-	}
-}
+		move_cooldown = 35
+	},
+	function move3() {
+		repeat (1) {
+			var inst = instance_create_depth(x+10,y,1,Spider)
+			inst.hp = 35
+		}
+		move_cooldown = 45
+	},
+]

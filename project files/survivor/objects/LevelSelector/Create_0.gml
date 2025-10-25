@@ -77,7 +77,6 @@ var button = CreateButton(-30, uranus_stars_background, uranus, function() {
 if (ini_read_real("LEVELS", "4", false)) {
 	button.locked = false	
 }
-button.locked = true // remove this when updating
 button.future = true
 
 var button = CreateButton(180,nocollision,nocollision, function () {
