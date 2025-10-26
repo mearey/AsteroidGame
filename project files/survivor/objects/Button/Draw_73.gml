@@ -9,7 +9,6 @@ if future {
 }
 try {
 var	game_exists = ini_read_real("STATE","position_x", 0)
-show_debug_log(game_exists)
 if text == "CONTINUE" && !game_exists {
 draw_sprite_ext(sprite_index,image_index,x+2+lengthdir_x(5,point_direction(x,y,instance_find(SelectorParent,0).x,instance_find(SelectorParent,0).y)),y+2+lengthdir_y(5,point_direction(x,y,mouse_x,mouse_y)),1,1,image_angle,c_aqua,0.3)
 draw_sprite_ext(sprite_index,image_index,x-2+lengthdir_x(5,point_direction(x,y,instance_find(SelectorParent,0).x,instance_find(SelectorParent,0).y)),y-2+lengthdir_y(5,point_direction(x,y,mouse_x,mouse_y)),1,1,image_angle,c_red,0.3)
